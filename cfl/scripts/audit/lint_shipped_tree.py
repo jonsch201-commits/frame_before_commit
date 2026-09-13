@@ -159,6 +159,38 @@ def discover(root: Path):
     return have, lack
 
 
+# ⛔ "FAIL 25" IS A LUMP AND IT OVERSTATES. Reading the non-passes, only ONE bucket is a defect in
+# the artifact; the rest are scripts correctly refusing to run outside a repo, scripts my own
+# discovery mis-detected because the flag string sits in their prose, and scripts still working when
+# the cap expired. A criterion reporting all four as one number gets argued about instead of fixed.
+# ⚠️ AND THIS CLASSIFIER WAS CLAIMED LANDED TWICE BEFORE IT EXISTED: the patch script carrying it died
+# on a SyntaxError before writing, and I told Professional it was in. Same aborted script also failed
+# to write three spec rows I announced. ONE CRASHED PATCH PRODUCED TWO FALSE CLAIMS IN TWO MESSAGES,
+# and only the one I re-measured got caught. Verify the change is on disk before reporting it.
+CLASS_NOTES = {
+    "MISSING-DEP": "the ARTIFACT is incomplete -- a shipped script imports a module the tree lacks. "
+                   "THE ONLY BUCKET THAT IS A DEFECT IN THE TREE.",
+    "REFUSED":     "the script declined to run outside a repo or without required arguments. Correct "
+                   "behaviour and evidence the guard works, not a failure.",
+    "NO-SUCH-FLAG":"MY OWN false positive: the flag string appears in the file's prose, so discovery "
+                   "matched a script that does not accept it. A defect in this lint, not the tree.",
+    "SLOW":        "still running when the timeout expired. INCONCLUSIVE -- never a pass, never a fail.",
+    "OTHER":       "a real non-zero exit fitting no bucket above. Read it.",
+    "RUNNER":      "this lint failed to launch the script at all.",
+}
+
+
+def classify(blob):
+    b = (blob or "").lower()
+    if "modulenotfounderror" in b or "importerror" in b:
+        return "MISSING-DEP"
+    if "unrecognized arguments" in b or "the following arguments are required" in b:
+        return "NO-SUCH-FLAG"
+    if "refusing to run" in b or "not a git repo" in b or "pass --fixtures" in b:
+        return "REFUSED"
+    return "OTHER"
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--tree", required=True)
@@ -213,25 +245,37 @@ def main():
                     if r2.returncode == 0:
                         ok += 1
                     else:
+                        blob = ((r.stdout or "") + (r.stderr or "")
+                                + (r2.stdout or "") + (r2.stderr or ""))
+                        cls = classify(blob)
                         fail += 1
-                        failures.append((p.name, rc, tail))
+                        failures.append((p.name, rc, tail, cls))
             except subprocess.TimeoutExpired:
                 err += 1
-                failures.append((p.name, "TIMEOUT", f">{a.timeout}s"))
+                failures.append((p.name, "TIMEOUT", f">{a.timeout}s", "SLOW"))
             except OSError as e:
                 err += 1
-                failures.append((p.name, "OSError", str(e)[:80]))
+                failures.append((p.name, "OSError", str(e)[:80], "RUNNER"))
             if (ok + fail + err) % 25 == 0:
                 print(f"  ... {ok + fail + err} of {len(have)} ({time.time() - t0:.1f}s last)")
     after, _ = tree_digest(root)
     print()
-    print(f"PASS     : {ok:,}")
-    print(f"FAIL     : {fail:,}")
-    print(f"ERROR    : {err:,}")
-    for name, rc, tail in failures[:15]:
-        print(f"   {name} rc={rc} {tail}")
-    if len(failures) > 15:
-        print(f"   ... and {len(failures) - 15:,} more")
+    print(f"PASS : {ok:,} of {len(have):,}")
+    print()
+    byc = {}
+    for row in failures:
+        byc.setdefault(row[3], []).append(row)
+    for cls in ("MISSING-DEP", "OTHER", "RUNNER", "REFUSED", "NO-SUCH-FLAG", "SLOW"):
+        rows_ = byc.get(cls) or []
+        if not rows_:
+            continue
+        print(f"{cls} ({len(rows_)}) -- {CLASS_NOTES[cls]}")
+        for name, rc, tail, _c in rows_[:8]:
+            print(f"     {name} rc={rc} {str(tail)[:88]}")
+        if len(rows_) > 8:
+            print(f"     ... and {len(rows_) - 8:,} more")
+        print()
+    _defects = len(byc.get("MISSING-DEP") or []) + len(byc.get("OTHER") or [])
     print()
     mv, mdetail = manifest_check(root)
     print(f"manifest check           : {mv} -- {mdetail}")
@@ -248,11 +292,12 @@ def main():
         print("   A selftest wrote into the tree being graded. Treat as a stop, not a lint result.")
         return 5
     print(f"tree digest after        : {after[:16]}  UNCHANGED (this run only)")
-    print(f"CRITERION 2 (executability): {'PASS' if not (fail or err) else 'FAIL'} over {len(have):,} "
-          f"scripts; {len(lack):,} UNGRADED for having no selftest.")
+    print(f"CRITERION 2 (executability): {'PASS' if not _defects else 'FAIL'} -- {_defects} defect(s) "
+          f"in the tree over {len(have):,} scripts; {len(lack):,} UNGRADED for having no selftest, "
+          f"{len(byc.get('SLOW') or [])} inconclusive.")
     print("This is EXECUTABILITY only. Professional's C2/C10/C22 set checks COVERAGE, and a half that")
     print("runs but covers nothing still fails. Neither substitutes for the other.")
-    return 0 if not (fail or err) else 3
+    return 0 if not _defects else 3
 
 
 if __name__ == "__main__":

@@ -7,3 +7,6 @@ controls-professional.runE/
 # bytecode litter from executability runs
 __pycache__/
 *.pyc
+
+# CFL superseded derivation kept for diffing, not part of the artifact
+cfl-superseded-*/
