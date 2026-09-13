@@ -8,8 +8,10 @@ This tree is **derived, not authored**, from two working trees by one deriver (`
 
 | half | source | considered | included | excluded | size | manifest sha (first 16) |
 |---|---|---|---|---|---|---|
-| `cfl/` | `N:/claude-cfl/clone` | 1,110 | 1,046 | 94 | 12.25 MB | 2d7fd58f64a19749 (fourth derivation, 2026-09-13 morning: dependency directories, `wiki/test-outputs/` (26 files: seals, hook-harness outputs), hook runtime state withheld, card-number fence corrected for dated filenames) |
-| `professional/` | `N:/claude-professional` | 331 | 330 | 12 | 2.28 MB | `controls-professional/MANIFEST.sha256` (controls sit beside the tree, not inside it, and its rows are paths relative to `professional/`; CFL's sit inside `cfl/` and are listed in its manifest) |
+| `cfl/` | `N:/claude-cfl/clone` | 1,140 (published as 1,110 until 08:4x; see note) | 1,046 | 94 | 12.25 MB | 2d7fd58f64a19749 (fourth derivation, 2026-09-13 morning: dependency directories, `wiki/test-outputs/` (26 files: seals, hook-harness outputs), hook runtime state withheld, card-number fence corrected for dated filenames) |
+| `professional/` | `N:/claude-professional` | 342 (published as 331 until 08:4x; see note) | 330 | 12 | 2.28 MB | `controls-professional/MANIFEST.sha256` (controls sit beside the tree, not inside it, and its rows are paths relative to `professional/`; CFL's sit inside `cfl/` and are listed in its manifest) |
+
+Note on "considered": the deriver dropped path-denied files before counting the candidates while still counting them as excluded, so included plus excluded exceeded "considered" by the path-denied count (30 in `cfl/`, 11 in `professional/`), and those files were reported under "not in the include spec" although the spec named them and a deny rule cut them. Found by CFL's reconciliation 08:4x, fixed in the deriver with a closing identity that refuses to publish when the counts do not close; the manifests were never affected. The corrected figures above are included plus excluded.
 
 Independent verification: Professional recomputed every row of `cfl/MANIFEST.sha256` against disk (1,047 of 1,047 by sha and size, 0 missing, 0 unlisted, 07:5x, after the fourth derivation); CFL and Antigravity each recomputed `controls-professional/MANIFEST.sha256` against `professional/` (326 of 326, 0 missing, 0 unlisted). A manifest agreeing with its own generator is not a receipt; these were produced by parsers that did not write it.
 
