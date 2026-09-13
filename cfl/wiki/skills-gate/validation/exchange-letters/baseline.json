@@ -1,0 +1,88 @@
+{
+  "skill": "exchange-letters",
+  "skill_file": "skills/exchange-letters/SKILL.md",
+  "skill_sha256": "9a507c577112c4d3abe4600aaf74bd76ff64d93f8f36256da0f09e10f6b3c766",
+  "split": "wiki/skills-gate/validation/exchange-letters/split.jsonl",
+  "split_sha256": "51e2f7c8b063e4e6a57104627b9c11d800e9929d944bc10708f711fe91b620a6",
+  "R_best": 1.0,
+  "R_degraded": 0.8672,
+  "tasks": 10,
+  "tier": "opus (the producing agent was this lane, an opus-tier reader with the full SKILL.md in context; NOT sonnet, NOT fable, NOT haiku — stated because the cross-tier transfer fence in wiki/concepts/wikiskill-adoption.md forbids scoring one tier's reader as another's consumer)",
+  "run_ts": "2026-09-02T17:49:43+00:00",
+  "runner_sha256": "c2df22eeb73a992a79738c922a048f6ef7c710a46511cd2563f13c0636182b76",
+  "seed": "n/a-deterministic",
+  "mechanical_properties": 128,
+  "cold_properties_unknown": 10,
+  "R_best_detail": {
+    "passed": 128,
+    "failed": 0,
+    "unknown": 10,
+    "producer": "opus, this program's own lane, skill text in context",
+    "artifacts": "C:\\Users\\JonSc\\AppData\\Local\\Temp\\claude\\gt1\\baseline"
+  },
+  "R_degraded_detail": {
+    "passed": 111,
+    "failed": 17,
+    "unknown": 10,
+    "degraded_skill_sha256": "c13a46e32fab9e3a84213f3fb7750d63daab285d6c9a6d6bfa50e7b49c2ec1a2",
+    "ablation": "rule 6 (receipts) and rule 8 (silence-clause lint) removed; rules 1-5, 7, 9 unchanged",
+    "degraded_skill_path": "%LOCALAPPDATA%/Temp/claude/exchange-letters-degraded/SKILL.md (scratch, never in the repo)",
+    "artifacts": "C:\\Users\\JonSc\\AppData\\Local\\Temp\\claude\\gt1\\degraded"
+  },
+  "loss_condition": "PRE-STATED (GT-3): R_blind <= R_best; R_degraded < R_best; R_blind below R_degraded => UNKNOWN-CALIBRATION. RESULT: R_best 1.0, R_degraded 0.8672, R_blind 0.9141 -- CALIBRATED.",
+  "ceiling": "R_best = 1.0 saturates the mechanical half at opus tier. The split can detect degradation and CANNOT detect improvement above the current text at this tier. G6 is therefore unsatisfiable for exchange-letters until the split gains rows the current skill fails, or R_before is re-measured at the consuming tier.",
+  "letters_baseline_dir": "C:\\Users\\JonSc\\AppData\\Local\\Temp\\claude\\gt1\\baseline",
+  "letters_degraded_dir": "C:\\Users\\JonSc\\AppData\\Local\\Temp\\claude\\gt1\\degraded",
+  "version": "v2 (GT-3 calibration against blind producer output, 2026-09-02)",
+  "supersedes": "v1, run_ts 2026-09-02T14:01:00+00:00 -- kept below under v1_as_measured",
+  "split_sha256_v1": "51e2f7c8b063e4e6a57104627b9c11d800e9929d944bc10708f711fe91b620a6",
+  "split_resealed": false,
+  "properties_module": "scripts/audit/gt2_properties.py",
+  "properties_module_sha256": "0cf2af5144089ccbf4024caef58348e9302274d7399f31cc693891cb9cb6f67a",
+  "properties_module_sha256_v1": null,
+  "R_blind": 0.9141,
+  "R_blind_detail": {
+    "passed": 117,
+    "failed": 11,
+    "unknown": 10,
+    "producer": "SONNET, blind -- saw ONLY the PRODUCE packet (skill text + situation); never saw split.jsonl, the property vocabulary, the checkers, or any GRADE packet",
+    "artifacts": "N:\\claude-cfl\\gt1-blind\\out"
+  },
+  "v1_as_measured": {
+    "R_best": 1.0,
+    "R_degraded": 0.8672,
+    "R_blind": 0.9141,
+    "note": "the same three artifact sets scored with the PRE-calibration property module (git HEAD:scripts/audit/gt2_properties.py). Reproduces the published GT-2 blind-run-1 numbers exactly."
+  },
+  "blind_fail_row_classification": {
+    "fail_rows_v1": 11,
+    "checker_false_positive": 0,
+    "producer_miss": 11,
+    "property_defect": 0,
+    "by_property": {
+      "PM:on_silence_acting_label": 1,
+      "PM:on_silence_sentence_not_label": 1,
+      "PM:byte_verify_named": 1,
+      "PM:fm:expires": 1,
+      "PM:expires_parseable": 1,
+      "PM:deadline_three_actions": 1,
+      "PM:no_expires_and_unclocked_declared_deliberate": 1,
+      "PM:receipt_mark_present": 1,
+      "PM:three_states_named": 1,
+      "PM:unreceipted_not_declined": 1,
+      "PM:delivery_state_ladder": 1
+    }
+  },
+  "loss_conditions_2026_09_02": {
+    "stated_before_the_run": [
+      "R_blind must NOT exceed R_best for any skill",
+      "R_degraded must still be < R_best",
+      "if R_blind still sits below R_degraded, the split is UNKNOWN-CALIBRATION and says so"
+    ],
+    "R_blind_le_R_best": true,
+    "R_degraded_lt_R_best": true,
+    "R_blind_gt_R_degraded": true,
+    "verdict": "CALIBRATED"
+  },
+  "cross_tier_caveat": "R_best and R_degraded are OPUS-tier productions; R_blind is SONNET. wiki/concepts/wikiskill-adoption.md forbids reading one tier's number as another's. R_blind < R_best is therefore NOT by itself evidence the skill text is weak -- it mixes a tier gap with a skill gap, and this split cannot separate them."
+}

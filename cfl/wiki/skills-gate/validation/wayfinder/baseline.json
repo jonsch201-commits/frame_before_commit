@@ -1,0 +1,100 @@
+{
+  "skill": "wayfinder",
+  "skill_file": "skills/wayfinder/SKILL.md",
+  "skill_sha256": "37384d4b555cf95eddd4eb574327d0e7b3e5729541f74b5aac29f81ce7872c59",
+  "split": "wiki/skills-gate/validation/wayfinder/split.jsonl",
+  "split_sha256": "b00d557669aca3f0e889e3cdb3dc516e6a724982a926461538774a31f8765362",
+  "R_best": 1.0,
+  "R_degraded": 0.6714,
+  "tasks": 8,
+  "tier": "opus (the producing agent was this lane, an opus-tier reader with the full skill text in context; NOT sonnet, NOT fable, NOT haiku -- stated because the cross-tier transfer fence in wiki/concepts/wikiskill-adoption.md forbids scoring one tier's reader as another's consumer)",
+  "run_ts": "2026-09-02T17:49:43+00:00",
+  "runner_sha256": "c2df22eeb73a992a79738c922a048f6ef7c710a46511cd2563f13c0636182b76",
+  "properties_module": "scripts/audit/gt2_properties.py",
+  "properties_module_sha256": "0cf2af5144089ccbf4024caef58348e9302274d7399f31cc693891cb9cb6f67a",
+  "seed": "n/a-deterministic",
+  "mechanical_properties": 140,
+  "cold_properties_unknown": 8,
+  "R_best_detail": {
+    "passed": 140,
+    "failed": 0,
+    "unknown": 8,
+    "producer": "opus, this program's own lane, skill text in context",
+    "artifacts": "C:\\Users\\JonSc\\AppData\\Local\\Temp\\claude\\gt2\\baseline\\wayfinder"
+  },
+  "R_degraded_detail": {
+    "passed": 94,
+    "failed": 46,
+    "unknown": 8,
+    "degraded_skill_sha256": "1347fd65526cd75ca47af9900eb74482b227ee3cbf776b3c4766f7aea2a79884",
+    "ablation": "the map body template (the five named sections) and the Fog of war section (the fog-or-ticket test and what Not yet specified is for)",
+    "degraded_skill_path": "%LOCALAPPDATA%/Temp/claude/gt2/degraded/wayfinder/SKILL.md (scratch, never written into the repo)",
+    "artifacts": "C:\\Users\\JonSc\\AppData\\Local\\Temp\\claude\\gt2\\degraded-out\\wayfinder"
+  },
+  "loss_condition": "PRE-STATED (GT-3): R_blind <= R_best; R_degraded < R_best; R_blind below R_degraded => UNKNOWN-CALIBRATION. RESULT: R_best 1.0, R_degraded 0.6714, R_blind 0.7571 -- CALIBRATED.",
+  "headroom": "R_best = 0.9114, so this split HAS headroom: 14 properties fail against the CURRENT skill text. All of them are the acceptance-test pair -- the skill's ticket template instructs a Question and nothing else, so a faithful producer writes tickets with no failable acceptance test. That is a measured gap in the skill, not a production error, and it is the one split of the five that a proposal can currently satisfy G6 against.",
+  "blind_spots": "fog_and_scope_disjoint and out_of_scope_items_carry_why lost NOTHING: the Out of scope section survives this ablation, so the split cannot see a change that touches only the scoping half. Ticketed.",
+  "packets_for_a_blind_run": "N:\\claude-cfl\\gt2-blind\\wayfinder\\",
+  "version": "v2 (GT-3 calibration against blind producer output, 2026-09-02)",
+  "supersedes": "v1, run_ts 2026-09-02T21:40:00+00:00 -- kept below under v1_as_measured",
+  "split_sha256_v1": "2c13d06b9ff20a86399ade5a45d55086805b64ab6f9ca19ced4e974c6135466c",
+  "split_resealed": true,
+  "properties_module_sha256_v1": "1c57d68fb95b2c8a226fbe1f9343abf3f4e7bcf71d17233b5dfc75e4b71aea22",
+  "R_blind": 0.7571,
+  "R_blind_detail": {
+    "passed": 106,
+    "failed": 34,
+    "unknown": 8,
+    "producer": "SONNET, blind -- saw ONLY the PRODUCE packet (skill text + situation); never saw split.jsonl, the property vocabulary, the checkers, or any GRADE packet",
+    "artifacts": "N:\\claude-cfl\\gt2-blind\\wayfinder\\out"
+  },
+  "v1_as_measured": {
+    "R_best": 0.9114,
+    "R_degraded": 0.6203,
+    "R_blind": 0.5316,
+    "note": "the same three artifact sets scored with the PRE-calibration property module (git HEAD:scripts/audit/gt2_properties.py). Reproduces the published GT-2 blind-run-1 numbers exactly."
+  },
+  "blind_fail_row_classification": {
+    "fail_rows_v1": 74,
+    "checker_false_positive": 22,
+    "producer_miss": 34,
+    "property_defect": 18,
+    "by_property": {
+      "CFP:destination_is_one_or_two_lines": 2,
+      "CFP:out_of_scope_items_carry_why": 5,
+      "CFP:tracker_choice_named": 4,
+      "CFP:every_ticket_has_question": 4,
+      "PD:every_ticket_has_acceptance_test": 7,
+      "PD:acceptance_tests_failable": 7,
+      "PM:map_section:destination": 4,
+      "PM:map_section:notes": 4,
+      "PM:map_section:out_of_scope": 2,
+      "PM:destination_is_one_or_two_lines": 4,
+      "PM:out_of_scope_items_carry_why": 2,
+      "CFP:map_body_lists_no_open_tickets": 4,
+      "CFP:blocking_convention_named": 2,
+      "PM:every_ticket_has_question": 3,
+      "PM:every_ticket_has_type_label": 3,
+      "PM:claim_before_work": 4,
+      "PD:one_ticket_per_session_with_research_exception": 4,
+      "CFP:graduated_fog_cleared": 1,
+      "PM:map_section:fog": 2,
+      "PM:fog_items_are_in_scope": 2,
+      "PM:blocking_convention_named": 2,
+      "PM:graduated_fog_cleared": 1,
+      "PM:fog_and_scope_disjoint": 1
+    }
+  },
+  "loss_conditions_2026_09_02": {
+    "stated_before_the_run": [
+      "R_blind must NOT exceed R_best for any skill",
+      "R_degraded must still be < R_best",
+      "if R_blind still sits below R_degraded, the split is UNKNOWN-CALIBRATION and says so"
+    ],
+    "R_blind_le_R_best": true,
+    "R_degraded_lt_R_best": true,
+    "R_blind_gt_R_degraded": true,
+    "verdict": "CALIBRATED"
+  },
+  "cross_tier_caveat": "R_best and R_degraded are OPUS-tier productions; R_blind is SONNET. wiki/concepts/wikiskill-adoption.md forbids reading one tier's number as another's. R_blind < R_best is therefore NOT by itself evidence the skill text is weak -- it mixes a tier gap with a skill gap, and this split cannot separate them."
+}

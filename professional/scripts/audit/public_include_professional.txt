@@ -1,0 +1,36 @@
+# Professional include spec for derive_public_tree.py --include-spec (CFL's key set: EXACT_INCLUDE,
+# PREFIX_INCLUDE, SUFFIX_UNDER <dir> <suffix>, BASENAME_UNDER <dir> <depth> <name>).
+# Written 2026-09-11 19:2x by Professional seat 682d274b for PR 4 run 3 over N:\claude-professional.
+# Allow-list, not deny-list: a path matching nothing here is never considered. The exclusion file
+# (CFL's public_exclusions.txt) still applies below this list, so every included file is scanned.
+#
+# What is deliberately NOT here, with the reason:
+#   wiki/tracker/, wiki/log.md, wiki/index.md, WAKE.md, RESUME*.md, START-HERE.md, POSTCOMPACT-STATUS.md
+#     operational state of this seat; the PR ships the method, not the day's clocks
+#   exchange/, raw/, evidence/, gists/, handoff-*.md   letters, transcripts, captures: never derived
+#   CLAUDE.md   the project constitution names sibling paths and gates that are not the reader's;
+#     whether a redacted copy ships is question-shaped and is not decided by an include list
+#   launch-claude-professional.bat   machine layout
+#   wiki/test-outputs/ except seals/   test designs reference private sessions; seals are the FBC record
+#
+# The knowledge pages
+PREFIX_INCLUDE wiki/concepts/
+PREFIX_INCLUDE wiki/references/
+PREFIX_INCLUDE wiki/sources/
+PREFIX_INCLUDE wiki/test-outputs/seals/
+# The instruments this trunk authored, source only; each is content-scanned like any other file
+SUFFIX_UNDER scripts/ .py
+SUFFIX_UNDER scripts/ .sh
+SUFFIX_UNDER scripts/audit/ .py
+SUFFIX_UNDER scripts/audit/ .sh
+# SUFFIX_UNDER scripts/audit/ .txt  -- REMOVED 2026-09-12 23:10: exclusion specs are inputs and carry a credential-shaped literal (value-walk hit on this trunk's own spec)
+EXACT_INCLUDE scripts/audit/public_include_professional.txt
+# The skills and the two commands
+BASENAME_UNDER skills/ 3 SKILL.md
+BASENAME_UNDER skills/ 3 PURPOSE.md
+SUFFIX_UNDER .claude/commands/ .md
+EXACT_INCLUDE README.md
+
+# T7 remedies 2026-09-13 00:5x (criterion 2 coverage, plan section 13): the hand index ships so C2 can be measured (dangling links to excluded pages are the honest number, not zero); oath-checks ships so C16-C32 can run. INDEX-DERIVED.md is NOT added: a derived subset tree cannot carry the source tree's derived index (C10 would read drift), and regenerating it inside the artifact would break the manifest -- structural, recorded in the plan.
+EXACT_INCLUDE wiki/index.md
+PREFIX_INCLUDE .claude/skills/oath-checks/

@@ -1,0 +1,66 @@
+{
+  "label": "blind-sonnet-run1-cold",
+  "grader": "fresh sonnet, packets+letters only",
+  "verdicts": [
+    {
+      "task": "T01",
+      "property": "cold:a cold reader can state what CFL will do on the stated deadline without opening any other file",
+      "verdict": "PASS",
+      "reason": "T01.md line 7 (on_silence): 'unreceipted — CFL will re-send as a past-due follow-up at expiry; no default fires beyond that' names a specific act on the 2026-09-05 expiry with no other file needed."
+    },
+    {
+      "task": "T02",
+      "property": "cold:the reply names the adaptation explicitly so the sender can grade it adopt / adapt / decline",
+      "verdict": "PASS",
+      "reason": "T02.md line 15: 'Disposition: ADOPT, with one adaptation. CFL will keep the per-letter receipt row in the gate ledger (wiki/skills-gate/LEDGER.md) rather than a separate file' names the exact change."
+    },
+    {
+      "task": "T03",
+      "property": "cold:from this letter alone the proposer can tell READ-AND-UNDECIDED apart from NEVER-RECEIVED",
+      "verdict": "PASS",
+      "reason": "T03.md line 17: 'CFL has read it in full. CFL has not decided.' explicitly asserts both receipt and non-decision, ruling out never-received."
+    },
+    {
+      "task": "T04",
+      "property": "cold:the trunk whose inbound copy was not re-verified is recorded as delivery-unverified, NOT as declined and NOT as silent-therefore-uninterested",
+      "verdict": "PASS",
+      "reason": "T04.md line 19 records Antigravity as 'UNKNOWN ... not gradeable as DELIVERED until re-verified', and line 24 explicitly states 'Only Professional has declined', ruling out decline and disinterest readings for Antigravity."
+    },
+    {
+      "task": "T05",
+      "property": "cold:each of the three states gets its OWN stated action, not one action covering all three",
+      "verdict": "PASS",
+      "reason": "T05.md lines 16-24 give three distinct actions: undelivered -> re-send with byte-verify (line 16-17), unreceipted -> follow up once directly before re-grading (line 18-20), declined -> record DISPOSITIONED: DECLINE and take no further action (line 21-22)."
+    },
+    {
+      "task": "T06",
+      "property": "cold:the letter shows the erroneous form without presenting it as the correct one",
+      "verdict": "FAIL",
+      "reason": "T06.md lines 12-22 only describe the erroneous emphasized form in prose ('carried Jon's PII ruling with emphasis added inside the quotation marks') and then quote the corrected byte string at line 18 — the erroneous form itself is never shown anywhere in the letter."
+    },
+    {
+      "task": "T07",
+      "property": "cold:a reader knows the missing deadline is deliberate rather than an omission",
+      "verdict": "PASS",
+      "reason": "T07.md lines 14-16: 'No expires: field is set, and that absence is deliberate, not an omission — this notice will read UNCLOCKED ... by design.'"
+    },
+    {
+      "task": "T08",
+      "property": "cold:the verdict, its reason and the raw-output pointer are all present",
+      "verdict": "PASS",
+      "reason": "T08.md line 13 gives verdict 'REJECTED' and reason 'The attached probe cannot fail'; line 15 gives the raw-output pointer 'wiki/skills-gate/probes/PROP-005-run.txt'."
+    },
+    {
+      "task": "T09",
+      "property": "cold:a haiku-tier reader can name all three trunk states and the reason none is recorded as no-interest, without opening another file",
+      "verdict": "FAIL",
+      "reason": "T09.md lines 15-17 name three states cleanly, but the stated 'reason' (lines 19-23) is only Jon's bandwidth quote ('One thing from you one thing from me. Thats the bandwidth.'), which does not logically explain why silence isn't recorded as no-interest — a reader must infer the connection rather than read it directly, failing the no-reread bar the instruction sets."
+    },
+    {
+      "task": "T10",
+      "property": "cold:the four states (never-arrived / arrived-unverified / arrived-and-unanswered / refused) are each distinguishable from this letter alone",
+      "verdict": "PASS",
+      "reason": "T10.md line 14 rules out never-arrived ('a file is present... not never-arrived'), lines 14-15 claim arrived-unverified, lines 18-19 explain the undecided state is because the tail is missing (not a generic unanswered), and line 19 explicitly states 'Not refused.'"
+    }
+  ]
+}

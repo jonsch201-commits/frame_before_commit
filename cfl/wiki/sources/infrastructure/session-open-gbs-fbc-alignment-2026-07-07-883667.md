@@ -1,0 +1,50 @@
+---
+title: Session-Open Alignment — GBS×FBC Point-of-Commitment Refinement, FBC HOLD Re-Entry, SessionStart Hook, WIP Limit
+trunk: fl
+branch: [cfl, fbc]
+sub_branch: [skills]
+branch_reason: "R-SRC-INFRA; secondary branch from title/slug (fbc) — load-bearing-for; sub: skills 3 vs fleet 2 on authored labels"
+source_file: raw/transcripts/claude-ai/_routing/incoming/chat-2026-07-07-883667-prioritizing-skills-and-claude-instructions.md
+date_ingested: 2026-07-07
+date_updated: 2026-07-07
+type: session
+tags: fl, gbs, fbc, claude-code, hooks, session-open, project-instructions, pm, wip-limit, tracker, ds-3, sync-universal
+---
+
+## Summary
+
+A claude.ai session (July 5–6, 2026) prioritizing high-value skill/instruction/CLAUDE.md changes and resolving three of them. Confirms the GBS×FBC interaction rule with a new point-of-commitment refinement (Jon: "100% agree, brilliant"); drafts an FBC HOLD re-entry condition with dual gates and a diary date; specifies a Claude Code SessionStart hook that makes `sync-universal.sh` deterministic; rewrites the claude.ai project-instructions block to collapse three Drive reads to one (skills injected as project files, freshness guaranteed by the hook); and delivers a PM consolidation analysis whose central finding is that Jon's *attention* — not agent capacity — is the scarce resource, with a proposed WIP limit. Surfaces two governance discrepancies: a T-09 mis-citation (corrected against the wiki) and a DS-3 status conflict between the tracker and the 2026-07-05 wiki-master log.
+
+## Key Claims
+
+- **GBS×FBC interaction rule confirmed, with a point-of-commitment refinement.** Standing answer: FBC branches are exempt from GBS grounding; COMMIT and META apply GBS discipline. Rationale is architectural, not convenient — FBC Discipline Rule 1 already says branches don't hedge internally and uncertainty lives in META/COMMIT; GBS labels are epistemic hedging apparatus, so putting them in branches re-litigates a settled rule and weakens the branch's ability to displace the instinct anchor. The one vulnerability (a PRIOR branch asserts an unlabeled false attribution that drives a [DELTA] into COMMIT — ungrounded content laundered through the exemption) is closed by the refinement: **GBS attaches at the point of commitment, not the point of origin** — any branch-originated claim surviving into COMMIT is grounded there, when it becomes load-bearing. Jon: "100% agree with the point-of-commitment refinement. Brilliant." ([session-open-gbs-fbc-alignment-2026-07-07-883667:T-gbs])
+
+- **SessionStart hook makes `sync-universal.sh` deterministic — closes the "Jon never runs sync" problem as a class.** claude.ai project instructions are *injection, not execution*: there is no hook system, so whether an instance performs session-open reads is probabilistic (demonstrated live — the assistant read the wiki index but skipped the two skill reads because they were already injected as project files). Claude Code, by contrast, has SessionStart hooks (deterministic shell at open/resume/post-compact, configured in `~/.claude/settings.json`). Proposed block: `cd /path/to/claude-foundational-layer && git pull --ff-only 2>/dev/null; bash sync-universal.sh` — pull-then-sync so a stale repo can't propagate; `;` so sync runs even if pull fails offline; idempotent. ([session-open-gbs-fbc-alignment-2026-07-07-883667:T-hook])
+
+- **Revised claude.ai project-instructions block — three Drive reads collapse to one.** Because CC becomes the deterministic freshness layer (hook guarantees repo↔local skill currency), claude.ai only needs to read the single dynamic artifact: the wiki index. Skills are injected as project files and must NOT be re-read from Drive; wiki-master SKILL.md is read from Drive only before a wiki WRITE. The honest trade: Jon takes on a rare manual step (refresh project files when a skill changes) in exchange for dropping two Drive reads every session — the right side of the trade given how rarely skill files change. The full revised block (Session Open / This Project / Skills / Wiki sections) is captured in the source. ([session-open-gbs-fbc-alignment-2026-07-07-883667:T-instructions])
+
+- **FBC HOLD re-entry condition drafted — two gates, a diary date, and an owner.** The tracker's `FBC Protocol Ratchet | ON HOLD` row is flawed: it is `[inferred]` (never Jon-confirmed) and "post-DS-3" is a dependency, not a re-entry condition, untethered from the recorded HOLD reason (Test Master flagged instrument improvements needed before ratchet runs yield trustworthy signal). Draft re-entry — either gate fires first: (1) **Instrument gate** — Test Master's named improvements implemented and verified, or explicitly waived in writing with rationale ("deviation with disclosure"); (2) **Adequacy gate** — DS-3 applied AND a Test Master session affirmatively confirms instruments are adequate (DS-3 completing does not itself reopen FBC). **Diary date 2026-08-31:** if neither gate fires, PM must decide at the next update-tracker run (resume / re-HOLD with new date / reclassify) — a HOLD surviving its diary in silence is a soft KILL. Trigger owner: PM's update-tracker. ([session-open-gbs-fbc-alignment-2026-07-07-883667:T-fbc-hold])
+
+- **PM consolidation — the scarce resource is Jon's attention, not agent capacity.** Open items sorted by *whose attention they consume*: **JON-REQUIRED (6):** DS-3 wiki-temp review (highest leverage — gates meta-PM apply, FBC Gate 2, wiki reorg paths), credential exposure action items (BLOCKED, security), paste the instructions block, T-09 (needs a tracker row), the async decision queue, git-workflow session (fold into next desktop PM session). **AGENT-EXECUTABLE (non-interactive):** everything in the CC packet, plus T-24 once specced. **INTERACTIVE DESIGN (schedule):** T-88 second brain, Judgment, security education, S2 true-branch test. **PARKED WITH CONDITIONS:** FBC (now written), Stylomantic, 02-CF, and the long tail. ([session-open-gbs-fbc-alignment-2026-07-07-883667:T-pm])
+
+- **Proposed WIP limit (high-confidence structural recommendation).** No more than two ACTIVE items per trunk requiring Jon's attention; everything else must be HOLD-with-condition, agent-assigned, or triage. Jon's goals doc already names the failure mode ("designs compounding faster than runs"); the tracker currently violates it. Overlaps to exploit: one re-entry template fixes the same defect across three holds; the hook retires the stale-skills problem as a class; one DS-3 review unblocks a chain; credential-items → tightening → education is one security sequence, not three threads. ([session-open-gbs-fbc-alignment-2026-07-07-883667:T-pm])
+
+- **CC handoff packet produced (cc-handoff-packet-2026-07-05.md).** Consolidates seven execution items into one Claude Code session: sync + hook install, settings verification (with `skipAutoPermissionPrompt` flagged as must-verify — could not confirm it is a real settings key; setting a non-key is false security), bash deny-by-default policy for service/system control (Stop-Service, sc, net stop, shutdown, registry writes, VPN/firewall control — the NordVPN incident defines the class; CC enumerates the allowlist from command history), intake queue processing, GBS decision write, FBC re-entry + tracker correction with Test Master list verification, backlog verification, CLAUDE.md update. ([session-open-gbs-fbc-alignment-2026-07-07-883667:T-packet])
+
+- **T-09 correction — a memory-sourced claim contradicted by the wiki.** The assistant's earlier "T-09 = professional governance, acute live risk" was memory-sourced and fails the wiki-first check: the wiki's T-009 is "Stylomantic → 02-CF bridge" (parked 2026-05-17, correctly blocked on Stylomantic Phase 2, dormant). The professional-governance item is believed real but its ID is unknown — likely open-items (OI-numbering) or wiki/pro/, not triage T-numbering. The desktop session should verify against `open-items.md` and `wiki/pro/index.md`. Demonstrates the wiki-first rule catching a confabulated citation in real time. ([session-open-gbs-fbc-alignment-2026-07-07-883667:T-t09])
+
+## Conflicts
+
+⚠️ CONFLICT (DS-3 status): The tracker shows DS-3 ACTIVE, next action "Jon review wiki-temp/ and approve," but `wiki-temp/` does not exist in Drive (it was a *local* staging directory created by the 2026-07-03 meta-PM session, invisible from phone/Drive), and the 2026-07-05 wiki-master log classified the DS-3 intake packet (`wiki-master-ds3-meta-wiki-reorganization`) as "already-done / already-in-wiki." Git history confirms DS-3 reorg commits (15b3c90, 521fa9b) exist on local main. So one of three is true: (a) the reorg was applied without Jon's gate (a gate violation), (b) the "already-done" classification is wrong, or (c) wiki-temp/ sits uncommitted on disk. A desktop CC session must reconstruct state (does wiki-temp/ exist locally? was DS-3 committed? diff summary if applied without review), write a phone-readable DS-3 REVIEW SHEET, and correct the tracker row. Resolution is Jon's.
+
+## Entities & Concepts
+
+[[frame-before-commit]], [[multi-agent-orchestration]], [[skills-system]], [[meta-pm-framework]], [[agent-interaction-framework-2026-07-02-5990f2]], [[security-permission-plan-2026-07-03]]
+
+## Uncaptured Content
+
+a) The `ground-before-stating` (GBS) discipline is referenced throughout and now confirmed in interaction with FBC, but has no concept page — it is a recurring cross-source concept (appears in 5990f2, the security packet, and here) and is a concept-page candidate.
+
+b) Deferred/HELD at session end: security education outline (folded into the scheduled desktop PM session); the WIP-limit proposal needs Jon's yes/no before it is written into tracker rules; Judgment's three design questions (granularity of domain-reliability tracking, who triggers writes to the known-failures log, whether Judgment warrants its own lint) — answered in the Judgment session itself.
+
+c) The revised project-instructions block and CC handoff packet are execution artifacts produced in-session; the packet lives in the transcript / Claude.ai outputs, not yet in the repo.

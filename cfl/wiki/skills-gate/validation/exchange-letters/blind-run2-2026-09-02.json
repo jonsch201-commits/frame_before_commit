@@ -1,0 +1,791 @@
+{
+  "meta": {
+    "skill": "exchange-letters",
+    "skill_file": "skills\\exchange-letters\\SKILL.md",
+    "skill_sha256": "9a507c577112c4d3abe4600aaf74bd76ff64d93f8f36256da0f09e10f6b3c766",
+    "split": "wiki\\skills-gate\\validation\\exchange-letters\\split.jsonl",
+    "split_sha256": "51e2f7c8b063e4e6a57104627b9c11d800e9929d944bc10708f711fe91b620a6",
+    "tier": "sonnet",
+    "runner_sha256": "c2df22eeb73a992a79738c922a048f6ef7c710a46511cd2563f13c0636182b76",
+    "seed": "n/a-deterministic",
+    "run_ts": "2026-09-02T18:02:35+00:00",
+    "label": "blind-sonnet-run2",
+    "tasks": 10
+  },
+  "R": 0.8828,
+  "passed": 113,
+  "failed": 15,
+  "unknown": 10,
+  "rows": [
+    {
+      "id": "T01",
+      "letter": "N:\\claude-cfl\\gt4-blind\\exchange-letters\\out\\T01.md",
+      "bytes": 1108,
+      "sha256": "25fb552b9ea6c952e371ed3c9c6bad41bbd7793b66d790a999562f691d79a6fc",
+      "properties": [
+        {
+          "property": "fm:from",
+          "verdict": "PASS",
+          "note": "from='CFL'"
+        },
+        {
+          "property": "fm:to",
+          "verdict": "PASS",
+          "note": "to='Herald (Claude Personal)'"
+        },
+        {
+          "property": "fm:date",
+          "verdict": "PASS",
+          "note": "date='2026-09-02'"
+        },
+        {
+          "property": "fm:kind",
+          "verdict": "PASS",
+          "note": "kind='finding'"
+        },
+        {
+          "property": "fm:on_silence",
+          "verdict": "PASS",
+          "note": "on_silence='\"NO-OP — CFL logs the finding UNRECEIPTED and re-sends at next wake; no other action fires\"'"
+        },
+        {
+          "property": "fm:expires",
+          "verdict": "PASS",
+          "note": "expires='2026-09-05'"
+        },
+        {
+          "property": "fm:reader_token_cost",
+          "verdict": "PASS",
+          "note": "reader_token_cost='~120 tokens'"
+        },
+        {
+          "property": "expires_parseable",
+          "verdict": "PASS",
+          "note": "expires='2026-09-05' -> 2026-09-05 23:59:59"
+        },
+        {
+          "property": "on_silence_acting_label",
+          "verdict": "PASS",
+          "note": "on_silence='\"NO-OP — CFL logs the finding UNRECEIPTED and re-sends at next wake; no other action fires\"'"
+        },
+        {
+          "property": "on_silence_sentence_not_label",
+          "verdict": "PASS",
+          "note": "words=15 acting=True v='\"NO-OP — CFL logs the finding UNRECEIPTED and re-sends at next wake; no other action fires\"'"
+        },
+        {
+          "property": "silence_lint_pass",
+          "verdict": "PASS",
+          "note": "clean"
+        },
+        {
+          "property": "byte_verify_named",
+          "verdict": "FAIL",
+          "note": "byte-verification named=False"
+        },
+        {
+          "property": "no_emphasis_inside_quote",
+          "verdict": "PASS",
+          "note": "emphasised quoted spans=[]"
+        },
+        {
+          "property": "cold:a cold reader can state what CFL will do on the stated deadline without opening any other file",
+          "verdict": "UNKNOWN",
+          "note": "cold-reader property; not mechanically checkable"
+        }
+      ]
+    },
+    {
+      "id": "T02",
+      "letter": "N:\\claude-cfl\\gt4-blind\\exchange-letters\\out\\T02.md",
+      "bytes": 901,
+      "sha256": "e73a08ecb3c8faa432e952919655a27e98d0c81602d3e38f0c3c143c9d952655",
+      "properties": [
+        {
+          "property": "fm:from",
+          "verdict": "PASS",
+          "note": "from='CFL'"
+        },
+        {
+          "property": "fm:to",
+          "verdict": "PASS",
+          "note": "to='Soul'"
+        },
+        {
+          "property": "fm:date",
+          "verdict": "PASS",
+          "note": "date='2026-09-02'"
+        },
+        {
+          "property": "fm:kind",
+          "verdict": "PASS",
+          "note": "kind='reply'"
+        },
+        {
+          "property": "fm:in_reply_to",
+          "verdict": "PASS",
+          "note": "in_reply_to='exchange/inbound/soul-offer-receipt-rows-2026-08-30.md'"
+        },
+        {
+          "property": "fm:on_silence",
+          "verdict": "PASS",
+          "note": "on_silence='\"nothing acts — this letter is CFL\\'s receipt and disposition; no further reply is owed\"'"
+        },
+        {
+          "property": "fm:reader_token_cost",
+          "verdict": "PASS",
+          "note": "reader_token_cost='~90 tokens'"
+        },
+        {
+          "property": "receipt_mark_present",
+          "verdict": "FAIL",
+          "note": "receipt mark=False"
+        },
+        {
+          "property": "on_silence_acting_label",
+          "verdict": "PASS",
+          "note": "on_silence='\"nothing acts — this letter is CFL\\'s receipt and disposition; no further reply is owed\"'"
+        },
+        {
+          "property": "silence_lint_pass",
+          "verdict": "PASS",
+          "note": "clean"
+        },
+        {
+          "property": "cold:the reply names the adaptation explicitly so the sender can grade it adopt / adapt / decline",
+          "verdict": "UNKNOWN",
+          "note": "cold-reader property; not mechanically checkable"
+        }
+      ]
+    },
+    {
+      "id": "T03",
+      "letter": "N:\\claude-cfl\\gt4-blind\\exchange-letters\\out\\T03.md",
+      "bytes": 682,
+      "sha256": "38833219b801d2d2bd81a435b5ee9861894f00eab7c5eed3a14c87c6f706e3bc",
+      "properties": [
+        {
+          "property": "fm:from",
+          "verdict": "PASS",
+          "note": "from='CFL'"
+        },
+        {
+          "property": "fm:to",
+          "verdict": "PASS",
+          "note": "to='Antigravity'"
+        },
+        {
+          "property": "fm:date",
+          "verdict": "PASS",
+          "note": "date='2026-09-02'"
+        },
+        {
+          "property": "fm:kind",
+          "verdict": "PASS",
+          "note": "kind='receipt'"
+        },
+        {
+          "property": "fm:in_reply_to",
+          "verdict": "FAIL",
+          "note": "in_reply_to=''"
+        },
+        {
+          "property": "fm:on_silence",
+          "verdict": "PASS",
+          "note": "on_silence='\"ACTS — CFL will send its disposition (adopt/adapt/decline) by 2026-09-05\"'"
+        },
+        {
+          "property": "fm:expires",
+          "verdict": "PASS",
+          "note": "expires='2026-09-05'"
+        },
+        {
+          "property": "fm:reader_token_cost",
+          "verdict": "PASS",
+          "note": "reader_token_cost='~80 tokens'"
+        },
+        {
+          "property": "expires_parseable",
+          "verdict": "PASS",
+          "note": "expires='2026-09-05' -> 2026-09-05 23:59:59"
+        },
+        {
+          "property": "receipt_mark_present",
+          "verdict": "PASS",
+          "note": "receipt mark=True"
+        },
+        {
+          "property": "undispositioned_state_reported",
+          "verdict": "PASS",
+          "note": "undispositioned state named=True"
+        },
+        {
+          "property": "on_silence_acting_label",
+          "verdict": "PASS",
+          "note": "on_silence='\"ACTS — CFL will send its disposition (adopt/adapt/decline) by 2026-09-05\"'"
+        },
+        {
+          "property": "silence_lint_pass",
+          "verdict": "PASS",
+          "note": "clean"
+        },
+        {
+          "property": "cold:from this letter alone the proposer can tell READ-AND-UNDECIDED apart from NEVER-RECEIVED",
+          "verdict": "UNKNOWN",
+          "note": "cold-reader property; not mechanically checkable"
+        }
+      ]
+    },
+    {
+      "id": "T04",
+      "letter": "N:\\claude-cfl\\gt4-blind\\exchange-letters\\out\\T04.md",
+      "bytes": 1087,
+      "sha256": "38dd9f513921e3e1751e6e63dae8112ff1f2a35f07b7c96e70c38d0716250035",
+      "properties": [
+        {
+          "property": "fm:from",
+          "verdict": "PASS",
+          "note": "from='CFL'"
+        },
+        {
+          "property": "fm:to",
+          "verdict": "PASS",
+          "note": "to='fleet'"
+        },
+        {
+          "property": "fm:date",
+          "verdict": "PASS",
+          "note": "date='2026-09-02'"
+        },
+        {
+          "property": "fm:kind",
+          "verdict": "PASS",
+          "note": "kind='status'"
+        },
+        {
+          "property": "fm:on_silence",
+          "verdict": "PASS",
+          "note": "on_silence='\"nothing acts — this is a status report, not an offer; no deadline attaches to it\"'"
+        },
+        {
+          "property": "fm:reader_token_cost",
+          "verdict": "PASS",
+          "note": "reader_token_cost='~140 tokens'"
+        },
+        {
+          "property": "three_states_named",
+          "verdict": "FAIL",
+          "note": "missing=['undelivered']"
+        },
+        {
+          "property": "unreceipted_not_declined",
+          "verdict": "PASS",
+          "note": "unreceipted=True conflation=False"
+        },
+        {
+          "property": "delivery_state_ladder",
+          "verdict": "PASS",
+          "note": "ladder terms present=['DELIVERED', 'RECEIPTED', 'DISPOSITIONED']"
+        },
+        {
+          "property": "byte_verify_named",
+          "verdict": "PASS",
+          "note": "byte-verification named=True"
+        },
+        {
+          "property": "on_silence_acting_label",
+          "verdict": "PASS",
+          "note": "on_silence='\"nothing acts — this is a status report, not an offer; no deadline attaches to it\"'"
+        },
+        {
+          "property": "silence_lint_pass",
+          "verdict": "PASS",
+          "note": "clean"
+        },
+        {
+          "property": "no_emphasis_inside_quote",
+          "verdict": "PASS",
+          "note": "emphasised quoted spans=[]"
+        },
+        {
+          "property": "cold:the trunk whose inbound copy was not re-verified is recorded as delivery-unverified, NOT as declined and NOT as silent-therefore-uninterested",
+          "verdict": "UNKNOWN",
+          "note": "cold-reader property; not mechanically checkable"
+        }
+      ]
+    },
+    {
+      "id": "T05",
+      "letter": "N:\\claude-cfl\\gt4-blind\\exchange-letters\\out\\T05.md",
+      "bytes": 1103,
+      "sha256": "74c00c7cf5d5620cb4ffeef631375150037a23100d8fbfbf677d6f4d7c5e86d7",
+      "properties": [
+        {
+          "property": "fm:from",
+          "verdict": "PASS",
+          "note": "from='CFL'"
+        },
+        {
+          "property": "fm:to",
+          "verdict": "PASS",
+          "note": "to='fleet'"
+        },
+        {
+          "property": "fm:date",
+          "verdict": "PASS",
+          "note": "date='2026-09-02'"
+        },
+        {
+          "property": "fm:kind",
+          "verdict": "PASS",
+          "note": "kind='deadline'"
+        },
+        {
+          "property": "fm:on_silence",
+          "verdict": "PASS",
+          "note": "on_silence='\"ACTS — this letter is that act; see dispositions below\"'"
+        },
+        {
+          "property": "fm:expires",
+          "verdict": "FAIL",
+          "note": "expires=''"
+        },
+        {
+          "property": "fm:reader_token_cost",
+          "verdict": "PASS",
+          "note": "reader_token_cost='~130 tokens'"
+        },
+        {
+          "property": "expires_parseable",
+          "verdict": "FAIL",
+          "note": "expires='' -> None"
+        },
+        {
+          "property": "deadline_three_actions",
+          "verdict": "FAIL",
+          "note": "lines naming exactly one state with an action=0"
+        },
+        {
+          "property": "three_states_named",
+          "verdict": "PASS",
+          "note": "missing=[]"
+        },
+        {
+          "property": "on_silence_acting_label",
+          "verdict": "PASS",
+          "note": "on_silence='\"ACTS — this letter is that act; see dispositions below\"'"
+        },
+        {
+          "property": "silence_lint_pass",
+          "verdict": "PASS",
+          "note": "clean"
+        },
+        {
+          "property": "cold:each of the three states gets its OWN stated action, not one action covering all three",
+          "verdict": "UNKNOWN",
+          "note": "cold-reader property; not mechanically checkable"
+        }
+      ]
+    },
+    {
+      "id": "T06",
+      "letter": "N:\\claude-cfl\\gt4-blind\\exchange-letters\\out\\T06.md",
+      "bytes": 866,
+      "sha256": "7cc43ea73272daec6489706461c636fbd263be7ce4fb5b1c426970934c754b8c",
+      "properties": [
+        {
+          "property": "fm:from",
+          "verdict": "PASS",
+          "note": "from='CFL'"
+        },
+        {
+          "property": "fm:to",
+          "verdict": "PASS",
+          "note": "to='Herald (Claude Personal)'"
+        },
+        {
+          "property": "fm:date",
+          "verdict": "PASS",
+          "note": "date='2026-09-02'"
+        },
+        {
+          "property": "fm:kind",
+          "verdict": "PASS",
+          "note": "kind='correction'"
+        },
+        {
+          "property": "fm:on_silence",
+          "verdict": "PASS",
+          "note": "on_silence='\"nothing acts — standing correction of record, no disposition required\"'"
+        },
+        {
+          "property": "fm:reader_token_cost",
+          "verdict": "PASS",
+          "note": "reader_token_cost='~110 tokens'"
+        },
+        {
+          "property": "contains_exact:4. Yeah no deletion. And no writing PII to Github.",
+          "verdict": "PASS",
+          "note": "literal substring present=True"
+        },
+        {
+          "property": "no_emphasis_inside_quote",
+          "verdict": "PASS",
+          "note": "emphasised quoted spans=[]"
+        },
+        {
+          "property": "on_silence_acting_label",
+          "verdict": "PASS",
+          "note": "on_silence='\"nothing acts — standing correction of record, no disposition required\"'"
+        },
+        {
+          "property": "no_expires_and_unclocked_declared_deliberate",
+          "verdict": "FAIL",
+          "note": "expires_present=False deliberateness_declared=False"
+        },
+        {
+          "property": "silence_lint_pass",
+          "verdict": "PASS",
+          "note": "clean"
+        },
+        {
+          "property": "cold:the letter shows the erroneous form without presenting it as the correct one",
+          "verdict": "UNKNOWN",
+          "note": "cold-reader property; not mechanically checkable"
+        }
+      ]
+    },
+    {
+      "id": "T07",
+      "letter": "N:\\claude-cfl\\gt4-blind\\exchange-letters\\out\\T07.md",
+      "bytes": 575,
+      "sha256": "9b0f6e2e5a7be2c7c7f4b2cd5b3034bf5029b0efff9762281ddc208bc5ad8047",
+      "properties": [
+        {
+          "property": "fm:from",
+          "verdict": "PASS",
+          "note": "from='CFL'"
+        },
+        {
+          "property": "fm:to",
+          "verdict": "PASS",
+          "note": "to='fleet'"
+        },
+        {
+          "property": "fm:date",
+          "verdict": "PASS",
+          "note": "date='2026-09-02'"
+        },
+        {
+          "property": "fm:kind",
+          "verdict": "PASS",
+          "note": "kind='notice'"
+        },
+        {
+          "property": "fm:on_silence",
+          "verdict": "PASS",
+          "note": "on_silence='\"nothing acts — standing offer, open indefinitely; no reply is expected or required\"'"
+        },
+        {
+          "property": "fm:reader_token_cost",
+          "verdict": "PASS",
+          "note": "reader_token_cost='~90 tokens'"
+        },
+        {
+          "property": "no_expires_and_unclocked_declared_deliberate",
+          "verdict": "PASS",
+          "note": "expires_present=False deliberateness_declared=True"
+        },
+        {
+          "property": "on_silence_acting_label",
+          "verdict": "PASS",
+          "note": "on_silence='\"nothing acts — standing offer, open indefinitely; no reply is expected or required\"'"
+        },
+        {
+          "property": "on_silence_sentence_not_label",
+          "verdict": "PASS",
+          "note": "words=12 acting=True v='\"nothing acts — standing offer, open indefinitely; no reply is expected or required\"'"
+        },
+        {
+          "property": "silence_lint_pass",
+          "verdict": "PASS",
+          "note": "clean"
+        },
+        {
+          "property": "cold:a reader knows the missing deadline is deliberate rather than an omission",
+          "verdict": "UNKNOWN",
+          "note": "cold-reader property; not mechanically checkable"
+        }
+      ]
+    },
+    {
+      "id": "T08",
+      "letter": "N:\\claude-cfl\\gt4-blind\\exchange-letters\\out\\T08.md",
+      "bytes": 359,
+      "sha256": "a13b3d344dda2b2da10e298f893f9da2e7dc31344188237cb31a452bc94c6ed7",
+      "properties": [
+        {
+          "property": "fm:from",
+          "verdict": "PASS",
+          "note": "from='CFL'"
+        },
+        {
+          "property": "fm:to",
+          "verdict": "PASS",
+          "note": "to='Professional'"
+        },
+        {
+          "property": "fm:date",
+          "verdict": "PASS",
+          "note": "date='2026-09-02'"
+        },
+        {
+          "property": "fm:kind",
+          "verdict": "PASS",
+          "note": "kind='verdict'"
+        },
+        {
+          "property": "fm:on_silence",
+          "verdict": "PASS",
+          "note": "on_silence='\"NO-OP — silence is not approval; this REJECTED verdict stands whether or not you reply\"'"
+        },
+        {
+          "property": "fm:reader_token_cost",
+          "verdict": "PASS",
+          "note": "reader_token_cost='~50 tokens'"
+        },
+        {
+          "property": "silence_lint_pass",
+          "verdict": "PASS",
+          "note": "clean"
+        },
+        {
+          "property": "on_silence_acting_label",
+          "verdict": "PASS",
+          "note": "on_silence='\"NO-OP — silence is not approval; this REJECTED verdict stands whether or not you reply\"'"
+        },
+        {
+          "property": "size_le_1200_bytes",
+          "verdict": "PASS",
+          "note": "359 bytes"
+        },
+        {
+          "property": "receipt_mark_present",
+          "verdict": "FAIL",
+          "note": "receipt mark=False"
+        },
+        {
+          "property": "cold:the verdict, its reason and the raw-output pointer are all present",
+          "verdict": "UNKNOWN",
+          "note": "cold-reader property; not mechanically checkable"
+        }
+      ]
+    },
+    {
+      "id": "T09",
+      "letter": "N:\\claude-cfl\\gt4-blind\\exchange-letters\\out\\T09.md",
+      "bytes": 669,
+      "sha256": "da0b88f4259e1bf63c725161555016e9a964284298f336d621fcc33aae563485",
+      "properties": [
+        {
+          "property": "fm:from",
+          "verdict": "PASS",
+          "note": "from='CFL'"
+        },
+        {
+          "property": "fm:to",
+          "verdict": "PASS",
+          "note": "to='Antigravity'"
+        },
+        {
+          "property": "fm:date",
+          "verdict": "PASS",
+          "note": "date='2026-09-02'"
+        },
+        {
+          "property": "fm:kind",
+          "verdict": "PASS",
+          "note": "kind='status'"
+        },
+        {
+          "property": "fm:on_silence",
+          "verdict": "PASS",
+          "note": "on_silence='\"nothing acts — standing report, no deadline\"'"
+        },
+        {
+          "property": "fm:reader_token_cost",
+          "verdict": "PASS",
+          "note": "reader_token_cost='~90 tokens'"
+        },
+        {
+          "property": "contains_exact:One thing from you one thing from me. Thats the bandwidth.",
+          "verdict": "PASS",
+          "note": "literal substring present=True"
+        },
+        {
+          "property": "no_emphasis_inside_quote",
+          "verdict": "PASS",
+          "note": "emphasised quoted spans=[]"
+        },
+        {
+          "property": "three_states_named",
+          "verdict": "PASS",
+          "note": "missing=[]"
+        },
+        {
+          "property": "unreceipted_not_declined",
+          "verdict": "PASS",
+          "note": "unreceipted=True conflation=False"
+        },
+        {
+          "property": "delivery_state_ladder",
+          "verdict": "FAIL",
+          "note": "ladder terms present=['DELIVERED', 'RECEIPTED']"
+        },
+        {
+          "property": "byte_verify_named",
+          "verdict": "PASS",
+          "note": "byte-verification named=True"
+        },
+        {
+          "property": "on_silence_acting_label",
+          "verdict": "PASS",
+          "note": "on_silence='\"nothing acts — standing report, no deadline\"'"
+        },
+        {
+          "property": "on_silence_sentence_not_label",
+          "verdict": "PASS",
+          "note": "words=6 acting=True v='\"nothing acts — standing report, no deadline\"'"
+        },
+        {
+          "property": "silence_lint_pass",
+          "verdict": "PASS",
+          "note": "clean"
+        },
+        {
+          "property": "size_le_1200_bytes",
+          "verdict": "PASS",
+          "note": "669 bytes"
+        },
+        {
+          "property": "no_expires_and_unclocked_declared_deliberate",
+          "verdict": "FAIL",
+          "note": "expires_present=False deliberateness_declared=False"
+        },
+        {
+          "property": "cold:a haiku-tier reader can name all three trunk states and the reason none is recorded as no-interest, without opening another file",
+          "verdict": "UNKNOWN",
+          "note": "cold-reader property; not mechanically checkable"
+        }
+      ]
+    },
+    {
+      "id": "T10",
+      "letter": "N:\\claude-cfl\\gt4-blind\\exchange-letters\\out\\T10.md",
+      "bytes": 706,
+      "sha256": "2fb4a34ea03463fce54a0230553f72c2eee129e06f017e056e44e1a19efc0b0c",
+      "properties": [
+        {
+          "property": "fm:from",
+          "verdict": "PASS",
+          "note": "from='CFL'"
+        },
+        {
+          "property": "fm:to",
+          "verdict": "PASS",
+          "note": "to='Professional'"
+        },
+        {
+          "property": "fm:date",
+          "verdict": "PASS",
+          "note": "date='2026-09-02'"
+        },
+        {
+          "property": "fm:kind",
+          "verdict": "PASS",
+          "note": "kind='receipt'"
+        },
+        {
+          "property": "fm:in_reply_to",
+          "verdict": "FAIL",
+          "note": "in_reply_to=''"
+        },
+        {
+          "property": "fm:on_silence",
+          "verdict": "PASS",
+          "note": "on_silence='\"ACTS — CFL acts 2026-09-06 if nothing changes\"'"
+        },
+        {
+          "property": "fm:expires",
+          "verdict": "PASS",
+          "note": "expires='2026-09-06'"
+        },
+        {
+          "property": "fm:reader_token_cost",
+          "verdict": "PASS",
+          "note": "reader_token_cost='~110 tokens'"
+        },
+        {
+          "property": "expires_parseable",
+          "verdict": "PASS",
+          "note": "expires='2026-09-06' -> 2026-09-06 23:59:59"
+        },
+        {
+          "property": "receipt_mark_present",
+          "verdict": "PASS",
+          "note": "receipt mark=True"
+        },
+        {
+          "property": "undispositioned_state_reported",
+          "verdict": "PASS",
+          "note": "undispositioned state named=True"
+        },
+        {
+          "property": "three_states_named",
+          "verdict": "FAIL",
+          "note": "missing=['undelivered', 'unreceipted', 'declined']"
+        },
+        {
+          "property": "unreceipted_not_declined",
+          "verdict": "FAIL",
+          "note": "unreceipted=False conflation=False"
+        },
+        {
+          "property": "delivery_state_ladder",
+          "verdict": "FAIL",
+          "note": "ladder terms present=[]"
+        },
+        {
+          "property": "byte_verify_named",
+          "verdict": "PASS",
+          "note": "byte-verification named=True"
+        },
+        {
+          "property": "on_silence_acting_label",
+          "verdict": "PASS",
+          "note": "on_silence='\"ACTS — CFL acts 2026-09-06 if nothing changes\"'"
+        },
+        {
+          "property": "on_silence_sentence_not_label",
+          "verdict": "PASS",
+          "note": "words=7 acting=True v='\"ACTS — CFL acts 2026-09-06 if nothing changes\"'"
+        },
+        {
+          "property": "silence_lint_pass",
+          "verdict": "PASS",
+          "note": "clean"
+        },
+        {
+          "property": "size_le_1200_bytes",
+          "verdict": "PASS",
+          "note": "706 bytes"
+        },
+        {
+          "property": "cold:the four states (never-arrived / arrived-unverified / arrived-and-unanswered / refused) are each distinguishable from this letter alone",
+          "verdict": "UNKNOWN",
+          "note": "cold-reader property; not mechanically checkable"
+        }
+      ]
+    }
+  ]
+}

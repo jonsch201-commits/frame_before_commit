@@ -1,0 +1,775 @@
+{
+  "meta": {
+    "skill": "su-compact",
+    "skill_file": ".claude\\commands\\su-compact.md",
+    "skill_sha256": "b06e130eddf48bdaba9add139e9dad4f11e42f342f8518b328d274a708b7b0ab",
+    "split": "wiki\\skills-gate\\validation\\su-compact\\split.jsonl",
+    "split_sha256": "e1864f330ef8d71c8c42835efa04f13f28d653cbb50bca428263ae67b21b3963",
+    "tier": "sonnet",
+    "runner_sha256": "c2df22eeb73a992a79738c922a048f6ef7c710a46511cd2563f13c0636182b76",
+    "seed": "n/a-deterministic",
+    "run_ts": "2026-09-02T18:05:46+00:00",
+    "label": "blind-sonnet-run2",
+    "tasks": 8
+  },
+  "R": 0.8,
+  "passed": 104,
+  "failed": 26,
+  "unknown": 8,
+  "rows": [
+    {
+      "id": "S01",
+      "letter": "N:\\claude-cfl\\gt4-blind\\su-compact\\out\\S01.md",
+      "bytes": 7725,
+      "sha256": "f137a46e6c0254edca4b0ce102e8fa38b330b11b71f71798f65d84e1e7e2570a",
+      "properties": [
+        {
+          "property": "as_of_date_explicit",
+          "verdict": "PASS",
+          "note": "as-of with an ISO date=True"
+        },
+        {
+          "property": "as_of_not_shell_default",
+          "verdict": "PASS",
+          "note": "explicit as-of date=True floating 'today' as-of=False provenance stated=True"
+        },
+        {
+          "property": "every_landing_has_sha",
+          "verdict": "PASS",
+          "note": "landings with no sha=[]"
+        },
+        {
+          "property": "every_landing_has_readback",
+          "verdict": "PASS",
+          "note": "landings with no readback=[]"
+        },
+        {
+          "property": "verdict_with_both_exit_codes",
+          "verdict": "PASS",
+          "note": "verdict word=True exit codes reported=['0', '0', '0', '0', '0', '0']"
+        },
+        {
+          "property": "tally_rows_carry_commands",
+          "verdict": "FAIL",
+          "note": "tally rows with no producing command=['| CARRIER.md | `11871` B → `11902` B | refresh, sh', '| wayfinder-week-2026-09-02.md | updated, 1 ticket']"
+        },
+        {
+          "property": "interpretation_labelled_separately",
+          "verdict": "PASS",
+          "note": "interpretation is its own labelled heading=True"
+        },
+        {
+          "property": "ask_stated_as_its_own_block",
+          "verdict": "FAIL",
+          "note": "no ASK block"
+        },
+        {
+          "property": "jon_block_no_ticket",
+          "verdict": "PASS",
+          "note": "jon-block ticket ids=[] (>=2 reads as a handed queue) assignments-to-Jon=[]"
+        },
+        {
+          "property": "next_resume_ticket_named",
+          "verdict": "FAIL",
+          "note": "next-session resume ticket named=False"
+        },
+        {
+          "property": "no_carrier_byte_gate",
+          "verdict": "PASS",
+          "note": "byte-gate assertions=[]"
+        },
+        {
+          "property": "compact_block_fenced",
+          "verdict": "PASS",
+          "note": "fenced blocks=1 one carrying the imperative=True"
+        },
+        {
+          "property": "compact_block_six_elements",
+          "verdict": "PASS",
+          "note": "compact instruction block missing=[]"
+        },
+        {
+          "property": "promises_table_present",
+          "verdict": "PASS",
+          "note": "promise rows=2 filled (deficiency + when)=2"
+        },
+        {
+          "property": "barrier_verify_named",
+          "verdict": "PASS",
+          "note": "barrier --verify named with an exit code=True"
+        },
+        {
+          "property": "no_dry_run",
+          "verdict": "PASS",
+          "note": "dry-run uses=[]"
+        },
+        {
+          "property": "no_main_merge_or_canonical",
+          "verdict": "PASS",
+          "note": "publishing acts claimed=[]"
+        },
+        {
+          "property": "cold:a cold reader can verify every landed item and knows exactly what is being asked of Jon",
+          "verdict": "UNKNOWN",
+          "note": "cold-reader property; not mechanically checkable"
+        }
+      ]
+    },
+    {
+      "id": "S02",
+      "letter": "N:\\claude-cfl\\gt4-blind\\su-compact\\out\\S02.md",
+      "bytes": 3003,
+      "sha256": "2ea842574219e19f9fc6c01cc4db2a8598c445011fca6eb63c95af658bac0811",
+      "properties": [
+        {
+          "property": "as_of_not_shell_default",
+          "verdict": "PASS",
+          "note": "explicit as-of date=False floating 'today' as-of=False provenance stated=True"
+        },
+        {
+          "property": "ask_stated_as_its_own_block",
+          "verdict": "PASS",
+          "note": "ASK names the action asked for=True"
+        },
+        {
+          "property": "no_carrier_byte_gate",
+          "verdict": "PASS",
+          "note": "byte-gate assertions=[]"
+        },
+        {
+          "property": "no_dry_run",
+          "verdict": "PASS",
+          "note": "dry-run uses=[]"
+        },
+        {
+          "property": "no_main_merge_or_canonical",
+          "verdict": "PASS",
+          "note": "publishing acts claimed=[]"
+        },
+        {
+          "property": "cold:a cold reader can verify every landed item and knows exactly what is being asked of Jon",
+          "verdict": "UNKNOWN",
+          "note": "cold-reader property; not mechanically checkable"
+        }
+      ]
+    },
+    {
+      "id": "S03",
+      "letter": "N:\\claude-cfl\\gt4-blind\\su-compact\\out\\S03.md",
+      "bytes": 6852,
+      "sha256": "374024a5357f2ed69aaaed341cd4a0bc8820d08e8e64305744933898770c2a0c",
+      "properties": [
+        {
+          "property": "as_of_date_explicit",
+          "verdict": "PASS",
+          "note": "as-of with an ISO date=True"
+        },
+        {
+          "property": "as_of_not_shell_default",
+          "verdict": "PASS",
+          "note": "explicit as-of date=True floating 'today' as-of=False provenance stated=False"
+        },
+        {
+          "property": "every_landing_has_sha",
+          "verdict": "PASS",
+          "note": "landings with no sha=[]"
+        },
+        {
+          "property": "every_landing_has_readback",
+          "verdict": "PASS",
+          "note": "landings with no readback=[]"
+        },
+        {
+          "property": "verdict_with_both_exit_codes",
+          "verdict": "FAIL",
+          "note": "verdict word=False exit codes reported=['2', '2', '1', '1', '0', '0', '0']"
+        },
+        {
+          "property": "tally_rows_carry_commands",
+          "verdict": "FAIL",
+          "note": "tally rows with no producing command=['| CARRIER.md | `11871` B → `11884` B, sha256 `2b77', '| wayfinder map | updated, sha256 `9ce30bb1f2a746d']"
+        },
+        {
+          "property": "interpretation_labelled_separately",
+          "verdict": "PASS",
+          "note": "interpretation is its own labelled heading=True"
+        },
+        {
+          "property": "ask_stated_as_its_own_block",
+          "verdict": "FAIL",
+          "note": "no ASK block"
+        },
+        {
+          "property": "jon_block_no_ticket",
+          "verdict": "PASS",
+          "note": "jon-block ticket ids=[] (>=2 reads as a handed queue) assignments-to-Jon=[]"
+        },
+        {
+          "property": "next_resume_ticket_named",
+          "verdict": "FAIL",
+          "note": "next-session resume ticket named=False"
+        },
+        {
+          "property": "no_carrier_byte_gate",
+          "verdict": "PASS",
+          "note": "byte-gate assertions=[]"
+        },
+        {
+          "property": "compact_block_fenced",
+          "verdict": "PASS",
+          "note": "fenced blocks=1 one carrying the imperative=True"
+        },
+        {
+          "property": "compact_block_six_elements",
+          "verdict": "PASS",
+          "note": "compact instruction block missing=[]"
+        },
+        {
+          "property": "promises_table_present",
+          "verdict": "PASS",
+          "note": "promise rows=3 filled (deficiency + when)=3"
+        },
+        {
+          "property": "barrier_verify_named",
+          "verdict": "PASS",
+          "note": "barrier --verify named with an exit code=True"
+        },
+        {
+          "property": "no_dry_run",
+          "verdict": "PASS",
+          "note": "dry-run uses=[]"
+        },
+        {
+          "property": "no_main_merge_or_canonical",
+          "verdict": "PASS",
+          "note": "publishing acts claimed=[]"
+        },
+        {
+          "property": "unknown_token_present",
+          "verdict": "PASS",
+          "note": "UNKNOWN present=True"
+        },
+        {
+          "property": "unknown_reported_above_failures",
+          "verdict": "PASS",
+          "note": "UNKNOWN at 143, first FAIL at 120; domination stated explicitly=True"
+        },
+        {
+          "property": "cold:a cold reader can verify every landed item and knows exactly what is being asked of Jon",
+          "verdict": "UNKNOWN",
+          "note": "cold-reader property; not mechanically checkable"
+        }
+      ]
+    },
+    {
+      "id": "S04",
+      "letter": "N:\\claude-cfl\\gt4-blind\\su-compact\\out\\S04.md",
+      "bytes": 5978,
+      "sha256": "770803e3e3555d0eccf6c9893f600c3209f7a79bbdef1fdfa8b4df5507ec1697",
+      "properties": [
+        {
+          "property": "as_of_date_explicit",
+          "verdict": "PASS",
+          "note": "as-of with an ISO date=True"
+        },
+        {
+          "property": "as_of_not_shell_default",
+          "verdict": "PASS",
+          "note": "explicit as-of date=True floating 'today' as-of=False provenance stated=False"
+        },
+        {
+          "property": "every_landing_has_sha",
+          "verdict": "PASS",
+          "note": "landings with no sha=[]"
+        },
+        {
+          "property": "every_landing_has_readback",
+          "verdict": "PASS",
+          "note": "landings with no readback=[]"
+        },
+        {
+          "property": "verdict_with_both_exit_codes",
+          "verdict": "PASS",
+          "note": "verdict word=True exit codes reported=['0', '0', '0', '0', '0']"
+        },
+        {
+          "property": "tally_rows_carry_commands",
+          "verdict": "FAIL",
+          "note": "tally rows with no producing command=['| CARRIER.md | `11871` B → **`13406` B** | refresh', '| wayfinder map | updated, sha256 `41e2c7a09b5db83']"
+        },
+        {
+          "property": "interpretation_labelled_separately",
+          "verdict": "PASS",
+          "note": "interpretation is its own labelled heading=True"
+        },
+        {
+          "property": "ask_stated_as_its_own_block",
+          "verdict": "FAIL",
+          "note": "no ASK block"
+        },
+        {
+          "property": "jon_block_no_ticket",
+          "verdict": "PASS",
+          "note": "jon-block ticket ids=[] (>=2 reads as a handed queue) assignments-to-Jon=[]"
+        },
+        {
+          "property": "next_resume_ticket_named",
+          "verdict": "FAIL",
+          "note": "next-session resume ticket named=False"
+        },
+        {
+          "property": "no_carrier_byte_gate",
+          "verdict": "PASS",
+          "note": "byte-gate assertions=[]"
+        },
+        {
+          "property": "compact_block_fenced",
+          "verdict": "PASS",
+          "note": "fenced blocks=1 one carrying the imperative=True"
+        },
+        {
+          "property": "compact_block_six_elements",
+          "verdict": "PASS",
+          "note": "compact instruction block missing=[]"
+        },
+        {
+          "property": "promises_table_present",
+          "verdict": "PASS",
+          "note": "promise rows=2 filled (deficiency + when)=2"
+        },
+        {
+          "property": "barrier_verify_named",
+          "verdict": "PASS",
+          "note": "barrier --verify named with an exit code=True"
+        },
+        {
+          "property": "no_dry_run",
+          "verdict": "PASS",
+          "note": "dry-run uses=[]"
+        },
+        {
+          "property": "no_main_merge_or_canonical",
+          "verdict": "PASS",
+          "note": "publishing acts claimed=[]"
+        },
+        {
+          "property": "cold:a cold reader can verify every landed item and knows exactly what is being asked of Jon",
+          "verdict": "UNKNOWN",
+          "note": "cold-reader property; not mechanically checkable"
+        }
+      ]
+    },
+    {
+      "id": "S05",
+      "letter": "N:\\claude-cfl\\gt4-blind\\su-compact\\out\\S05.md",
+      "bytes": 5043,
+      "sha256": "f14703904187685f316a24b836a4fb89e96ee8c8cd870261541875b93efb643f",
+      "properties": [
+        {
+          "property": "as_of_date_explicit",
+          "verdict": "PASS",
+          "note": "as-of with an ISO date=True"
+        },
+        {
+          "property": "as_of_not_shell_default",
+          "verdict": "PASS",
+          "note": "explicit as-of date=True floating 'today' as-of=False provenance stated=False"
+        },
+        {
+          "property": "every_landing_has_sha",
+          "verdict": "PASS",
+          "note": "landings with no sha=[]"
+        },
+        {
+          "property": "every_landing_has_readback",
+          "verdict": "FAIL",
+          "note": "landings with no readback=['commit: | local commit | `e4471bc` \"GT-2 fixtures\" | ']"
+        },
+        {
+          "property": "verdict_with_both_exit_codes",
+          "verdict": "PASS",
+          "note": "verdict word=True exit codes reported=['0', '0', '0', '0', '0']"
+        },
+        {
+          "property": "tally_rows_carry_commands",
+          "verdict": "FAIL",
+          "note": "tally rows with no producing command=['| CARRIER.md | `11871` B → `11893` B, sha256 `ab77', '| wayfinder map | updated, sha256 `7fa3e18c25d0b6a']"
+        },
+        {
+          "property": "interpretation_labelled_separately",
+          "verdict": "PASS",
+          "note": "interpretation is its own labelled heading=True"
+        },
+        {
+          "property": "ask_stated_as_its_own_block",
+          "verdict": "FAIL",
+          "note": "no ASK block"
+        },
+        {
+          "property": "jon_block_no_ticket",
+          "verdict": "PASS",
+          "note": "jon-block ticket ids=[] (>=2 reads as a handed queue) assignments-to-Jon=[]"
+        },
+        {
+          "property": "next_resume_ticket_named",
+          "verdict": "FAIL",
+          "note": "next-session resume ticket named=False"
+        },
+        {
+          "property": "no_carrier_byte_gate",
+          "verdict": "PASS",
+          "note": "byte-gate assertions=[]"
+        },
+        {
+          "property": "compact_block_fenced",
+          "verdict": "PASS",
+          "note": "fenced blocks=1 one carrying the imperative=True"
+        },
+        {
+          "property": "compact_block_six_elements",
+          "verdict": "PASS",
+          "note": "compact instruction block missing=[]"
+        },
+        {
+          "property": "promises_table_present",
+          "verdict": "PASS",
+          "note": "promise rows=2 filled (deficiency + when)=2"
+        },
+        {
+          "property": "barrier_verify_named",
+          "verdict": "PASS",
+          "note": "barrier --verify named with an exit code=True"
+        },
+        {
+          "property": "no_dry_run",
+          "verdict": "PASS",
+          "note": "dry-run uses=[]"
+        },
+        {
+          "property": "no_main_merge_or_canonical",
+          "verdict": "PASS",
+          "note": "publishing acts claimed=[]"
+        },
+        {
+          "property": "push_conflict_rebased_not_forced",
+          "verdict": "PASS",
+          "note": "rebased=True forced=False"
+        },
+        {
+          "property": "cold:a cold reader can verify every landed item and knows exactly what is being asked of Jon",
+          "verdict": "UNKNOWN",
+          "note": "cold-reader property; not mechanically checkable"
+        }
+      ]
+    },
+    {
+      "id": "S06",
+      "letter": "N:\\claude-cfl\\gt4-blind\\su-compact\\out\\S06.md",
+      "bytes": 7345,
+      "sha256": "cef46859e1c717afd93c4067065933b6e03e8ff53420503b5f8b3b3302f46f3a",
+      "properties": [
+        {
+          "property": "as_of_date_explicit",
+          "verdict": "FAIL",
+          "note": "as-of with an ISO date=False"
+        },
+        {
+          "property": "as_of_not_shell_default",
+          "verdict": "PASS",
+          "note": "explicit as-of date=True floating 'today' as-of=False provenance stated=True"
+        },
+        {
+          "property": "every_landing_has_sha",
+          "verdict": "PASS",
+          "note": "landings with no sha=[]"
+        },
+        {
+          "property": "every_landing_has_readback",
+          "verdict": "PASS",
+          "note": "landings with no readback=[]"
+        },
+        {
+          "property": "verdict_with_both_exit_codes",
+          "verdict": "FAIL",
+          "note": "verdict word=False exit codes reported=['0', '0', '1', '0', '0', '1', '0', '0', '1', '1']"
+        },
+        {
+          "property": "tally_rows_carry_commands",
+          "verdict": "FAIL",
+          "note": "tally rows with no producing command=['| CARRIER.md | `11871` B → `11879` B, sha256 `93de', '| wayfinder map | updated, sha256 `05c7b9ea3f1d846']"
+        },
+        {
+          "property": "interpretation_labelled_separately",
+          "verdict": "PASS",
+          "note": "interpretation is its own labelled heading=True"
+        },
+        {
+          "property": "ask_stated_as_its_own_block",
+          "verdict": "FAIL",
+          "note": "no ASK block"
+        },
+        {
+          "property": "jon_block_no_ticket",
+          "verdict": "PASS",
+          "note": "jon-block ticket ids=[] (>=2 reads as a handed queue) assignments-to-Jon=[]"
+        },
+        {
+          "property": "next_resume_ticket_named",
+          "verdict": "FAIL",
+          "note": "next-session resume ticket named=False"
+        },
+        {
+          "property": "no_carrier_byte_gate",
+          "verdict": "PASS",
+          "note": "byte-gate assertions=[]"
+        },
+        {
+          "property": "compact_block_fenced",
+          "verdict": "PASS",
+          "note": "fenced blocks=1 one carrying the imperative=True"
+        },
+        {
+          "property": "compact_block_six_elements",
+          "verdict": "PASS",
+          "note": "compact instruction block missing=[]"
+        },
+        {
+          "property": "promises_table_present",
+          "verdict": "FAIL",
+          "note": "promise rows=0 filled (deficiency + when)=0"
+        },
+        {
+          "property": "barrier_verify_named",
+          "verdict": "PASS",
+          "note": "barrier --verify named with an exit code=True"
+        },
+        {
+          "property": "no_dry_run",
+          "verdict": "PASS",
+          "note": "dry-run uses=[]"
+        },
+        {
+          "property": "no_main_merge_or_canonical",
+          "verdict": "PASS",
+          "note": "publishing acts claimed=[]"
+        },
+        {
+          "property": "cold:a cold reader can verify every landed item and knows exactly what is being asked of Jon",
+          "verdict": "UNKNOWN",
+          "note": "cold-reader property; not mechanically checkable"
+        }
+      ]
+    },
+    {
+      "id": "S07",
+      "letter": "N:\\claude-cfl\\gt4-blind\\su-compact\\out\\S07.md",
+      "bytes": 6956,
+      "sha256": "1a07ccc0cc40fa4026b3f5cfba602c5a235becca37d488dda6dec838780e4ed2",
+      "properties": [
+        {
+          "property": "as_of_date_explicit",
+          "verdict": "FAIL",
+          "note": "as-of with an ISO date=False"
+        },
+        {
+          "property": "as_of_not_shell_default",
+          "verdict": "PASS",
+          "note": "explicit as-of date=True floating 'today' as-of=False provenance stated=False"
+        },
+        {
+          "property": "every_landing_has_sha",
+          "verdict": "PASS",
+          "note": "landings with no sha=[]"
+        },
+        {
+          "property": "every_landing_has_readback",
+          "verdict": "PASS",
+          "note": "landings with no readback=[]"
+        },
+        {
+          "property": "verdict_with_both_exit_codes",
+          "verdict": "PASS",
+          "note": "verdict word=True exit codes reported=['0', '0', '1', '0', '0', '0', '0', '1', '0', '0', '0', '0', '1', '0']"
+        },
+        {
+          "property": "tally_rows_carry_commands",
+          "verdict": "FAIL",
+          "note": "tally rows with no producing command=['| CARRIER.md | `11871` B → `11888` B, sha256 `4ab0', '| wayfinder map | updated, sha256 `36f1d5be80ca749']"
+        },
+        {
+          "property": "interpretation_labelled_separately",
+          "verdict": "PASS",
+          "note": "interpretation is its own labelled heading=True"
+        },
+        {
+          "property": "ask_stated_as_its_own_block",
+          "verdict": "FAIL",
+          "note": "no ASK block"
+        },
+        {
+          "property": "jon_block_no_ticket",
+          "verdict": "PASS",
+          "note": "jon-block ticket ids=[] (>=2 reads as a handed queue) assignments-to-Jon=[]"
+        },
+        {
+          "property": "next_resume_ticket_named",
+          "verdict": "FAIL",
+          "note": "next-session resume ticket named=False"
+        },
+        {
+          "property": "no_carrier_byte_gate",
+          "verdict": "PASS",
+          "note": "byte-gate assertions=[]"
+        },
+        {
+          "property": "compact_block_fenced",
+          "verdict": "PASS",
+          "note": "fenced blocks=1 one carrying the imperative=True"
+        },
+        {
+          "property": "compact_block_six_elements",
+          "verdict": "PASS",
+          "note": "compact instruction block missing=[]"
+        },
+        {
+          "property": "promises_table_present",
+          "verdict": "PASS",
+          "note": "promise rows=2 filled (deficiency + when)=2"
+        },
+        {
+          "property": "barrier_verify_named",
+          "verdict": "PASS",
+          "note": "barrier --verify named with an exit code=True"
+        },
+        {
+          "property": "no_dry_run",
+          "verdict": "PASS",
+          "note": "dry-run uses=[]"
+        },
+        {
+          "property": "no_main_merge_or_canonical",
+          "verdict": "PASS",
+          "note": "publishing acts claimed=[]"
+        },
+        {
+          "property": "skipped_step_named_loudly",
+          "verdict": "PASS",
+          "note": "skip names which+why=True reported UNKNOWN=True"
+        },
+        {
+          "property": "unknown_token_present",
+          "verdict": "PASS",
+          "note": "UNKNOWN present=True"
+        },
+        {
+          "property": "cold:a cold reader can verify every landed item and knows exactly what is being asked of Jon",
+          "verdict": "UNKNOWN",
+          "note": "cold-reader property; not mechanically checkable"
+        }
+      ]
+    },
+    {
+      "id": "S08",
+      "letter": "N:\\claude-cfl\\gt4-blind\\su-compact\\out\\S08.md",
+      "bytes": 5916,
+      "sha256": "5b1a3d82ed3dd8d0c5c81c5d3f67f1e005273ed28aa91f6b82337e05e89842fd",
+      "properties": [
+        {
+          "property": "as_of_date_explicit",
+          "verdict": "PASS",
+          "note": "as-of with an ISO date=True"
+        },
+        {
+          "property": "as_of_not_shell_default",
+          "verdict": "PASS",
+          "note": "explicit as-of date=True floating 'today' as-of=False provenance stated=False"
+        },
+        {
+          "property": "every_landing_has_sha",
+          "verdict": "PASS",
+          "note": "landings with no sha=[]"
+        },
+        {
+          "property": "every_landing_has_readback",
+          "verdict": "PASS",
+          "note": "landings with no readback=[]"
+        },
+        {
+          "property": "verdict_with_both_exit_codes",
+          "verdict": "PASS",
+          "note": "verdict word=True exit codes reported=['0', '0', '0', '0', '0']"
+        },
+        {
+          "property": "tally_rows_carry_commands",
+          "verdict": "FAIL",
+          "note": "tally rows with no producing command=['| CARRIER.md | `11871` B → `11881` B, sha256 `cd3f', '| wayfinder map | updated, sha256 `8e40b21ca7f36d5']"
+        },
+        {
+          "property": "interpretation_labelled_separately",
+          "verdict": "PASS",
+          "note": "interpretation is its own labelled heading=True"
+        },
+        {
+          "property": "ask_stated_as_its_own_block",
+          "verdict": "FAIL",
+          "note": "no ASK block"
+        },
+        {
+          "property": "jon_block_no_ticket",
+          "verdict": "PASS",
+          "note": "jon-block ticket ids=[] (>=2 reads as a handed queue) assignments-to-Jon=[]"
+        },
+        {
+          "property": "next_resume_ticket_named",
+          "verdict": "PASS",
+          "note": "next-session resume ticket named=True"
+        },
+        {
+          "property": "no_carrier_byte_gate",
+          "verdict": "PASS",
+          "note": "byte-gate assertions=[]"
+        },
+        {
+          "property": "compact_block_fenced",
+          "verdict": "PASS",
+          "note": "fenced blocks=1 one carrying the imperative=True"
+        },
+        {
+          "property": "compact_block_six_elements",
+          "verdict": "PASS",
+          "note": "compact instruction block missing=[]"
+        },
+        {
+          "property": "promises_table_present",
+          "verdict": "PASS",
+          "note": "promise rows=2 filled (deficiency + when)=2"
+        },
+        {
+          "property": "barrier_verify_named",
+          "verdict": "PASS",
+          "note": "barrier --verify named with an exit code=True"
+        },
+        {
+          "property": "no_dry_run",
+          "verdict": "PASS",
+          "note": "dry-run uses=[]"
+        },
+        {
+          "property": "no_main_merge_or_canonical",
+          "verdict": "PASS",
+          "note": "publishing acts claimed=[]"
+        },
+        {
+          "property": "gate_default_executes_nothing",
+          "verdict": "PASS",
+          "note": "gate-default-executes-nothing stated=True"
+        },
+        {
+          "property": "cold:a cold reader can verify every landed item and knows exactly what is being asked of Jon",
+          "verdict": "UNKNOWN",
+          "note": "cold-reader property; not mechanically checkable"
+        }
+      ]
+    }
+  ]
+}

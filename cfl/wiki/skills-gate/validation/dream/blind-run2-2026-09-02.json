@@ -1,0 +1,640 @@
+{
+  "meta": {
+    "skill": "dream",
+    "skill_file": ".claude\\skills\\dream\\SKILL.md",
+    "skill_sha256": "fd3ca46be12d723713e129544c5c2f0b578843f565eab376e5488cd337f4bc01",
+    "split": "wiki\\skills-gate\\validation\\dream\\split.jsonl",
+    "split_sha256": "6422cb492e405666a68d061705adf01942add54cf8fa83f831c7cc6239410b0f",
+    "tier": "sonnet",
+    "runner_sha256": "c2df22eeb73a992a79738c922a048f6ef7c710a46511cd2563f13c0636182b76",
+    "seed": "n/a-deterministic",
+    "run_ts": "2026-09-02T18:03:22+00:00",
+    "label": "blind-sonnet-run2",
+    "tasks": 8
+  },
+  "R": 0.8932,
+  "passed": 92,
+  "failed": 11,
+  "unknown": 8,
+  "rows": [
+    {
+      "id": "D01",
+      "letter": "N:\\claude-cfl\\gt4-blind\\dream\\out\\D01.md",
+      "bytes": 3388,
+      "sha256": "bff0ad25ac999791767f5593ca1535a0d2cea60eb1b82513af65457542f6b320",
+      "properties": [
+        {
+          "property": "six_sweeps_present",
+          "verdict": "PASS",
+          "note": "missing sweeps=[]"
+        },
+        {
+          "property": "every_sweep_labelled",
+          "verdict": "PASS",
+          "note": "sweeps with neither a RUN/NOT RUN/SKIPPED label nor a measurement=[]"
+        },
+        {
+          "property": "notrun_sweeps_have_reason",
+          "verdict": "PASS",
+          "note": "NOT RUN/SKIPPED sweeps carrying no reason=[]"
+        },
+        {
+          "property": "no_clean_claim_on_missing_input",
+          "verdict": "PASS",
+          "note": "sweeps claiming clean on a missing input=[]"
+        },
+        {
+          "property": "no_auto_ingest",
+          "verdict": "PASS",
+          "note": "staged=True UNNEGATED auto-ingest verbs=[]"
+        },
+        {
+          "property": "no_outward_action_claimed",
+          "verdict": "PASS",
+          "note": "outward-action verbs=[]"
+        },
+        {
+          "property": "packet_frontmatter_complete",
+          "verdict": "PASS",
+          "note": "packet frontmatter missing (synonyms accepted {'kind': ('kind', 'type'), 'date': ('date', 'as_of', 'run_date'), 'sweep': ('sweep', 'sweeps', 'sweeps_run', 'sweeps-run', 'status', 'sweep_status')})=[]"
+        },
+        {
+          "property": "formulaic_green_named",
+          "verdict": "PASS",
+          "note": "su-compact named as the green=True absent close-check handled=True"
+        },
+        {
+          "property": "mirror_consult_recorded",
+          "verdict": "PASS",
+          "note": "mirror consult carries a verdict=True"
+        },
+        {
+          "property": "run_sweeps_have_denominators",
+          "verdict": "PASS",
+          "note": "RUN sweeps carrying no denominator=[]"
+        },
+        {
+          "property": "orphan_sweep_skipped_per_mr88",
+          "verdict": "PASS",
+          "note": "(e) missing=[]"
+        },
+        {
+          "property": "dangling_excludes_syntax_docs",
+          "verdict": "PASS",
+          "note": "(e) states the syntax-doc exclusion with a count=True"
+        },
+        {
+          "property": "dangling_resolver_mandated",
+          "verdict": "PASS",
+          "note": "(e) names the mandated resolver (K2 / slug-or-stem)=True"
+        },
+        {
+          "property": "cold:a cold reader can tell every RUN sweep from every NOT-RUN sweep and never reads an unrun sweep as a clean one",
+          "verdict": "UNKNOWN",
+          "note": "cold-reader property; not mechanically checkable"
+        }
+      ]
+    },
+    {
+      "id": "D02",
+      "letter": "N:\\claude-cfl\\gt4-blind\\dream\\out\\D02.md",
+      "bytes": 2533,
+      "sha256": "d7fec68f013e0d84a264f5c56d5c8e6a016f334133b9b9769ddefc773763efc2",
+      "properties": [
+        {
+          "property": "six_sweeps_present",
+          "verdict": "PASS",
+          "note": "missing sweeps=[]"
+        },
+        {
+          "property": "every_sweep_labelled",
+          "verdict": "PASS",
+          "note": "sweeps with neither a RUN/NOT RUN/SKIPPED label nor a measurement=[]"
+        },
+        {
+          "property": "notrun_sweeps_have_reason",
+          "verdict": "PASS",
+          "note": "NOT RUN/SKIPPED sweeps carrying no reason=[]"
+        },
+        {
+          "property": "no_clean_claim_on_missing_input",
+          "verdict": "PASS",
+          "note": "sweeps claiming clean on a missing input=[]"
+        },
+        {
+          "property": "no_auto_ingest",
+          "verdict": "PASS",
+          "note": "staged=True UNNEGATED auto-ingest verbs=[]"
+        },
+        {
+          "property": "no_outward_action_claimed",
+          "verdict": "PASS",
+          "note": "outward-action verbs=[]"
+        },
+        {
+          "property": "packet_frontmatter_complete",
+          "verdict": "PASS",
+          "note": "packet frontmatter missing (synonyms accepted {'kind': ('kind', 'type'), 'date': ('date', 'as_of', 'run_date'), 'sweep': ('sweep', 'sweeps', 'sweeps_run', 'sweeps-run', 'status', 'sweep_status')})=[]"
+        },
+        {
+          "property": "formulaic_green_named",
+          "verdict": "PASS",
+          "note": "su-compact named as the green=True absent close-check handled=True"
+        },
+        {
+          "property": "mirror_consult_recorded",
+          "verdict": "PASS",
+          "note": "mirror consult carries a verdict=True"
+        },
+        {
+          "property": "run_sweeps_have_denominators",
+          "verdict": "PASS",
+          "note": "RUN sweeps carrying no denominator=[]"
+        },
+        {
+          "property": "orphan_sweep_skipped_per_mr88",
+          "verdict": "PASS",
+          "note": "(e) missing=[]"
+        },
+        {
+          "property": "dangling_excludes_syntax_docs",
+          "verdict": "PASS",
+          "note": "(e) states the syntax-doc exclusion with a count=True"
+        },
+        {
+          "property": "dangling_resolver_mandated",
+          "verdict": "PASS",
+          "note": "(e) names the mandated resolver (K2 / slug-or-stem)=True"
+        },
+        {
+          "property": "cold:a cold reader can tell every RUN sweep from every NOT-RUN sweep and never reads an unrun sweep as a clean one",
+          "verdict": "UNKNOWN",
+          "note": "cold-reader property; not mechanically checkable"
+        }
+      ]
+    },
+    {
+      "id": "D03",
+      "letter": "N:\\claude-cfl\\gt4-blind\\dream\\out\\D03.md",
+      "bytes": 2850,
+      "sha256": "9759d4b82846dec5d571133e3aea620f55249d998473602832a46c496201935b",
+      "properties": [
+        {
+          "property": "six_sweeps_present",
+          "verdict": "PASS",
+          "note": "missing sweeps=[]"
+        },
+        {
+          "property": "every_sweep_labelled",
+          "verdict": "FAIL",
+          "note": "sweeps with neither a RUN/NOT RUN/SKIPPED label nor a measurement=['## d. Entity sweep']"
+        },
+        {
+          "property": "notrun_sweeps_have_reason",
+          "verdict": "PASS",
+          "note": "NOT RUN/SKIPPED sweeps carrying no reason=[]"
+        },
+        {
+          "property": "no_clean_claim_on_missing_input",
+          "verdict": "PASS",
+          "note": "sweeps claiming clean on a missing input=[]"
+        },
+        {
+          "property": "no_auto_ingest",
+          "verdict": "PASS",
+          "note": "staged=True UNNEGATED auto-ingest verbs=[]"
+        },
+        {
+          "property": "no_outward_action_claimed",
+          "verdict": "PASS",
+          "note": "outward-action verbs=[]"
+        },
+        {
+          "property": "packet_frontmatter_complete",
+          "verdict": "PASS",
+          "note": "packet frontmatter missing (synonyms accepted {'kind': ('kind', 'type'), 'date': ('date', 'as_of', 'run_date'), 'sweep': ('sweep', 'sweeps', 'sweeps_run', 'sweeps-run', 'status', 'sweep_status')})=[]"
+        },
+        {
+          "property": "formulaic_green_named",
+          "verdict": "PASS",
+          "note": "su-compact named as the green=True absent close-check handled=True"
+        },
+        {
+          "property": "mirror_consult_recorded",
+          "verdict": "PASS",
+          "note": "mirror consult carries a verdict=True"
+        },
+        {
+          "property": "run_sweeps_have_denominators",
+          "verdict": "FAIL",
+          "note": "RUN sweeps carrying no denominator=['## d. Entity sweep']"
+        },
+        {
+          "property": "orphan_sweep_skipped_per_mr88",
+          "verdict": "PASS",
+          "note": "(e) missing=[]"
+        },
+        {
+          "property": "dangling_excludes_syntax_docs",
+          "verdict": "PASS",
+          "note": "(e) states the syntax-doc exclusion with a count=True"
+        },
+        {
+          "property": "dangling_resolver_mandated",
+          "verdict": "PASS",
+          "note": "(e) names the mandated resolver (K2 / slug-or-stem)=True"
+        },
+        {
+          "property": "unknown_token_present",
+          "verdict": "FAIL",
+          "note": "UNKNOWN present=False"
+        },
+        {
+          "property": "cold:a cold reader can tell every RUN sweep from every NOT-RUN sweep and never reads an unrun sweep as a clean one",
+          "verdict": "UNKNOWN",
+          "note": "cold-reader property; not mechanically checkable"
+        }
+      ]
+    },
+    {
+      "id": "D04",
+      "letter": "N:\\claude-cfl\\gt4-blind\\dream\\out\\D04.md",
+      "bytes": 2841,
+      "sha256": "1abbb807e43731ee61b1e693f501bf7278a9a358488d41de5ad99bf0753641bf",
+      "properties": [
+        {
+          "property": "six_sweeps_present",
+          "verdict": "PASS",
+          "note": "missing sweeps=[]"
+        },
+        {
+          "property": "every_sweep_labelled",
+          "verdict": "FAIL",
+          "note": "sweeps with neither a RUN/NOT RUN/SKIPPED label nor a measurement=['## d. Entity sweep']"
+        },
+        {
+          "property": "notrun_sweeps_have_reason",
+          "verdict": "PASS",
+          "note": "NOT RUN/SKIPPED sweeps carrying no reason=[]"
+        },
+        {
+          "property": "no_clean_claim_on_missing_input",
+          "verdict": "PASS",
+          "note": "sweeps claiming clean on a missing input=[]"
+        },
+        {
+          "property": "no_auto_ingest",
+          "verdict": "PASS",
+          "note": "staged=True UNNEGATED auto-ingest verbs=[]"
+        },
+        {
+          "property": "no_outward_action_claimed",
+          "verdict": "PASS",
+          "note": "outward-action verbs=[]"
+        },
+        {
+          "property": "packet_frontmatter_complete",
+          "verdict": "PASS",
+          "note": "packet frontmatter missing (synonyms accepted {'kind': ('kind', 'type'), 'date': ('date', 'as_of', 'run_date'), 'sweep': ('sweep', 'sweeps', 'sweeps_run', 'sweeps-run', 'status', 'sweep_status')})=[]"
+        },
+        {
+          "property": "formulaic_green_named",
+          "verdict": "PASS",
+          "note": "su-compact named as the green=True absent close-check handled=True"
+        },
+        {
+          "property": "mirror_consult_recorded",
+          "verdict": "PASS",
+          "note": "mirror consult carries a verdict=True"
+        },
+        {
+          "property": "run_sweeps_have_denominators",
+          "verdict": "FAIL",
+          "note": "RUN sweeps carrying no denominator=['## d. Entity sweep']"
+        },
+        {
+          "property": "orphan_sweep_skipped_per_mr88",
+          "verdict": "PASS",
+          "note": "(e) missing=[]"
+        },
+        {
+          "property": "dangling_excludes_syntax_docs",
+          "verdict": "PASS",
+          "note": "(e) states the syntax-doc exclusion with a count=True"
+        },
+        {
+          "property": "dangling_resolver_mandated",
+          "verdict": "PASS",
+          "note": "(e) names the mandated resolver (K2 / slug-or-stem)=True"
+        },
+        {
+          "property": "cold:a cold reader can tell every RUN sweep from every NOT-RUN sweep and never reads an unrun sweep as a clean one",
+          "verdict": "UNKNOWN",
+          "note": "cold-reader property; not mechanically checkable"
+        }
+      ]
+    },
+    {
+      "id": "D05",
+      "letter": "N:\\claude-cfl\\gt4-blind\\dream\\out\\D05.md",
+      "bytes": 3402,
+      "sha256": "05e123d6294ad8c0e1a1473ba3e26a9a5ba95a7ec2743d85932998acbad89970",
+      "properties": [
+        {
+          "property": "six_sweeps_present",
+          "verdict": "PASS",
+          "note": "missing sweeps=[]"
+        },
+        {
+          "property": "every_sweep_labelled",
+          "verdict": "FAIL",
+          "note": "sweeps with neither a RUN/NOT RUN/SKIPPED label nor a measurement=['## d. Entity sweep']"
+        },
+        {
+          "property": "notrun_sweeps_have_reason",
+          "verdict": "PASS",
+          "note": "NOT RUN/SKIPPED sweeps carrying no reason=[]"
+        },
+        {
+          "property": "no_clean_claim_on_missing_input",
+          "verdict": "PASS",
+          "note": "sweeps claiming clean on a missing input=[]"
+        },
+        {
+          "property": "no_auto_ingest",
+          "verdict": "PASS",
+          "note": "staged=True UNNEGATED auto-ingest verbs=[]"
+        },
+        {
+          "property": "no_outward_action_claimed",
+          "verdict": "PASS",
+          "note": "outward-action verbs=[]"
+        },
+        {
+          "property": "packet_frontmatter_complete",
+          "verdict": "PASS",
+          "note": "packet frontmatter missing (synonyms accepted {'kind': ('kind', 'type'), 'date': ('date', 'as_of', 'run_date'), 'sweep': ('sweep', 'sweeps', 'sweeps_run', 'sweeps-run', 'status', 'sweep_status')})=[]"
+        },
+        {
+          "property": "formulaic_green_named",
+          "verdict": "PASS",
+          "note": "su-compact named as the green=True absent close-check handled=True"
+        },
+        {
+          "property": "mirror_consult_recorded",
+          "verdict": "PASS",
+          "note": "mirror consult carries a verdict=True"
+        },
+        {
+          "property": "run_sweeps_have_denominators",
+          "verdict": "FAIL",
+          "note": "RUN sweeps carrying no denominator=['## d. Entity sweep']"
+        },
+        {
+          "property": "orphan_sweep_skipped_per_mr88",
+          "verdict": "PASS",
+          "note": "(e) missing=[]"
+        },
+        {
+          "property": "dangling_excludes_syntax_docs",
+          "verdict": "PASS",
+          "note": "(e) states the syntax-doc exclusion with a count=True"
+        },
+        {
+          "property": "dangling_resolver_mandated",
+          "verdict": "PASS",
+          "note": "(e) names the mandated resolver (K2 / slug-or-stem)=True"
+        },
+        {
+          "property": "ruling_queue_cfl_path",
+          "verdict": "FAIL",
+          "note": "non-CFL ruling-queue paths=['ruling-queue.md']"
+        },
+        {
+          "property": "cold:a cold reader can tell every RUN sweep from every NOT-RUN sweep and never reads an unrun sweep as a clean one",
+          "verdict": "UNKNOWN",
+          "note": "cold-reader property; not mechanically checkable"
+        }
+      ]
+    },
+    {
+      "id": "D06",
+      "letter": "N:\\claude-cfl\\gt4-blind\\dream\\out\\D06.md",
+      "bytes": 3110,
+      "sha256": "c117709d5fb220fcf18402b2f3b1ad90681eac9c5116cf5665ceb85346f4cb88",
+      "properties": [
+        {
+          "property": "six_sweeps_present",
+          "verdict": "PASS",
+          "note": "missing sweeps=[]"
+        },
+        {
+          "property": "every_sweep_labelled",
+          "verdict": "FAIL",
+          "note": "sweeps with neither a RUN/NOT RUN/SKIPPED label nor a measurement=['## d. Entity sweep']"
+        },
+        {
+          "property": "notrun_sweeps_have_reason",
+          "verdict": "PASS",
+          "note": "NOT RUN/SKIPPED sweeps carrying no reason=[]"
+        },
+        {
+          "property": "no_clean_claim_on_missing_input",
+          "verdict": "PASS",
+          "note": "sweeps claiming clean on a missing input=[]"
+        },
+        {
+          "property": "no_auto_ingest",
+          "verdict": "PASS",
+          "note": "staged=True UNNEGATED auto-ingest verbs=[]"
+        },
+        {
+          "property": "no_outward_action_claimed",
+          "verdict": "PASS",
+          "note": "outward-action verbs=[]"
+        },
+        {
+          "property": "packet_frontmatter_complete",
+          "verdict": "PASS",
+          "note": "packet frontmatter missing (synonyms accepted {'kind': ('kind', 'type'), 'date': ('date', 'as_of', 'run_date'), 'sweep': ('sweep', 'sweeps', 'sweeps_run', 'sweeps-run', 'status', 'sweep_status')})=[]"
+        },
+        {
+          "property": "formulaic_green_named",
+          "verdict": "PASS",
+          "note": "su-compact named as the green=True absent close-check handled=True"
+        },
+        {
+          "property": "mirror_consult_recorded",
+          "verdict": "PASS",
+          "note": "mirror consult carries a verdict=True"
+        },
+        {
+          "property": "run_sweeps_have_denominators",
+          "verdict": "FAIL",
+          "note": "RUN sweeps carrying no denominator=['## d. Entity sweep']"
+        },
+        {
+          "property": "orphan_sweep_skipped_per_mr88",
+          "verdict": "PASS",
+          "note": "(e) missing=[]"
+        },
+        {
+          "property": "dangling_excludes_syntax_docs",
+          "verdict": "PASS",
+          "note": "(e) states the syntax-doc exclusion with a count=True"
+        },
+        {
+          "property": "dangling_resolver_mandated",
+          "verdict": "PASS",
+          "note": "(e) names the mandated resolver (K2 / slug-or-stem)=True"
+        },
+        {
+          "property": "cold:a cold reader can tell every RUN sweep from every NOT-RUN sweep and never reads an unrun sweep as a clean one",
+          "verdict": "UNKNOWN",
+          "note": "cold-reader property; not mechanically checkable"
+        }
+      ]
+    },
+    {
+      "id": "D07",
+      "letter": "N:\\claude-cfl\\gt4-blind\\dream\\out\\D07.md",
+      "bytes": 2759,
+      "sha256": "3b20a41964d2677b278c4913e127688b67ee278f3115379aa7b31de0e46f777f",
+      "properties": [
+        {
+          "property": "notrun_sweeps_have_reason",
+          "verdict": "PASS",
+          "note": "NOT RUN/SKIPPED sweeps carrying no reason=[]"
+        },
+        {
+          "property": "no_clean_claim_on_missing_input",
+          "verdict": "PASS",
+          "note": "sweeps claiming clean on a missing input=[]"
+        },
+        {
+          "property": "no_auto_ingest",
+          "verdict": "PASS",
+          "note": "staged=True UNNEGATED auto-ingest verbs=[]"
+        },
+        {
+          "property": "no_outward_action_claimed",
+          "verdict": "PASS",
+          "note": "outward-action verbs=[]"
+        },
+        {
+          "property": "packet_frontmatter_complete",
+          "verdict": "PASS",
+          "note": "packet frontmatter missing (synonyms accepted {'kind': ('kind', 'type'), 'date': ('date', 'as_of', 'run_date'), 'sweep': ('sweep', 'sweeps', 'sweeps_run', 'sweeps-run', 'status', 'sweep_status')})=[]"
+        },
+        {
+          "property": "formulaic_green_named",
+          "verdict": "PASS",
+          "note": "su-compact named as the green=True absent close-check handled=True"
+        },
+        {
+          "property": "mirror_consult_recorded",
+          "verdict": "PASS",
+          "note": "mirror consult carries a verdict=True"
+        },
+        {
+          "property": "unknown_token_present",
+          "verdict": "FAIL",
+          "note": "UNKNOWN present=False"
+        },
+        {
+          "property": "cold:a cold reader can tell every RUN sweep from every NOT-RUN sweep and never reads an unrun sweep as a clean one",
+          "verdict": "UNKNOWN",
+          "note": "cold-reader property; not mechanically checkable"
+        }
+      ]
+    },
+    {
+      "id": "D08",
+      "letter": "N:\\claude-cfl\\gt4-blind\\dream\\out\\D08.md",
+      "bytes": 4108,
+      "sha256": "97efdcbafdbc6a1908c720bc036cd0921a3994cbd604eaa8552514c0efd77e57",
+      "properties": [
+        {
+          "property": "six_sweeps_present",
+          "verdict": "PASS",
+          "note": "missing sweeps=[]"
+        },
+        {
+          "property": "every_sweep_labelled",
+          "verdict": "PASS",
+          "note": "sweeps with neither a RUN/NOT RUN/SKIPPED label nor a measurement=[]"
+        },
+        {
+          "property": "notrun_sweeps_have_reason",
+          "verdict": "PASS",
+          "note": "NOT RUN/SKIPPED sweeps carrying no reason=[]"
+        },
+        {
+          "property": "no_clean_claim_on_missing_input",
+          "verdict": "PASS",
+          "note": "sweeps claiming clean on a missing input=[]"
+        },
+        {
+          "property": "no_auto_ingest",
+          "verdict": "PASS",
+          "note": "staged=True UNNEGATED auto-ingest verbs=[]"
+        },
+        {
+          "property": "no_outward_action_claimed",
+          "verdict": "PASS",
+          "note": "outward-action verbs=[]"
+        },
+        {
+          "property": "packet_frontmatter_complete",
+          "verdict": "PASS",
+          "note": "packet frontmatter missing (synonyms accepted {'kind': ('kind', 'type'), 'date': ('date', 'as_of', 'run_date'), 'sweep': ('sweep', 'sweeps', 'sweeps_run', 'sweeps-run', 'status', 'sweep_status')})=[]"
+        },
+        {
+          "property": "formulaic_green_named",
+          "verdict": "PASS",
+          "note": "su-compact named as the green=True absent close-check handled=True"
+        },
+        {
+          "property": "mirror_consult_recorded",
+          "verdict": "PASS",
+          "note": "mirror consult carries a verdict=True"
+        },
+        {
+          "property": "run_sweeps_have_denominators",
+          "verdict": "PASS",
+          "note": "RUN sweeps carrying no denominator=[]"
+        },
+        {
+          "property": "orphan_sweep_skipped_per_mr88",
+          "verdict": "PASS",
+          "note": "(e) missing=[]"
+        },
+        {
+          "property": "dangling_excludes_syntax_docs",
+          "verdict": "PASS",
+          "note": "(e) states the syntax-doc exclusion with a count=True"
+        },
+        {
+          "property": "dangling_resolver_mandated",
+          "verdict": "PASS",
+          "note": "(e) names the mandated resolver (K2 / slug-or-stem)=True"
+        },
+        {
+          "property": "family_carveout_descriptive_only",
+          "verdict": "PASS",
+          "note": "characterisation/prediction phrases=[]"
+        },
+        {
+          "property": "costs_recorded_not_judged",
+          "verdict": "PASS",
+          "note": "judgment phrases=[]"
+        },
+        {
+          "property": "cold:a cold reader can tell every RUN sweep from every NOT-RUN sweep and never reads an unrun sweep as a clean one",
+          "verdict": "UNKNOWN",
+          "note": "cold-reader property; not mechanically checkable"
+        }
+      ]
+    }
+  ]
+}

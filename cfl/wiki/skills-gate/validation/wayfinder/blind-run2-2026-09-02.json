@@ -1,0 +1,825 @@
+{
+  "meta": {
+    "skill": "wayfinder",
+    "skill_file": "skills\\wayfinder\\SKILL.md",
+    "skill_sha256": "37384d4b555cf95eddd4eb574327d0e7b3e5729541f74b5aac29f81ce7872c59",
+    "split": "wiki\\skills-gate\\validation\\wayfinder\\split.jsonl",
+    "split_sha256": "b00d557669aca3f0e889e3cdb3dc516e6a724982a926461538774a31f8765362",
+    "tier": "sonnet",
+    "runner_sha256": "c2df22eeb73a992a79738c922a048f6ef7c710a46511cd2563f13c0636182b76",
+    "seed": "n/a-deterministic",
+    "run_ts": "2026-09-02T18:03:00+00:00",
+    "label": "blind-sonnet-run2",
+    "tasks": 8
+  },
+  "R": 0.8571,
+  "passed": 120,
+  "failed": 20,
+  "unknown": 8,
+  "rows": [
+    {
+      "id": "Y01",
+      "letter": "N:\\claude-cfl\\gt4-blind\\wayfinder\\out\\Y01.md",
+      "bytes": 3035,
+      "sha256": "9adbcb0971c5cfb0d45c91aa0dcdf3fb7027c41f12b69539047238b406fee2f6",
+      "properties": [
+        {
+          "property": "map_section:destination",
+          "verdict": "PASS",
+          "note": "section 'destination' present and non-empty=True"
+        },
+        {
+          "property": "map_section:notes",
+          "verdict": "PASS",
+          "note": "section 'notes' present and non-empty=True"
+        },
+        {
+          "property": "map_section:decisions",
+          "verdict": "PASS",
+          "note": "section 'decisions' present and non-empty=True"
+        },
+        {
+          "property": "map_section:fog",
+          "verdict": "PASS",
+          "note": "section 'fog' present and non-empty=True"
+        },
+        {
+          "property": "map_section:out_of_scope",
+          "verdict": "PASS",
+          "note": "section 'out_of_scope' present and non-empty=True"
+        },
+        {
+          "property": "destination_is_one_or_two_lines",
+          "verdict": "PASS",
+          "note": "destination sentences=1 chars=125 (must be 1-2 sentences, <=400 chars)"
+        },
+        {
+          "property": "fog_and_scope_disjoint",
+          "verdict": "PASS",
+          "note": "items present in BOTH fog and out-of-scope=[]"
+        },
+        {
+          "property": "out_of_scope_items_carry_why",
+          "verdict": "PASS",
+          "note": "out-of-scope items with no stated why=[]"
+        },
+        {
+          "property": "fog_items_are_in_scope",
+          "verdict": "PASS",
+          "note": "fog items marked out-of-scope=[]"
+        },
+        {
+          "property": "refer_by_name_not_bare_id",
+          "verdict": "PASS",
+          "note": "lines using a bare id with no name=[]"
+        },
+        {
+          "property": "map_body_lists_no_open_tickets",
+          "verdict": "PASS",
+          "note": "open-ticket detail inside the five map sections: type labels=0 Question fields=0"
+        },
+        {
+          "property": "blocking_convention_named",
+          "verdict": "PASS",
+          "note": "blocking convention named=True"
+        },
+        {
+          "property": "tracker_choice_named",
+          "verdict": "FAIL",
+          "note": "github mentioned=True wiki-tracker mentioned=True chose-wiki=False chose-github=False"
+        },
+        {
+          "property": "plan_not_do",
+          "verdict": "PASS",
+          "note": "execution claims=[] notes-override declared=False"
+        },
+        {
+          "property": "every_ticket_has_question",
+          "verdict": "PASS",
+          "note": "tickets with no Question=[]"
+        },
+        {
+          "property": "every_ticket_has_type_label",
+          "verdict": "PASS",
+          "note": "tickets with no wayfinder:<type> label=[]"
+        },
+        {
+          "property": "cold:a cold reader can pick the next takeable ticket and tell fog from out-of-scope without asking",
+          "verdict": "UNKNOWN",
+          "note": "cold-reader property; not mechanically checkable"
+        }
+      ]
+    },
+    {
+      "id": "Y02",
+      "letter": "N:\\claude-cfl\\gt4-blind\\wayfinder\\out\\Y02.md",
+      "bytes": 3494,
+      "sha256": "8346cd4e3673ce60f6189f109475b4a936fc3db7fd1f78acd876a7a4f07d52a8",
+      "properties": [
+        {
+          "property": "map_section:destination",
+          "verdict": "PASS",
+          "note": "section 'destination' present and non-empty=True"
+        },
+        {
+          "property": "map_section:notes",
+          "verdict": "FAIL",
+          "note": "section 'notes' present and non-empty=False"
+        },
+        {
+          "property": "map_section:decisions",
+          "verdict": "PASS",
+          "note": "section 'decisions' present and non-empty=True"
+        },
+        {
+          "property": "map_section:fog",
+          "verdict": "PASS",
+          "note": "section 'fog' present and non-empty=True"
+        },
+        {
+          "property": "map_section:out_of_scope",
+          "verdict": "PASS",
+          "note": "section 'out_of_scope' present and non-empty=True"
+        },
+        {
+          "property": "destination_is_one_or_two_lines",
+          "verdict": "PASS",
+          "note": "destination sentences=1 chars=97 (must be 1-2 sentences, <=400 chars)"
+        },
+        {
+          "property": "fog_and_scope_disjoint",
+          "verdict": "PASS",
+          "note": "items present in BOTH fog and out-of-scope=[]"
+        },
+        {
+          "property": "out_of_scope_items_carry_why",
+          "verdict": "PASS",
+          "note": "out-of-scope items with no stated why=[]"
+        },
+        {
+          "property": "fog_items_are_in_scope",
+          "verdict": "PASS",
+          "note": "fog items marked out-of-scope=[]"
+        },
+        {
+          "property": "refer_by_name_not_bare_id",
+          "verdict": "PASS",
+          "note": "lines using a bare id with no name=[]"
+        },
+        {
+          "property": "map_body_lists_no_open_tickets",
+          "verdict": "PASS",
+          "note": "open-ticket detail inside the five map sections: type labels=0 Question fields=0"
+        },
+        {
+          "property": "blocking_convention_named",
+          "verdict": "PASS",
+          "note": "blocking convention named=True"
+        },
+        {
+          "property": "tracker_choice_named",
+          "verdict": "PASS",
+          "note": "github mentioned=False wiki-tracker mentioned=True chose-wiki=False chose-github=False"
+        },
+        {
+          "property": "plan_not_do",
+          "verdict": "PASS",
+          "note": "execution claims=[] notes-override declared=False"
+        },
+        {
+          "property": "every_ticket_has_question",
+          "verdict": "FAIL",
+          "note": "tickets with no Question=['### Ticket: Score per property or per task — ']"
+        },
+        {
+          "property": "every_ticket_has_type_label",
+          "verdict": "PASS",
+          "note": "tickets with no wayfinder:<type> label=[]"
+        },
+        {
+          "property": "claim_before_work",
+          "verdict": "FAIL",
+          "note": "claim recorded or claim-before-work stated=False"
+        },
+        {
+          "property": "resolution_recorded_three_ways",
+          "verdict": "PASS",
+          "note": "resolution artifacts missing=[]"
+        },
+        {
+          "property": "decisions_are_linked_gists",
+          "verdict": "FAIL",
+          "note": "decision lines unlinked or over 220 chars=['- [Score per property or per task](wiki/track']"
+        },
+        {
+          "property": "graduated_fog_cleared",
+          "verdict": "FAIL",
+          "note": "graduated=True cleared from the fog=False"
+        },
+        {
+          "property": "cold:a cold reader can pick the next takeable ticket and tell fog from out-of-scope without asking",
+          "verdict": "UNKNOWN",
+          "note": "cold-reader property; not mechanically checkable"
+        }
+      ]
+    },
+    {
+      "id": "Y03",
+      "letter": "N:\\claude-cfl\\gt4-blind\\wayfinder\\out\\Y03.md",
+      "bytes": 2551,
+      "sha256": "ae9d4ba5cbf149bc6b2411fd70403c04105ef608491d4880f10ce3f6fb571f13",
+      "properties": [
+        {
+          "property": "map_section:destination",
+          "verdict": "PASS",
+          "note": "section 'destination' present and non-empty=True"
+        },
+        {
+          "property": "map_section:notes",
+          "verdict": "FAIL",
+          "note": "section 'notes' present and non-empty=False"
+        },
+        {
+          "property": "map_section:decisions",
+          "verdict": "PASS",
+          "note": "section 'decisions' present and non-empty=True"
+        },
+        {
+          "property": "map_section:fog",
+          "verdict": "FAIL",
+          "note": "section 'fog' present and non-empty=False"
+        },
+        {
+          "property": "map_section:out_of_scope",
+          "verdict": "PASS",
+          "note": "section 'out_of_scope' present and non-empty=True"
+        },
+        {
+          "property": "destination_is_one_or_two_lines",
+          "verdict": "PASS",
+          "note": "destination sentences=1 chars=97 (must be 1-2 sentences, <=400 chars)"
+        },
+        {
+          "property": "fog_and_scope_disjoint",
+          "verdict": "PASS",
+          "note": "items present in BOTH fog and out-of-scope=[]"
+        },
+        {
+          "property": "out_of_scope_items_carry_why",
+          "verdict": "PASS",
+          "note": "out-of-scope items with no stated why=[]"
+        },
+        {
+          "property": "fog_items_are_in_scope",
+          "verdict": "FAIL",
+          "note": "Not yet specified carries no item"
+        },
+        {
+          "property": "refer_by_name_not_bare_id",
+          "verdict": "PASS",
+          "note": "lines using a bare id with no name=[]"
+        },
+        {
+          "property": "map_body_lists_no_open_tickets",
+          "verdict": "PASS",
+          "note": "open-ticket detail inside the five map sections: type labels=0 Question fields=0"
+        },
+        {
+          "property": "blocking_convention_named",
+          "verdict": "PASS",
+          "note": "blocking convention named=True"
+        },
+        {
+          "property": "tracker_choice_named",
+          "verdict": "PASS",
+          "note": "github mentioned=False wiki-tracker mentioned=True chose-wiki=False chose-github=False"
+        },
+        {
+          "property": "plan_not_do",
+          "verdict": "PASS",
+          "note": "execution claims=[] notes-override declared=False"
+        },
+        {
+          "property": "claim_before_work",
+          "verdict": "PASS",
+          "note": "claim recorded or claim-before-work stated=True"
+        },
+        {
+          "property": "resolution_recorded_three_ways",
+          "verdict": "PASS",
+          "note": "resolution artifacts missing=[]"
+        },
+        {
+          "property": "decisions_are_linked_gists",
+          "verdict": "FAIL",
+          "note": "decision lines unlinked or over 220 chars=['- [Does a saturated split block or warn](wiki']"
+        },
+        {
+          "property": "cold:a cold reader can pick the next takeable ticket and tell fog from out-of-scope without asking",
+          "verdict": "UNKNOWN",
+          "note": "cold-reader property; not mechanically checkable"
+        }
+      ]
+    },
+    {
+      "id": "Y04",
+      "letter": "N:\\claude-cfl\\gt4-blind\\wayfinder\\out\\Y04.md",
+      "bytes": 2710,
+      "sha256": "457d2f71bb989dff2fe2a1f73db04b108e0927d87567124e06dde63e389145ac",
+      "properties": [
+        {
+          "property": "map_section:destination",
+          "verdict": "PASS",
+          "note": "section 'destination' present and non-empty=True"
+        },
+        {
+          "property": "map_section:notes",
+          "verdict": "FAIL",
+          "note": "section 'notes' present and non-empty=False"
+        },
+        {
+          "property": "map_section:decisions",
+          "verdict": "PASS",
+          "note": "section 'decisions' present and non-empty=True"
+        },
+        {
+          "property": "map_section:fog",
+          "verdict": "PASS",
+          "note": "section 'fog' present and non-empty=True"
+        },
+        {
+          "property": "map_section:out_of_scope",
+          "verdict": "PASS",
+          "note": "section 'out_of_scope' present and non-empty=True"
+        },
+        {
+          "property": "destination_is_one_or_two_lines",
+          "verdict": "PASS",
+          "note": "destination sentences=1 chars=97 (must be 1-2 sentences, <=400 chars)"
+        },
+        {
+          "property": "fog_and_scope_disjoint",
+          "verdict": "PASS",
+          "note": "items present in BOTH fog and out-of-scope=[]"
+        },
+        {
+          "property": "out_of_scope_items_carry_why",
+          "verdict": "PASS",
+          "note": "out-of-scope items with no stated why=[]"
+        },
+        {
+          "property": "fog_items_are_in_scope",
+          "verdict": "PASS",
+          "note": "fog items marked out-of-scope=[]"
+        },
+        {
+          "property": "refer_by_name_not_bare_id",
+          "verdict": "PASS",
+          "note": "lines using a bare id with no name=[]"
+        },
+        {
+          "property": "map_body_lists_no_open_tickets",
+          "verdict": "PASS",
+          "note": "open-ticket detail inside the five map sections: type labels=0 Question fields=0"
+        },
+        {
+          "property": "blocking_convention_named",
+          "verdict": "PASS",
+          "note": "blocking convention named=True"
+        },
+        {
+          "property": "tracker_choice_named",
+          "verdict": "PASS",
+          "note": "github mentioned=False wiki-tracker mentioned=True chose-wiki=False chose-github=False"
+        },
+        {
+          "property": "plan_not_do",
+          "verdict": "PASS",
+          "note": "execution claims=[] notes-override declared=False"
+        },
+        {
+          "property": "every_ticket_has_question",
+          "verdict": "PASS",
+          "note": "tickets with no Question=[]"
+        },
+        {
+          "property": "every_ticket_has_type_label",
+          "verdict": "PASS",
+          "note": "tickets with no wayfinder:<type> label=[]"
+        },
+        {
+          "property": "claim_before_work",
+          "verdict": "FAIL",
+          "note": "claim recorded or claim-before-work stated=False"
+        },
+        {
+          "property": "resolution_recorded_three_ways",
+          "verdict": "PASS",
+          "note": "resolution artifacts missing=[]"
+        },
+        {
+          "property": "decisions_are_linked_gists",
+          "verdict": "FAIL",
+          "note": "decision lines unlinked or over 220 chars=['- [Producer tier for baselines](wiki/tracker/']"
+        },
+        {
+          "property": "graduated_fog_cleared",
+          "verdict": "FAIL",
+          "note": "graduated=False cleared from the fog=False"
+        },
+        {
+          "property": "cold:a cold reader can pick the next takeable ticket and tell fog from out-of-scope without asking",
+          "verdict": "UNKNOWN",
+          "note": "cold-reader property; not mechanically checkable"
+        }
+      ]
+    },
+    {
+      "id": "Y05",
+      "letter": "N:\\claude-cfl\\gt4-blind\\wayfinder\\out\\Y05.md",
+      "bytes": 3441,
+      "sha256": "91acb5d3706873ff3ae5a5844b5f5e0750c317a027bdf21c82a6bf5416948c55",
+      "properties": [
+        {
+          "property": "map_section:destination",
+          "verdict": "PASS",
+          "note": "section 'destination' present and non-empty=True"
+        },
+        {
+          "property": "map_section:notes",
+          "verdict": "PASS",
+          "note": "section 'notes' present and non-empty=True"
+        },
+        {
+          "property": "map_section:decisions",
+          "verdict": "PASS",
+          "note": "section 'decisions' present and non-empty=True"
+        },
+        {
+          "property": "map_section:fog",
+          "verdict": "PASS",
+          "note": "section 'fog' present and non-empty=True"
+        },
+        {
+          "property": "map_section:out_of_scope",
+          "verdict": "PASS",
+          "note": "section 'out_of_scope' present and non-empty=True"
+        },
+        {
+          "property": "destination_is_one_or_two_lines",
+          "verdict": "PASS",
+          "note": "destination sentences=1 chars=129 (must be 1-2 sentences, <=400 chars)"
+        },
+        {
+          "property": "fog_and_scope_disjoint",
+          "verdict": "PASS",
+          "note": "items present in BOTH fog and out-of-scope=[]"
+        },
+        {
+          "property": "out_of_scope_items_carry_why",
+          "verdict": "PASS",
+          "note": "out-of-scope items with no stated why=[]"
+        },
+        {
+          "property": "fog_items_are_in_scope",
+          "verdict": "PASS",
+          "note": "fog items marked out-of-scope=[]"
+        },
+        {
+          "property": "refer_by_name_not_bare_id",
+          "verdict": "PASS",
+          "note": "lines using a bare id with no name=[]"
+        },
+        {
+          "property": "map_body_lists_no_open_tickets",
+          "verdict": "PASS",
+          "note": "open-ticket detail inside the five map sections: type labels=0 Question fields=0"
+        },
+        {
+          "property": "blocking_convention_named",
+          "verdict": "PASS",
+          "note": "blocking convention named=True"
+        },
+        {
+          "property": "tracker_choice_named",
+          "verdict": "PASS",
+          "note": "github mentioned=False wiki-tracker mentioned=True chose-wiki=False chose-github=False"
+        },
+        {
+          "property": "plan_not_do",
+          "verdict": "PASS",
+          "note": "execution claims=[] notes-override declared=False"
+        },
+        {
+          "property": "every_ticket_has_question",
+          "verdict": "PASS",
+          "note": "tickets with no Question=[]"
+        },
+        {
+          "property": "every_ticket_has_type_label",
+          "verdict": "PASS",
+          "note": "tickets with no wayfinder:<type> label=[]"
+        },
+        {
+          "property": "cold:a cold reader can pick the next takeable ticket and tell fog from out-of-scope without asking",
+          "verdict": "UNKNOWN",
+          "note": "cold-reader property; not mechanically checkable"
+        }
+      ]
+    },
+    {
+      "id": "Y06",
+      "letter": "N:\\claude-cfl\\gt4-blind\\wayfinder\\out\\Y06.md",
+      "bytes": 2072,
+      "sha256": "7c96db537bb37f05c916c511a6f1039c13c722aa8e48925141f04e440e77ae0d",
+      "properties": [
+        {
+          "property": "map_section:destination",
+          "verdict": "PASS",
+          "note": "section 'destination' present and non-empty=True"
+        },
+        {
+          "property": "map_section:notes",
+          "verdict": "PASS",
+          "note": "section 'notes' present and non-empty=True"
+        },
+        {
+          "property": "map_section:decisions",
+          "verdict": "PASS",
+          "note": "section 'decisions' present and non-empty=True"
+        },
+        {
+          "property": "map_section:fog",
+          "verdict": "PASS",
+          "note": "section 'fog' present and non-empty=True"
+        },
+        {
+          "property": "map_section:out_of_scope",
+          "verdict": "PASS",
+          "note": "section 'out_of_scope' present and non-empty=True"
+        },
+        {
+          "property": "destination_is_one_or_two_lines",
+          "verdict": "PASS",
+          "note": "destination sentences=1 chars=56 (must be 1-2 sentences, <=400 chars)"
+        },
+        {
+          "property": "fog_and_scope_disjoint",
+          "verdict": "PASS",
+          "note": "items present in BOTH fog and out-of-scope=[]"
+        },
+        {
+          "property": "out_of_scope_items_carry_why",
+          "verdict": "PASS",
+          "note": "out-of-scope items with no stated why=[]"
+        },
+        {
+          "property": "fog_items_are_in_scope",
+          "verdict": "PASS",
+          "note": "fog items marked out-of-scope=[]"
+        },
+        {
+          "property": "refer_by_name_not_bare_id",
+          "verdict": "PASS",
+          "note": "lines using a bare id with no name=[]"
+        },
+        {
+          "property": "map_body_lists_no_open_tickets",
+          "verdict": "PASS",
+          "note": "open-ticket detail inside the five map sections: type labels=0 Question fields=0"
+        },
+        {
+          "property": "blocking_convention_named",
+          "verdict": "PASS",
+          "note": "blocking convention named=True"
+        },
+        {
+          "property": "tracker_choice_named",
+          "verdict": "FAIL",
+          "note": "github mentioned=True wiki-tracker mentioned=True chose-wiki=False chose-github=False"
+        },
+        {
+          "property": "plan_not_do",
+          "verdict": "PASS",
+          "note": "execution claims=[] notes-override declared=False"
+        },
+        {
+          "property": "every_ticket_has_question",
+          "verdict": "PASS",
+          "note": "tickets with no Question=[]"
+        },
+        {
+          "property": "every_ticket_has_type_label",
+          "verdict": "PASS",
+          "note": "tickets with no wayfinder:<type> label=[]"
+        },
+        {
+          "property": "cold:a cold reader can pick the next takeable ticket and tell fog from out-of-scope without asking",
+          "verdict": "UNKNOWN",
+          "note": "cold-reader property; not mechanically checkable"
+        }
+      ]
+    },
+    {
+      "id": "Y07",
+      "letter": "N:\\claude-cfl\\gt4-blind\\wayfinder\\out\\Y07.md",
+      "bytes": 2595,
+      "sha256": "c71498402a7242824d7176c07a6ca474c88aeadfb81202677e10bdd444019a93",
+      "properties": [
+        {
+          "property": "map_section:destination",
+          "verdict": "PASS",
+          "note": "section 'destination' present and non-empty=True"
+        },
+        {
+          "property": "map_section:notes",
+          "verdict": "FAIL",
+          "note": "section 'notes' present and non-empty=False"
+        },
+        {
+          "property": "map_section:decisions",
+          "verdict": "PASS",
+          "note": "section 'decisions' present and non-empty=True"
+        },
+        {
+          "property": "map_section:fog",
+          "verdict": "PASS",
+          "note": "section 'fog' present and non-empty=True"
+        },
+        {
+          "property": "map_section:out_of_scope",
+          "verdict": "PASS",
+          "note": "section 'out_of_scope' present and non-empty=True"
+        },
+        {
+          "property": "destination_is_one_or_two_lines",
+          "verdict": "PASS",
+          "note": "destination sentences=1 chars=56 (must be 1-2 sentences, <=400 chars)"
+        },
+        {
+          "property": "fog_and_scope_disjoint",
+          "verdict": "PASS",
+          "note": "items present in BOTH fog and out-of-scope=[]"
+        },
+        {
+          "property": "out_of_scope_items_carry_why",
+          "verdict": "FAIL",
+          "note": "out-of-scope items with no stated why=[\"- The wiki ingest that consumes the parser's \"]"
+        },
+        {
+          "property": "fog_items_are_in_scope",
+          "verdict": "PASS",
+          "note": "fog items marked out-of-scope=[]"
+        },
+        {
+          "property": "refer_by_name_not_bare_id",
+          "verdict": "PASS",
+          "note": "lines using a bare id with no name=[]"
+        },
+        {
+          "property": "map_body_lists_no_open_tickets",
+          "verdict": "PASS",
+          "note": "open-ticket detail inside the five map sections: type labels=0 Question fields=0"
+        },
+        {
+          "property": "blocking_convention_named",
+          "verdict": "PASS",
+          "note": "blocking convention named=True"
+        },
+        {
+          "property": "tracker_choice_named",
+          "verdict": "PASS",
+          "note": "github mentioned=False wiki-tracker mentioned=True chose-wiki=False chose-github=False"
+        },
+        {
+          "property": "plan_not_do",
+          "verdict": "PASS",
+          "note": "execution claims=[] notes-override declared=False"
+        },
+        {
+          "property": "every_ticket_has_question",
+          "verdict": "FAIL",
+          "note": "tickets with no Question=['### Ticket: Zip directly or extracted tree — ', '### Ticket: Extraction cache invalidation pol', '### Ticket: Where extracted trees live on dis']"
+        },
+        {
+          "property": "every_ticket_has_type_label",
+          "verdict": "PASS",
+          "note": "tickets with no wayfinder:<type> label=[]"
+        },
+        {
+          "property": "claim_before_work",
+          "verdict": "FAIL",
+          "note": "claim recorded or claim-before-work stated=False"
+        },
+        {
+          "property": "resolution_recorded_three_ways",
+          "verdict": "PASS",
+          "note": "resolution artifacts missing=[]"
+        },
+        {
+          "property": "decisions_are_linked_gists",
+          "verdict": "FAIL",
+          "note": "decision lines unlinked or over 220 chars=['- [Zip directly or extracted tree](wiki/track']"
+        },
+        {
+          "property": "cold:a cold reader can pick the next takeable ticket and tell fog from out-of-scope without asking",
+          "verdict": "UNKNOWN",
+          "note": "cold-reader property; not mechanically checkable"
+        }
+      ]
+    },
+    {
+      "id": "Y08",
+      "letter": "N:\\claude-cfl\\gt4-blind\\wayfinder\\out\\Y08.md",
+      "bytes": 2877,
+      "sha256": "0fe5b313cf6686fbe21bd9f38dbd28fb0607a8635f99551ab52ca26ff636b6ec",
+      "properties": [
+        {
+          "property": "map_section:destination",
+          "verdict": "PASS",
+          "note": "section 'destination' present and non-empty=True"
+        },
+        {
+          "property": "map_section:notes",
+          "verdict": "PASS",
+          "note": "section 'notes' present and non-empty=True"
+        },
+        {
+          "property": "map_section:decisions",
+          "verdict": "PASS",
+          "note": "section 'decisions' present and non-empty=True"
+        },
+        {
+          "property": "map_section:fog",
+          "verdict": "PASS",
+          "note": "section 'fog' present and non-empty=True"
+        },
+        {
+          "property": "map_section:out_of_scope",
+          "verdict": "PASS",
+          "note": "section 'out_of_scope' present and non-empty=True"
+        },
+        {
+          "property": "destination_is_one_or_two_lines",
+          "verdict": "PASS",
+          "note": "destination sentences=1 chars=93 (must be 1-2 sentences, <=400 chars)"
+        },
+        {
+          "property": "fog_and_scope_disjoint",
+          "verdict": "PASS",
+          "note": "items present in BOTH fog and out-of-scope=[]"
+        },
+        {
+          "property": "out_of_scope_items_carry_why",
+          "verdict": "PASS",
+          "note": "out-of-scope items with no stated why=[]"
+        },
+        {
+          "property": "fog_items_are_in_scope",
+          "verdict": "PASS",
+          "note": "fog items marked out-of-scope=[]"
+        },
+        {
+          "property": "refer_by_name_not_bare_id",
+          "verdict": "PASS",
+          "note": "lines using a bare id with no name=[]"
+        },
+        {
+          "property": "map_body_lists_no_open_tickets",
+          "verdict": "PASS",
+          "note": "open-ticket detail inside the five map sections: type labels=0 Question fields=0"
+        },
+        {
+          "property": "blocking_convention_named",
+          "verdict": "PASS",
+          "note": "blocking convention named=True"
+        },
+        {
+          "property": "tracker_choice_named",
+          "verdict": "PASS",
+          "note": "github mentioned=False wiki-tracker mentioned=True chose-wiki=False chose-github=False"
+        },
+        {
+          "property": "plan_not_do",
+          "verdict": "PASS",
+          "note": "execution claims=[] notes-override declared=True"
+        },
+        {
+          "property": "every_ticket_has_question",
+          "verdict": "PASS",
+          "note": "tickets with no Question=[]"
+        },
+        {
+          "property": "every_ticket_has_type_label",
+          "verdict": "PASS",
+          "note": "tickets with no wayfinder:<type> label=[]"
+        },
+        {
+          "property": "cold:a cold reader can pick the next takeable ticket and tell fog from out-of-scope without asking",
+          "verdict": "UNKNOWN",
+          "note": "cold-reader property; not mechanically checkable"
+        }
+      ]
+    }
+  ]
+}

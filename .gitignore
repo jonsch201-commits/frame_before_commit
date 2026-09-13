@@ -1,0 +1,9 @@
+# derived, rebuildable, and over GitHub's 100 MB per-file limit: rebuild with the command in README.md, or ship to HuggingFace as a dataset
+graph/*.sqlite
+graph/*.json
+# earlier derivation kept beside the union for the record, not part of the artifact
+professional.runE/
+controls-professional.runE/
+# bytecode litter from executability runs
+__pycache__/
+*.pyc

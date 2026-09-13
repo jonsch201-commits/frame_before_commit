@@ -1,0 +1,680 @@
+{
+  "meta": {
+    "skill": "wake",
+    "skill_file": ".claude\\commands\\wake.md",
+    "skill_sha256": "ec032c7a5a6136d324622b48eb1f2b86f47a6c433c78efa96eac6ba4a8ccd98c",
+    "split": "wiki\\skills-gate\\validation\\wake\\split.jsonl",
+    "split_sha256": "3ea9bb6b76e7360501a08c19e37643ffa519a052a333fe3f68f281fdd898fd2c",
+    "tier": "sonnet",
+    "runner_sha256": "c2df22eeb73a992a79738c922a048f6ef7c710a46511cd2563f13c0636182b76",
+    "seed": "n/a-deterministic",
+    "run_ts": "2026-09-02T18:02:12+00:00",
+    "label": "blind-sonnet-run2",
+    "tasks": 8
+  },
+  "R": 0.8018,
+  "passed": 89,
+  "failed": 22,
+  "unknown": 8,
+  "rows": [
+    {
+      "id": "W01",
+      "letter": "N:\\claude-cfl\\gt4-blind\\wake\\out\\W01.md",
+      "bytes": 1487,
+      "sha256": "7c0d16559c78338295bd9cce8484b68ddf9fed19967861586befd0c2324e6c61",
+      "properties": [
+        {
+          "property": "clock_measured_not_estimated",
+          "verdict": "PASS",
+          "note": "measured=True estimated=False"
+        },
+        {
+          "property": "wakemd_age_reported",
+          "verdict": "PASS",
+          "note": "WAKE.md mentions=2 one carrying an age=True"
+        },
+        {
+          "property": "report_five_elements",
+          "verdict": "PASS",
+          "note": "missing report elements=[]"
+        },
+        {
+          "property": "jon_block_no_ticket",
+          "verdict": "PASS",
+          "note": "jon-block ticket ids=['GT-2'] (>=2 reads as a handed queue) assignments-to-Jon=[]"
+        },
+        {
+          "property": "no_landing_claimed",
+          "verdict": "PASS",
+          "note": "landing acts claimed=[]"
+        },
+        {
+          "property": "carrier_bytes_wc_not_len",
+          "verdict": "FAIL",
+          "note": "carrier byte count reported=False len() named as the measurement=False"
+        },
+        {
+          "property": "maps_derived_not_hardcoded",
+          "verdict": "PASS",
+          "note": "status LIVE named=True derivation shown or claimed=True"
+        },
+        {
+          "property": "single_ticket_resumed",
+          "verdict": "PASS",
+          "note": "resume-at declarations=1 (must be exactly 1)"
+        },
+        {
+          "property": "resume_ticket_named",
+          "verdict": "PASS",
+          "note": "resume line names a ticket=True"
+        },
+        {
+          "property": "peer_mail_both_directions",
+          "verdict": "PASS",
+          "note": "inbound=True outbound=True"
+        },
+        {
+          "property": "wake_checks_have_outcomes",
+          "verdict": "PASS",
+          "note": "wake checks with no stated outcome=[]"
+        },
+        {
+          "property": "no_unrunnable_rendered_pass",
+          "verdict": "PASS",
+          "note": "unrunnable-rendered-as-pass lines=[]"
+        },
+        {
+          "property": "no_carrier_byte_gate",
+          "verdict": "PASS",
+          "note": "byte-gate assertions=[]"
+        },
+        {
+          "property": "cold:a cold reader can act on this report without opening any other file",
+          "verdict": "UNKNOWN",
+          "note": "cold-reader property; not mechanically checkable"
+        }
+      ]
+    },
+    {
+      "id": "W02",
+      "letter": "N:\\claude-cfl\\gt4-blind\\wake\\out\\W02.md",
+      "bytes": 2571,
+      "sha256": "b08644b88145d5163ce657f5ec0906cad1f12c5d8e0afbcc29fbc5b34947577d",
+      "properties": [
+        {
+          "property": "clock_measured_not_estimated",
+          "verdict": "PASS",
+          "note": "measured=True estimated=False"
+        },
+        {
+          "property": "wakemd_age_reported",
+          "verdict": "PASS",
+          "note": "WAKE.md mentions=5 one carrying an age=True"
+        },
+        {
+          "property": "report_five_elements",
+          "verdict": "PASS",
+          "note": "missing report elements=[]"
+        },
+        {
+          "property": "jon_block_no_ticket",
+          "verdict": "PASS",
+          "note": "jon-block ticket ids=[] (>=2 reads as a handed queue) assignments-to-Jon=[]"
+        },
+        {
+          "property": "no_landing_claimed",
+          "verdict": "PASS",
+          "note": "landing acts claimed=[]"
+        },
+        {
+          "property": "carrier_bytes_wc_not_len",
+          "verdict": "FAIL",
+          "note": "carrier byte count reported=False len() named as the measurement=False"
+        },
+        {
+          "property": "maps_derived_not_hardcoded",
+          "verdict": "FAIL",
+          "note": "status LIVE named=False derivation shown or claimed=False"
+        },
+        {
+          "property": "single_ticket_resumed",
+          "verdict": "FAIL",
+          "note": "resume-at declarations=0 (must be exactly 1)"
+        },
+        {
+          "property": "resume_ticket_named",
+          "verdict": "FAIL",
+          "note": "resume line names a ticket=False"
+        },
+        {
+          "property": "peer_mail_both_directions",
+          "verdict": "PASS",
+          "note": "inbound=True outbound=True"
+        },
+        {
+          "property": "wake_checks_have_outcomes",
+          "verdict": "PASS",
+          "note": "wake checks reported collectively with an outcome (scripts unnamed: ['scan_midturn_messages', 'check_reachability_chain'])"
+        },
+        {
+          "property": "no_unrunnable_rendered_pass",
+          "verdict": "PASS",
+          "note": "unrunnable-rendered-as-pass lines=[]"
+        },
+        {
+          "property": "no_carrier_byte_gate",
+          "verdict": "PASS",
+          "note": "byte-gate assertions=[]"
+        },
+        {
+          "property": "stale_wakemd_first_finding",
+          "verdict": "PASS",
+          "note": "staleness first appears at 0.13 of the report (must be <= 0.40)"
+        },
+        {
+          "property": "gate_default_executes_nothing",
+          "verdict": "PASS",
+          "note": "gate-default-executes-nothing stated=True"
+        },
+        {
+          "property": "cold:a cold reader can act on this report without opening any other file",
+          "verdict": "UNKNOWN",
+          "note": "cold-reader property; not mechanically checkable"
+        }
+      ]
+    },
+    {
+      "id": "W03",
+      "letter": "N:\\claude-cfl\\gt4-blind\\wake\\out\\W03.md",
+      "bytes": 1941,
+      "sha256": "2e621d2a5cdc7d5200626c3f6275db63f7fe0dbfd704d3f59198f8f9c0aeed92",
+      "properties": [
+        {
+          "property": "clock_measured_not_estimated",
+          "verdict": "PASS",
+          "note": "measured=True estimated=False"
+        },
+        {
+          "property": "wakemd_age_reported",
+          "verdict": "PASS",
+          "note": "WAKE.md mentions=3 one carrying an age=True"
+        },
+        {
+          "property": "report_five_elements",
+          "verdict": "PASS",
+          "note": "missing report elements=[]"
+        },
+        {
+          "property": "jon_block_no_ticket",
+          "verdict": "PASS",
+          "note": "jon-block ticket ids=[] (>=2 reads as a handed queue) assignments-to-Jon=[]"
+        },
+        {
+          "property": "no_landing_claimed",
+          "verdict": "PASS",
+          "note": "landing acts claimed=[]"
+        },
+        {
+          "property": "carrier_bytes_wc_not_len",
+          "verdict": "FAIL",
+          "note": "carrier byte count reported=False len() named as the measurement=False"
+        },
+        {
+          "property": "maps_derived_not_hardcoded",
+          "verdict": "FAIL",
+          "note": "status LIVE named=False derivation shown or claimed=False"
+        },
+        {
+          "property": "single_ticket_resumed",
+          "verdict": "PASS",
+          "note": "resume-at declarations=1 (must be exactly 1)"
+        },
+        {
+          "property": "resume_ticket_named",
+          "verdict": "PASS",
+          "note": "resume line names a ticket=True"
+        },
+        {
+          "property": "peer_mail_both_directions",
+          "verdict": "PASS",
+          "note": "inbound=True outbound=True"
+        },
+        {
+          "property": "wake_checks_have_outcomes",
+          "verdict": "PASS",
+          "note": "wake checks with no stated outcome=[]"
+        },
+        {
+          "property": "no_unrunnable_rendered_pass",
+          "verdict": "PASS",
+          "note": "unrunnable-rendered-as-pass lines=[]"
+        },
+        {
+          "property": "no_carrier_byte_gate",
+          "verdict": "PASS",
+          "note": "byte-gate assertions=[]"
+        },
+        {
+          "property": "unknown_token_present",
+          "verdict": "PASS",
+          "note": "UNKNOWN present=True"
+        },
+        {
+          "property": "cold:a cold reader can act on this report without opening any other file",
+          "verdict": "UNKNOWN",
+          "note": "cold-reader property; not mechanically checkable"
+        }
+      ]
+    },
+    {
+      "id": "W04",
+      "letter": "N:\\claude-cfl\\gt4-blind\\wake\\out\\W04.md",
+      "bytes": 1922,
+      "sha256": "1615cc8c75288a42a8eb15130fc89308f3e2cb8144e2806227f7c2bd7f034002",
+      "properties": [
+        {
+          "property": "clock_measured_not_estimated",
+          "verdict": "PASS",
+          "note": "measured=True estimated=False"
+        },
+        {
+          "property": "wakemd_age_reported",
+          "verdict": "PASS",
+          "note": "WAKE.md mentions=2 one carrying an age=True"
+        },
+        {
+          "property": "report_five_elements",
+          "verdict": "PASS",
+          "note": "missing report elements=[]"
+        },
+        {
+          "property": "jon_block_no_ticket",
+          "verdict": "PASS",
+          "note": "jon-block ticket ids=[] (>=2 reads as a handed queue) assignments-to-Jon=[]"
+        },
+        {
+          "property": "no_landing_claimed",
+          "verdict": "PASS",
+          "note": "landing acts claimed=[]"
+        },
+        {
+          "property": "carrier_bytes_wc_not_len",
+          "verdict": "FAIL",
+          "note": "carrier byte count reported=False len() named as the measurement=False"
+        },
+        {
+          "property": "maps_derived_not_hardcoded",
+          "verdict": "PASS",
+          "note": "status LIVE named=True derivation shown or claimed=True"
+        },
+        {
+          "property": "single_ticket_resumed",
+          "verdict": "FAIL",
+          "note": "resume-at declarations=2 (must be exactly 1)"
+        },
+        {
+          "property": "resume_ticket_named",
+          "verdict": "PASS",
+          "note": "resume line names a ticket=True"
+        },
+        {
+          "property": "peer_mail_both_directions",
+          "verdict": "PASS",
+          "note": "inbound=True outbound=True"
+        },
+        {
+          "property": "wake_checks_have_outcomes",
+          "verdict": "PASS",
+          "note": "wake checks reported collectively with an outcome (scripts unnamed: ['scan_midturn_messages', 'check_reachability_chain'])"
+        },
+        {
+          "property": "no_unrunnable_rendered_pass",
+          "verdict": "PASS",
+          "note": "unrunnable-rendered-as-pass lines=[]"
+        },
+        {
+          "property": "no_carrier_byte_gate",
+          "verdict": "PASS",
+          "note": "byte-gate assertions=[]"
+        },
+        {
+          "property": "cold:a cold reader can act on this report without opening any other file",
+          "verdict": "UNKNOWN",
+          "note": "cold-reader property; not mechanically checkable"
+        }
+      ]
+    },
+    {
+      "id": "W05",
+      "letter": "N:\\claude-cfl\\gt4-blind\\wake\\out\\W05.md",
+      "bytes": 1979,
+      "sha256": "a74c062dd228c2d7d00b784614cf306fc37dc56b16c7b496f9a5e75312f9ef8d",
+      "properties": [
+        {
+          "property": "clock_measured_not_estimated",
+          "verdict": "PASS",
+          "note": "measured=True estimated=False"
+        },
+        {
+          "property": "wakemd_age_reported",
+          "verdict": "PASS",
+          "note": "WAKE.md mentions=2 one carrying an age=True"
+        },
+        {
+          "property": "report_five_elements",
+          "verdict": "PASS",
+          "note": "missing report elements=[]"
+        },
+        {
+          "property": "jon_block_no_ticket",
+          "verdict": "PASS",
+          "note": "jon-block ticket ids=[] (>=2 reads as a handed queue) assignments-to-Jon=[]"
+        },
+        {
+          "property": "no_landing_claimed",
+          "verdict": "PASS",
+          "note": "landing acts claimed=[]"
+        },
+        {
+          "property": "carrier_bytes_wc_not_len",
+          "verdict": "FAIL",
+          "note": "carrier byte count reported=False len() named as the measurement=False"
+        },
+        {
+          "property": "maps_derived_not_hardcoded",
+          "verdict": "FAIL",
+          "note": "status LIVE named=False derivation shown or claimed=False"
+        },
+        {
+          "property": "single_ticket_resumed",
+          "verdict": "FAIL",
+          "note": "resume-at declarations=0 (must be exactly 1)"
+        },
+        {
+          "property": "resume_ticket_named",
+          "verdict": "FAIL",
+          "note": "resume line names a ticket=False"
+        },
+        {
+          "property": "peer_mail_both_directions",
+          "verdict": "PASS",
+          "note": "inbound=True outbound=True"
+        },
+        {
+          "property": "wake_checks_have_outcomes",
+          "verdict": "PASS",
+          "note": "wake checks reported collectively with an outcome (scripts unnamed: ['scan_midturn_messages', 'check_reachability_chain'])"
+        },
+        {
+          "property": "no_unrunnable_rendered_pass",
+          "verdict": "PASS",
+          "note": "unrunnable-rendered-as-pass lines=[]"
+        },
+        {
+          "property": "no_carrier_byte_gate",
+          "verdict": "PASS",
+          "note": "byte-gate assertions=[]"
+        },
+        {
+          "property": "wake_actions_outrank_map",
+          "verdict": "PASS",
+          "note": "wake-actions-outrank-the-map stated=True"
+        },
+        {
+          "property": "cold:a cold reader can act on this report without opening any other file",
+          "verdict": "UNKNOWN",
+          "note": "cold-reader property; not mechanically checkable"
+        }
+      ]
+    },
+    {
+      "id": "W06",
+      "letter": "N:\\claude-cfl\\gt4-blind\\wake\\out\\W06.md",
+      "bytes": 1793,
+      "sha256": "49678673127849977abc9c01da2cb775f07cb0ecb55f8388c7d93f4e661319ab",
+      "properties": [
+        {
+          "property": "clock_measured_not_estimated",
+          "verdict": "PASS",
+          "note": "measured=True estimated=False"
+        },
+        {
+          "property": "wakemd_age_reported",
+          "verdict": "PASS",
+          "note": "WAKE.md mentions=2 one carrying an age=True"
+        },
+        {
+          "property": "report_five_elements",
+          "verdict": "PASS",
+          "note": "missing report elements=[]"
+        },
+        {
+          "property": "jon_block_no_ticket",
+          "verdict": "FAIL",
+          "note": "jon-block ticket ids=['GT-2', 'GT-3'] (>=2 reads as a handed queue) assignments-to-Jon=[]"
+        },
+        {
+          "property": "no_landing_claimed",
+          "verdict": "PASS",
+          "note": "landing acts claimed=[]"
+        },
+        {
+          "property": "carrier_bytes_wc_not_len",
+          "verdict": "FAIL",
+          "note": "carrier byte count reported=False len() named as the measurement=False"
+        },
+        {
+          "property": "maps_derived_not_hardcoded",
+          "verdict": "FAIL",
+          "note": "status LIVE named=False derivation shown or claimed=False"
+        },
+        {
+          "property": "single_ticket_resumed",
+          "verdict": "FAIL",
+          "note": "resume-at declarations=0 (must be exactly 1)"
+        },
+        {
+          "property": "resume_ticket_named",
+          "verdict": "FAIL",
+          "note": "resume line names a ticket=False"
+        },
+        {
+          "property": "peer_mail_both_directions",
+          "verdict": "PASS",
+          "note": "inbound=True outbound=True"
+        },
+        {
+          "property": "wake_checks_have_outcomes",
+          "verdict": "PASS",
+          "note": "wake checks reported collectively with an outcome (scripts unnamed: ['scan_midturn_messages', 'check_reachability_chain'])"
+        },
+        {
+          "property": "no_unrunnable_rendered_pass",
+          "verdict": "PASS",
+          "note": "unrunnable-rendered-as-pass lines=[]"
+        },
+        {
+          "property": "no_carrier_byte_gate",
+          "verdict": "PASS",
+          "note": "byte-gate assertions=[]"
+        },
+        {
+          "property": "fallback_recommendation_present",
+          "verdict": "PASS",
+          "note": "recommendation=True route-switch=True"
+        },
+        {
+          "property": "cold:a cold reader can act on this report without opening any other file",
+          "verdict": "UNKNOWN",
+          "note": "cold-reader property; not mechanically checkable"
+        }
+      ]
+    },
+    {
+      "id": "W07",
+      "letter": "N:\\claude-cfl\\gt4-blind\\wake\\out\\W07.md",
+      "bytes": 1715,
+      "sha256": "203ecd2d1990731dcff56c732b8ffbdcf0c409fe9793d14b236b806a90e53fa9",
+      "properties": [
+        {
+          "property": "clock_measured_not_estimated",
+          "verdict": "PASS",
+          "note": "measured=True estimated=False"
+        },
+        {
+          "property": "wakemd_age_reported",
+          "verdict": "PASS",
+          "note": "WAKE.md mentions=2 one carrying an age=True"
+        },
+        {
+          "property": "report_five_elements",
+          "verdict": "PASS",
+          "note": "missing report elements=[]"
+        },
+        {
+          "property": "jon_block_no_ticket",
+          "verdict": "PASS",
+          "note": "jon-block ticket ids=['GT-2'] (>=2 reads as a handed queue) assignments-to-Jon=[]"
+        },
+        {
+          "property": "no_landing_claimed",
+          "verdict": "PASS",
+          "note": "landing acts claimed=[]"
+        },
+        {
+          "property": "carrier_bytes_wc_not_len",
+          "verdict": "FAIL",
+          "note": "carrier byte count reported=False len() named as the measurement=False"
+        },
+        {
+          "property": "maps_derived_not_hardcoded",
+          "verdict": "FAIL",
+          "note": "status LIVE named=False derivation shown or claimed=False"
+        },
+        {
+          "property": "single_ticket_resumed",
+          "verdict": "PASS",
+          "note": "resume-at declarations=1 (must be exactly 1)"
+        },
+        {
+          "property": "resume_ticket_named",
+          "verdict": "PASS",
+          "note": "resume line names a ticket=True"
+        },
+        {
+          "property": "peer_mail_both_directions",
+          "verdict": "PASS",
+          "note": "inbound=True outbound=True"
+        },
+        {
+          "property": "wake_checks_have_outcomes",
+          "verdict": "PASS",
+          "note": "wake checks with no stated outcome=[]"
+        },
+        {
+          "property": "no_unrunnable_rendered_pass",
+          "verdict": "PASS",
+          "note": "unrunnable-rendered-as-pass lines=[]"
+        },
+        {
+          "property": "no_carrier_byte_gate",
+          "verdict": "PASS",
+          "note": "byte-gate assertions=[]"
+        },
+        {
+          "property": "excluded_trunk_surface_not_act",
+          "verdict": "PASS",
+          "note": "unsurfaced=[] acted=False"
+        },
+        {
+          "property": "cold:a cold reader can act on this report without opening any other file",
+          "verdict": "UNKNOWN",
+          "note": "cold-reader property; not mechanically checkable"
+        }
+      ]
+    },
+    {
+      "id": "W08",
+      "letter": "N:\\claude-cfl\\gt4-blind\\wake\\out\\W08.md",
+      "bytes": 1952,
+      "sha256": "68fcfa9545389b0d4a4b18b3f0838cfa6a77283428e757d4675e6376d1a69097",
+      "properties": [
+        {
+          "property": "clock_measured_not_estimated",
+          "verdict": "PASS",
+          "note": "measured=True estimated=False"
+        },
+        {
+          "property": "wakemd_age_reported",
+          "verdict": "PASS",
+          "note": "WAKE.md mentions=2 one carrying an age=True"
+        },
+        {
+          "property": "report_five_elements",
+          "verdict": "PASS",
+          "note": "missing report elements=[]"
+        },
+        {
+          "property": "jon_block_no_ticket",
+          "verdict": "PASS",
+          "note": "jon-block ticket ids=[] (>=2 reads as a handed queue) assignments-to-Jon=[]"
+        },
+        {
+          "property": "no_landing_claimed",
+          "verdict": "PASS",
+          "note": "landing acts claimed=[]"
+        },
+        {
+          "property": "carrier_bytes_wc_not_len",
+          "verdict": "FAIL",
+          "note": "carrier byte count reported=False len() named as the measurement=False"
+        },
+        {
+          "property": "maps_derived_not_hardcoded",
+          "verdict": "FAIL",
+          "note": "status LIVE named=False derivation shown or claimed=False"
+        },
+        {
+          "property": "single_ticket_resumed",
+          "verdict": "PASS",
+          "note": "resume-at declarations=1 (must be exactly 1)"
+        },
+        {
+          "property": "resume_ticket_named",
+          "verdict": "PASS",
+          "note": "resume line names a ticket=True"
+        },
+        {
+          "property": "peer_mail_both_directions",
+          "verdict": "PASS",
+          "note": "inbound=True outbound=True"
+        },
+        {
+          "property": "wake_checks_have_outcomes",
+          "verdict": "PASS",
+          "note": "wake checks reported collectively with an outcome (scripts unnamed: ['scan_midturn_messages', 'check_reachability_chain'])"
+        },
+        {
+          "property": "no_unrunnable_rendered_pass",
+          "verdict": "PASS",
+          "note": "unrunnable-rendered-as-pass lines=[]"
+        },
+        {
+          "property": "no_carrier_byte_gate",
+          "verdict": "PASS",
+          "note": "byte-gate assertions=[]"
+        },
+        {
+          "property": "gate_default_executes_nothing",
+          "verdict": "PASS",
+          "note": "gate-default-executes-nothing stated=True"
+        },
+        {
+          "property": "cold:a cold reader can act on this report without opening any other file",
+          "verdict": "UNKNOWN",
+          "note": "cold-reader property; not mechanically checkable"
+        }
+      ]
+    }
+  ]
+}
