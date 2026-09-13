@@ -1,11 +1,4 @@
 #!/usr/bin/env python3
-# ⛔ ONE HOME FOR THE GRAPH. This file hardcoded %LOCALAPPDATA%/claude/graphrag and would NOT
-# have followed CFL_GRAPHRAG_HOME -- [measured 2026-09-12 23:1x] seven scripts had that bug,
-# so setting the variable would have pointed the BUILDER at a new disk while every READER
-# stayed on the old one, each reporting success. See scripts/lib/graphrag_home.py.
-sys.path.insert(0, str(__import__("pathlib").Path(__file__).resolve().parents[1] / "lib"))
-from graphrag_home import DB as _GRAPHRAG_DB  # noqa: E402
-
 """WW-19 -- a verdict must carry its own provenance, or a reader cannot grade it.
 
 WHY THIS EXISTS, in three instances from one 24-hour window, all in this trunk:
@@ -47,6 +40,20 @@ THE FOUR ROLES a verdict-bearing artifact must be able to speak to:
 
 Exit: 0 all clean · 1 findings · 5 selftest failed.
 """
+
+# ⛔ ONE HOME FOR THE GRAPH -- and this shim has to sit BELOW the module docstring.
+# [2026-09-13 03:0x] My first version of it landed ABOVE the docstring, which did two things at once:
+# it used `sys` before this module's own `import sys` seventy lines down (NameError on every run), and
+# it displaced the docstring from being the file's FIRST STATEMENT, so `__doc__` became None and
+# argparse died on `__doc__.splitlines()`. Two failures from one careless insertion point, and the
+# second only appeared after fixing the first.
+# ⭐ Both were found by scripts/audit/lint_shipped_tree.py -- a lint I wrote four hours after breaking
+# this file, for a different purpose, and its first real finding was my own damage. That is the whole
+# argument for an executability check over a shipped tree: nothing else runs 125 scripts.
+import sys
+sys.path.insert(0, str(__import__("pathlib").Path(__file__).resolve().parents[1] / "lib"))
+from graphrag_home import DB as _GRAPHRAG_DB  # noqa: E402
+
 
 import argparse
 import copy

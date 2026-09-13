@@ -1,0 +1,237 @@
+=== v4.0 CONFORMANCE — 311 /sources/ pages (stdout only, ledger NOT touched) ===
+  grades: ✓=PASS  ·=FAIL  —=N/A-by-kind  ▨=N/A-blocked  !=unrecoverable
+  E1k_kind       PASS  111 ( 35%)   FAIL  200   non-applicable    0
+  E1_form        PASS  261 ( 83%)   FAIL   50   non-applicable    0
+  E2_anchor      PASS  212 ( 68%)   FAIL   71   non-applicable   28
+  E3_fidelity    PASS   94 ( 30%)   FAIL  191   non-applicable   26
+  E4_uncap       PASS   79 ( 25%)   FAIL  194   non-applicable   38
+  E5_link        PASS  225 ( 72%)   FAIL   60   non-applicable   26
+  E6_find        PASS  111 ( 35%)   FAIL  200   non-applicable    0
+  E7_prov        PASS  105 ( 33%)   FAIL  206   non-applicable    0
+  E7m_reads      PASS   16 (  5%)   FAIL    5   non-applicable  290
+  E8_fixity      PASS   63 ( 20%)   FAIL  192   non-applicable   56
+  conformant(v4.0): 71/311
+  audit_state: {'unaudited': 297, 'verified@current': 11, 'verified@stale(v3.0)': 1, 'linted (v4.0-conformant at write time; not yet independently re-verified by a second session)': 2}
+  !! verified at a SUPERSEDED standard (G3: demoted authority): ['actuarial-ai-tooling-2026-03-30-012097']
+
+=== DETERMINISTIC BROKEN ANCHORS (Tn > verified turn count) — 0 pages ===
+
+NOTE: in-range anchors are NOT verified here. scripts/lint_citation_coverage.py's
+sampled arm put genuine in-range support at ~40% against this file's 96.7%.
+
+=== KIND-AWARE SWEEP (--all-kinds), 232 non-source pages (patterns/entities/concepts/references/purpose) ===
+  grades: ✓=PASS  ·=FAIL  —=N/A-by-kind  !=unrecoverable  (UNKNOWN/unrecoverable is reported as its own NA bucket below, never folded into CONFORMANT)
+
+  kind              pages  CONFORMANT   FAIL     NA
+  concept              60           7     53      0
+  doctrines             1           0      1      0
+  entity               12           0     12      0
+  finding               1           0      1      0
+  pattern              15          15      0      0
+  pattern-index         1           1      0      0
+  purpose              42           0     42      0
+  reference            91          10     81      0
+  reference — authoritative current-form page      1           0      1      0
+  skill-record          8           0      8      0
+  TOTAL               232          33    199      0
+
+  --- failing/NA pages (199) and their non-PASS checks ---
+  [FAIL      ] concept    actuarial-epistemology: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    ai-governance: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    ai-mechanics: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    bgisolation-membrane: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    chat-organization: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    citability-standard: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    claude-architecture: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    claude-constitution: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    consciousness-framework-research: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    coordinator: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    de-pii-deriver: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    design-execution-split: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    disposition-and-delivered-is-not-received: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    disposition-rate: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    extraction-pipeline: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    fable-mirror: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    fbc-self-scoring: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    fbc-verification-gap: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    first-order-and-second-order-repair: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    four-things-the-fleet-is-missing: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    frame-before-commit: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    graphrag-retrieval: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    ground-before-stating: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    herald-of-home-and-life: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    hypothesis-loop: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    jon-cognitive-model: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    life-domains: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    loop-taxonomy: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    memory-core: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    meta-pm-framework: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    mirror-consult-economics: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    multi-agent-orchestration: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    orders-and-oaths: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    personal-role-architecture: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    probe-registry: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    ratchet-loop-rules: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    repo-hygiene: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    skills-system: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    stochastic-retrieval-research: E1k_kind=FAIL, E2_anchor=FAIL, E3_fidelity=FAIL, E4_uncap=FAIL, E6_find=FAIL, E7_prov=FAIL, E8_fixity=FAIL
+  [FAIL      ] concept    stylomantic: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    superintelligence-bostrom: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    supersession-and-old-rules-outranking-amendments: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    test-master-methodology: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    the-comparand-lives-in-prose: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    the-pessimism-split-tested-on-a-different-sample: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    transcript-corpus: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    understand-anything: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    unsaid-ledger: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    wayfinder: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    wiki-ingest-methodology: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    wiki-master-origin: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    wikiskill-adoption: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] concept    words-reify: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] doctrines  heteronomy-horn-pearl-lens: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] entity     antigravity: E10_probe=FAIL
+  [FAIL      ] entity     deco: E10_probe=FAIL
+  [FAIL      ] entity     duncan: E10_probe=FAIL
+  [FAIL      ] entity     exchequer: E10_probe=FAIL
+  [FAIL      ] entity     fable-mirror-agent: E10_probe=FAIL
+  [FAIL      ] entity     herald: E10_probe=FAIL
+  [FAIL      ] entity     index: E10_probe=FAIL
+  [FAIL      ] entity     professional: E10_probe=FAIL
+  [FAIL      ] entity     resident: E10_probe=FAIL
+  [FAIL      ] entity     secretary: E10_probe=FAIL
+  [FAIL      ] entity     soul: E10_probe=FAIL
+  [FAIL      ] entity     switchboard: E10_probe=FAIL
+  [FAIL      ] finding    ledger-positional-defects-2026-08-06: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] purpose    caveman: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] purpose    chat-exporter: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] purpose    cross-venue-intake: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] purpose    data-master: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] purpose    domain-modeling: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] purpose    exchange-letters: E1k_kind=FAIL, E6_find=FAIL
+  [FAIL      ] purpose    fbc-test-reporter: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] purpose    frame-before-commit: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] purpose    git-bash-creator: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] purpose    grill-me: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] purpose    ground-before-stating: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] purpose    guide-of-home-and-family: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] purpose    handoff: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] purpose    harness-creator: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] purpose    herald: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] purpose    loom: E1k_kind=FAIL, E6_find=FAIL
+  [FAIL      ] purpose    memory-core: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] purpose    oath-pairing-check: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] purpose    present-to-jon: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] purpose    probe-registry: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] purpose    project-manager: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] purpose    prototype: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] purpose    reverse-grill-me: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] purpose    security-master: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] purpose    session-lifecycle: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] purpose    session-order: E1k_kind=FAIL, E6_find=FAIL
+  [FAIL      ] purpose    skill-evolution-framework: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] purpose    skills-master: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] purpose    soul: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] purpose    teach-me: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] purpose    temporal-context: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] purpose    test-master: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] purpose    to-spec: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] purpose    to-tickets: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] purpose    tracker-recovery: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] purpose    transcript-parser: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] purpose    triage-master: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] purpose    unlazy: E1k_kind=FAIL, E6_find=FAIL
+  [FAIL      ] purpose    wayfinder: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] purpose    wiki-master: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] purpose    wiki-orientation: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] purpose    wiki-query: E1k_kind=FAIL, E6_find=FAIL
+  [FAIL      ] reference  LAWS-what-a-green-means: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] reference  README: E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] reference  README: E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] reference  README-genre-split: E5_link=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] reference  SCOPE-anthropic-zips-read-fence-2026-08-24: E1k_kind=FAIL, E1_form=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] reference  active-work-state: E6_find=FAIL
+  [FAIL      ] reference  architecture-changes-require-permission: E1_form=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] reference  audit-census-2026-07-13: E1k_kind=FAIL, E1_form=FAIL, E5_link=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] reference  audit-conformance-ledger: E1k_kind=FAIL, E1_form=FAIL, E5_link=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] reference  audit-program-2026-07-13: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] reference  audit-program-explained: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] reference  audit-state-and-authority: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] reference  calibration-results-2026-07-13: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] reference  cc-jsonl-thinking-signature-only: E1_form=FAIL, E6_find=FAIL
+  [FAIL      ] reference  cc-retention-cleanupperioddays: E1_form=FAIL, E6_find=FAIL
+  [FAIL      ] reference  cfl-branch-registry: E5_link=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] reference  cfl-file-manifest-2026-07-16: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] reference  cfl-launcher-git-pull-collision: E1_form=FAIL, E6_find=FAIL
+  [FAIL      ] reference  cfl-memory-store-split-by-cwd: E5_link=FAIL
+  [FAIL      ] reference  checkpoint-model: E1_form=FAIL, E6_find=FAIL
+  [FAIL      ] reference  coordinator-dispatches-never-adopts: E1_form=FAIL, E6_find=FAIL
+  [FAIL      ] reference  corpus-operations-taxonomy: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] reference  corpus-path-divergence: E1_form=FAIL, E6_find=FAIL
+  [FAIL      ] reference  decision-grain-one-clause-per-pr: E1_form=FAIL, E6_find=FAIL
+  [FAIL      ] reference  decision-scope-calibration: E1_form=FAIL, E6_find=FAIL
+  [FAIL      ] reference  deploy-phase-operating-protocol: E1_form=FAIL, E6_find=FAIL
+  [FAIL      ] reference  docker-two-mode-architecture: E1_form=FAIL, E6_find=FAIL
+  [FAIL      ] reference  drive-lag-stale-read-hazard: E1_form=FAIL, E6_find=FAIL
+  [FAIL      ] reference  drive-worktree-mirror-poisoning: E1_form=FAIL, E6_find=FAIL
+  [FAIL      ] reference  dual-relevance-wiki-routing: E1_form=FAIL, E6_find=FAIL
+  [FAIL      ] reference  example-a-material-agent-interaction-after: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] reference  example-b-immaterial-token-encoding-after: E1k_kind=FAIL
+  [FAIL      ] reference  example-c-null-consciousness-free-after: E1k_kind=FAIL, E7_prov=FAIL
+  [FAIL      ] reference  fbc-format-gap: E1_form=FAIL, E6_find=FAIL
+  [FAIL      ] reference  gist-criteria: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] reference  glossary: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] reference  gmail-messaging-standards: E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] reference  golden-principles: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] reference  identity-fence-purpose-based: E1_form=FAIL, E6_find=FAIL
+  [FAIL      ] reference  ingest-queue: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] reference  jon-control-surface: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] reference  live-session-liveness-and-untracked-state: E1_form=FAIL, E6_find=FAIL
+  [FAIL      ] reference  loop-taxonomy: E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] reference  lost-sessions-registry: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] reference  max-plan-fl-budget: E1_form=FAIL, E6_find=FAIL
+  [FAIL      ] reference  md-not-uncaptured-authoritative-disposition: E1_form=FAIL, E6_find=FAIL
+  [FAIL      ] reference  memory-collection-acknowledgment: E1_form=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] reference  mirror-stateless-dispatch-only: E6_find=FAIL
+  [FAIL      ] reference  nightly-lane-leg2-truncated-prompt: E1_form=FAIL, E6_find=FAIL
+  [FAIL      ] reference  no-public-clone-inside-private-tree: E1_form=FAIL, E6_find=FAIL
+  [FAIL      ] reference  open-architecture-questions: E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] reference  partial-sessions-registry: E1k_kind=FAIL, E1_form=FAIL, E5_link=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] reference  pilot-backfill-findings-2026-07-13: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] reference  planned-path-g1-g2-gate-order: E1_form=FAIL, E6_find=FAIL
+  [FAIL      ] reference  pm-herald-skill-state: E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] reference  privacy-default-rule-2026-07-29: E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] reference  ratification-packets-g1-g2-g4-2026-07-13: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] reference  raw-file-standards: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] reference  record-architecture-v1: E5_link=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] reference  records-map: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] reference  session-close-2026-07-07-backlog-plan: E1_form=FAIL, E6_find=FAIL
+  [FAIL      ] reference  source-page-contract-v1: E10_probe=FAIL
+  [FAIL      ] reference  source-page-standard-v1: E1k_kind=FAIL
+  [FAIL      ] reference  source-page-standard-v2: E1k_kind=FAIL
+  [FAIL      ] reference  source-page-standard-v3: E1k_kind=FAIL
+  [FAIL      ] reference  source-page-standard-v4: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] reference  source-schemas: E5_link=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] reference  stale-index-lock-recovery: E1_form=FAIL, E6_find=FAIL
+  [FAIL      ] reference  struck-gates: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] reference  subagent-stays-open-only-with-work: E1_form=FAIL, E6_find=FAIL
+  [FAIL      ] reference  t44-apollo-artemis-complete: E1_form=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] reference  ti-b-decision: E1_form=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] reference  trunks: E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] reference  unshipped-fix-updates-its-own-docs: E1_form=FAIL, E6_find=FAIL
+  [FAIL      ] reference  update-levels-2026-07-31: E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] reference  verify-conditional-claim-resolution: E1_form=FAIL, E6_find=FAIL
+  [FAIL      ] reference  vocabulary: E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] reference  wiki-answer-key: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] reference  wiki-growth-intent: E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] reference  wiki-master-concurrency-gap: E6_find=FAIL
+  [FAIL      ] reference  windows-maxpath-worktree: E6_find=FAIL
+  [FAIL      ] reference — authoritative current-form page pii-rule-current: E1k_kind=FAIL, E6_find=FAIL, E7_prov=FAIL
+  [FAIL      ] skill-record frame-before-commit: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] skill-record grill-me: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] skill-record ground-before-stating: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] skill-record handoff: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] skill-record session-order: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] skill-record temporal-context: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] skill-record wayfinder: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL
+  [FAIL      ] skill-record wiki-master: E1k_kind=FAIL, E5_link=FAIL, E6_find=FAIL

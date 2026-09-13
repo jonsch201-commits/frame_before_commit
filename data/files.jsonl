@@ -1,7 +1,7 @@
-{"path": "HUGGINGFACE-CARD.md", "sha256": "9ae9b36bf14d9c25b49396816cbf127c230d2f9000c9f23a6c53859322ecccf7", "bytes": 6219, "kind": "selfdoc:(root)", "tier": "knowledge"}
-{"path": "README.md", "sha256": "2abb0b49d976e9865815b8845e3b8dc4e660bc8fd87986cfa2df2d5f09e1582e", "bytes": 10402, "kind": "selfdoc:(root)", "tier": "knowledge"}
+{"path": "HUGGINGFACE-CARD.md", "sha256": "e92fba15680f12dc74732cfa4b2b3e1cedd2c870393bc8f3c3b09ae3e38c83e8", "bytes": 10076, "kind": "selfdoc:(root)", "tier": "knowledge"}
+{"path": "README.md", "sha256": "cab171a0595fd4a2c1e91c575099d686cf2bdbab4b3101bd5d42d000b6ba41df", "bytes": 11243, "kind": "selfdoc:(root)", "tier": "knowledge"}
 {"path": "cfl/.claude/hooks/fable-mirror-write-fence.README.md", "sha256": "f621b3f00dd51943384fc69aa759abce458c8718c47d4ad7d37838a99082f5dd", "bytes": 8710, "kind": "include:cfl", "tier": "knowledge"}
-{"path": "cfl/DERIVATION-LOG.md", "sha256": "50e95165c61589c4767d6b394eba6ce38c3d4d932e13e4fca80fe3a33462af6e", "bytes": 153905, "kind": "include:cfl", "tier": "knowledge"}
+{"path": "cfl/DERIVATION-LOG.md", "sha256": "b5948abb8cf4f26fb102446f81d014859ef11da383b4a126be64792b5be17e8e", "bytes": 165934, "kind": "include:cfl", "tier": "knowledge"}
 {"path": "cfl/scripts/ancestor.py", "sha256": "5e6fafb040f506f69126dbe880a635e5d462a9bea1e103caeacc51687edfc13c", "bytes": 10002, "kind": "include:cfl", "tier": "knowledge"}
 {"path": "cfl/scripts/anti_decoy_resolver.py", "sha256": "7f5b23295ad5f292b0c2e434106265ede2789a663e1583e173f567f7fdfbe341", "bytes": 8695, "kind": "include:cfl", "tier": "knowledge"}
 {"path": "cfl/scripts/audit/_su_close_absent.py", "sha256": "909797248672806d7e3d9cff2f8fdcab5f0980b067a64ee3e6218c3555af0a53", "bytes": 8668, "kind": "include:cfl", "tier": "knowledge"}
@@ -46,7 +46,7 @@
 {"path": "cfl/scripts/audit/db2_levers.py", "sha256": "e0ec37642943e54048365c4379080d6f5351931333105c1bc7f4dda04c6e6ff3", "bytes": 24146, "kind": "include:cfl", "tier": "knowledge"}
 {"path": "cfl/scripts/audit/deferral_unblocked.py", "sha256": "9d33b876d53d52917a83b384ddb1f950774ec4cabcdd4bc57abe168a09e17c5c", "bytes": 9148, "kind": "include:cfl", "tier": "knowledge"}
 {"path": "cfl/scripts/audit/depii_probe_reach.py", "sha256": "283732ecb3262ed87956f2417ed02582bb122887b392deae393f0786f0afc375", "bytes": 2995, "kind": "include:cfl", "tier": "knowledge"}
-{"path": "cfl/scripts/audit/derive_public_tree.py", "sha256": "e17fa26293b42e42389e5f871d5f66d5fc44e668fcd50ebb21e606c2639a5a14", "bytes": 53490, "kind": "include:cfl", "tier": "knowledge"}
+{"path": "cfl/scripts/audit/derive_public_tree.py", "sha256": "9e74f855c0b8e4a7c7931a222f37f134a50bcffbe1533153af56a626a7457e56", "bytes": 54671, "kind": "include:cfl", "tier": "knowledge"}
 {"path": "cfl/scripts/audit/dispatch_gate.py", "sha256": "a9d7e49a0399878d86bd5b07543188d6eb7a6805cc5ca25b46f0fe415518043c", "bytes": 11629, "kind": "include:cfl", "tier": "knowledge"}
 {"path": "cfl/scripts/audit/dispatch_record.py", "sha256": "6565a5e004313cf71628348eed94f4af8beb82dddf1f147d26ddcf355a0d83d2", "bytes": 7773, "kind": "include:cfl", "tier": "knowledge"}
 {"path": "cfl/scripts/audit/dispose.py", "sha256": "8d248ff354493a1f3a3fbee2114b7846f27e5aa5958b1a923f60d8aed8412881", "bytes": 6415, "kind": "include:cfl", "tier": "knowledge"}
@@ -100,7 +100,8 @@
 {"path": "cfl/scripts/audit/letter_ledger.py", "sha256": "e2eb125cb9e73d0484b1601349f5b8e4cf08c5b324e5da6b9fdf6ad8b7487c96", "bytes": 3998, "kind": "include:cfl", "tier": "knowledge"}
 {"path": "cfl/scripts/audit/lint.py", "sha256": "5297bb5f58ee32c3dde815682d142648d05a037d2f7f1f2ee5c2d4d8e01558ba", "bytes": 29941, "kind": "include:cfl", "tier": "knowledge"}
 {"path": "cfl/scripts/audit/lint_purpose.py", "sha256": "d7836cb7d853ca141631669da696c2038856a060c2a90eb1fdd2431ca14c12ce", "bytes": 8985, "kind": "include:cfl", "tier": "knowledge"}
-{"path": "cfl/scripts/audit/lint_shipped_tree.py", "sha256": "7585a8742e2167b4026ecb64f9ec5ffc9683482e74111ea2621d97050422c9a0", "bytes": 16353, "kind": "include:cfl", "tier": "knowledge"}
+{"path": "cfl/scripts/audit/lint_shipped_coverage.py", "sha256": "fef2bf9d27d6d75367cc78467f558731be972f25d3223343fa209d7e222cde11", "bytes": 13787, "kind": "include:cfl", "tier": "knowledge"}
+{"path": "cfl/scripts/audit/lint_shipped_tree.py", "sha256": "2c6956131bc6a01588083e656bd4f2a83fe4e80a1523de66eec627222f1e1590", "bytes": 17627, "kind": "include:cfl", "tier": "knowledge"}
 {"path": "cfl/scripts/audit/lint_silence_clause.py", "sha256": "0136e9b4fed31a2a626c112cbd9cfba078fa4820cfa862bc3d9a97ff017b88a3", "bytes": 3408, "kind": "include:cfl", "tier": "knowledge"}
 {"path": "cfl/scripts/audit/lint_skills.py", "sha256": "b0f6bd6e128209661ea0b69f91222da32753486528c7387ac55dbcc157bbace1", "bytes": 10700, "kind": "include:cfl", "tier": "knowledge"}
 {"path": "cfl/scripts/audit/lint_work_claims.py", "sha256": "d8e23ed9fb218cdc9d76be640f21e7d1922b09130cd0a63eccb23aa4d1cc1541", "bytes": 14535, "kind": "include:cfl", "tier": "knowledge"}
@@ -175,7 +176,7 @@
 {"path": "cfl/scripts/audit/turn_metadata.py", "sha256": "a6cb90fd0bd6e966cfdd107d4bbd8c85667083beb78f83915064686519a7ab61", "bytes": 15103, "kind": "include:cfl", "tier": "knowledge"}
 {"path": "cfl/scripts/audit/turn_parity.py", "sha256": "daeaf62d2f8a808e0a93c359168dae51879f9f19b08b1e34d3110abadd5c47d1", "bytes": 8207, "kind": "include:cfl", "tier": "knowledge"}
 {"path": "cfl/scripts/audit/usage_meter.py", "sha256": "f05a87ad7a833f1c12afb10ce605ce72eb700d9fc54232609a7ae8d4cb9eb58a", "bytes": 11296, "kind": "include:cfl", "tier": "knowledge"}
-{"path": "cfl/scripts/audit/verdict_provenance_lint.py", "sha256": "a2150bbc1eb560ec42267cf69a52a64e1e46c546cbbb9e096f6f415e25db5352", "bytes": 16719, "kind": "include:cfl", "tier": "knowledge"}
+{"path": "cfl/scripts/audit/verdict_provenance_lint.py", "sha256": "ab4b195fbf427534d72ccdc9e18f7508b9031679d86cc47ebdf3a6c569488b06", "bytes": 17199, "kind": "include:cfl", "tier": "knowledge"}
 {"path": "cfl/scripts/audit/verify_decision_list.py", "sha256": "120eebbc7370735a208ea9df503d67a9cbed2e4070d35835184b922bb57dd6b1", "bytes": 9406, "kind": "include:cfl", "tier": "knowledge"}
 {"path": "cfl/scripts/audit/w1_cascade_check.py", "sha256": "1ff24cb595fd9c50580ecda7558a8dda669651a10e555765592eb30cc68a0270", "bytes": 2898, "kind": "include:cfl", "tier": "knowledge"}
 {"path": "cfl/scripts/audit/w1_distance_to_conformant.py", "sha256": "2acf794cbaeee34ca5d166ca77423a8709c23691de694f990bb9ef547acf2c13", "bytes": 4366, "kind": "include:cfl", "tier": "knowledge"}
@@ -687,6 +688,7 @@
 {"path": "cfl/wiki/sources/infrastructure/ds3-meta-wiki-reorganization-lint-verification-2026-08-07-15018d.md", "sha256": "9a1ad84beb63c8a3bb9aeec847766e369571edc600e1f41b5b77db5ef430d6a8", "bytes": 6285, "kind": "include:cfl", "tier": "knowledge"}
 {"path": "cfl/wiki/sources/infrastructure/ears-approve-decisions-unseen-close-loop-2026-08-07-9040f9.md", "sha256": "d7182f2ddf42f5b48e93fdee97b99e4f32809c7c282ac04036aba184c557bf6e", "bytes": 5465, "kind": "include:cfl", "tier": "knowledge"}
 {"path": "cfl/wiki/sources/infrastructure/ears-protocol-disk-g-standing-rule-test-2026-08-07-5321a1.md", "sha256": "31ccf929d020fd83ec6b4a8bdfe1a5bf10e54d9119367056e7ba7f71869a8761", "bytes": 6230, "kind": "include:cfl", "tier": "knowledge"}
+{"path": "cfl/wiki/sources/infrastructure/ears-protocol-position-changes-heading-test-2026-08-07-746694.md", "sha256": "37806b4f12c777048f3a053413b5f78733cdcb24c1fda4d848625f71b8c9dc6d", "bytes": 5652, "kind": "include:cfl", "tier": "knowledge"}
 {"path": "cfl/wiki/sources/infrastructure/ears-protocol-tabernacle-praise-misread-test-2026-08-07-81fd72.md", "sha256": "ba6e78f40c0862d068c9064dc104ddad147b9e7a03c333d4b0e17884097b0c8e", "bytes": 5484, "kind": "include:cfl", "tier": "knowledge"}
 {"path": "cfl/wiki/sources/infrastructure/ears-wiki-navigability-not-a-volume-budget-2026-08-07-8b1f77.md", "sha256": "085a3ac4f5897fc841b2de4d46ee2a82f16c1815fe64c890f6f96621c18880af", "bytes": 5643, "kind": "include:cfl", "tier": "knowledge"}
 {"path": "cfl/wiki/sources/infrastructure/effort-slash-command-sets-medium-2026-08-05-3762d6.md", "sha256": "3a1754b505c2052355d9998e4d1626123d659c559adbc87ab03716e8d2d13735", "bytes": 3512, "kind": "include:cfl", "tier": "knowledge"}
@@ -702,6 +704,7 @@
 {"path": "cfl/wiki/sources/infrastructure/fable-opus-fallback-research-2026-07-08.md", "sha256": "975baaa34be5f87aa50796c754d9f2f8f4a3e83844e363697dc90cf515c02737", "bytes": 4744, "kind": "include:cfl", "tier": "knowledge"}
 {"path": "cfl/wiki/sources/infrastructure/fork-test-never-run-and-wiki-md-gap-2026-08-19-910b80.md", "sha256": "e567888b986e2d67cef392af911a92c19248bfbf9ffbcde5919fe5ba7c5ccf7e", "bytes": 9605, "kind": "include:cfl", "tier": "knowledge"}
 {"path": "cfl/wiki/sources/infrastructure/fourth-attempt-fragment-ears-protocol-2026-08-07-33b629.md", "sha256": "412c282284a553c385db340d5d622ad665810564669f7f1e9f53a7f8f23e006e", "bytes": 6454, "kind": "include:cfl", "tier": "knowledge"}
+{"path": "cfl/wiki/sources/infrastructure/fourth-attempt-signal-dropped-interpretation-test-2026-08-07-807624.md", "sha256": "db64860ebb91eaf3089a8953a4e633ceb73c1fbf95e0cc7352ab695d56383191", "bytes": 5278, "kind": "include:cfl", "tier": "knowledge"}
 {"path": "cfl/wiki/sources/infrastructure/fourth-attempt-unwritten-2026-08-07-ca7096.md", "sha256": "45e1e5b383685d883358d26f9ca69d7edfcca07f0abdf8091ad4938bb9030c22", "bytes": 4107, "kind": "include:cfl", "tier": "knowledge"}
 {"path": "cfl/wiki/sources/infrastructure/fusion-multihop-routing-design-2026-08-12-f7b11b.md", "sha256": "c55bd46267514d522f32e2ce2b0a3d6ad97b01b8a11a7f63bd132f4051e30e1d", "bytes": 10221, "kind": "include:cfl", "tier": "knowledge"}
 {"path": "cfl/wiki/sources/infrastructure/goals-file-herald-goal-writing-2026-07-09-c4e44f.md", "sha256": "79ffddc2c662811a4525a8a01211b0c2e5c802581feb8cc7dd671f4171516c56", "bytes": 6278, "kind": "include:cfl", "tier": "knowledge"}
@@ -933,6 +936,7 @@
 {"path": "cfl/wiki/sources/infrastructure/wiki-master-cc-fl-wiki-completion-2026-05-09.md", "sha256": "6bbca040f205a1e0f4a959d4b1d69191f356e4ec86c6bcc6e4010607749d7c62", "bytes": 3445, "kind": "include:cfl", "tier": "knowledge"}
 {"path": "cfl/wiki/sources/infrastructure/wiki-master-cc-ingest-oi012-oi013-2026-05-15-6f7600.md", "sha256": "fc2a3124f6da72d369b498c19afc59d462d87939f7f1a6e9b6ef0392b63dd68f", "bytes": 2177, "kind": "include:cfl", "tier": "knowledge"}
 {"path": "cfl/wiki/sources/infrastructure/wiki-master-cc-oi013-015-memory-fidelity-2026-05-17-41fa02.md", "sha256": "90b13c9241d696c160c93f77ed4f410c7569b402f3d57c9659d3d297b14b8bf9", "bytes": 2044, "kind": "include:cfl", "tier": "knowledge"}
+{"path": "cfl/wiki/sources/infrastructure/wiki-master-cc-personal-ingest-2026-05-29-974202.md", "sha256": "5bb8f37e9f775283ee225aa330d5e0b00cf1b325daa7384b6bd6dff148537e9d", "bytes": 1318, "kind": "include:cfl", "tier": "knowledge"}
 {"path": "cfl/wiki/sources/infrastructure/wiki-master-cc-phase3e-concept-gaps-2026-06-04-125957.md", "sha256": "974eee45f3bd963d4056b8580e20f6308b61503d39d0cdd61a5ee1b8aba07dfb", "bytes": 3672, "kind": "include:cfl", "tier": "knowledge"}
 {"path": "cfl/wiki/sources/infrastructure/wiki-master-cc-session-recovery-2026-05-08-8989d1.md", "sha256": "6b90995099572481eb16a20b5666444aa8baa12469540563f2b28395b2f811c3", "bytes": 2820, "kind": "include:cfl", "tier": "knowledge"}
 {"path": "cfl/wiki/sources/infrastructure/wiki-master-cc-t24-diff-ingest-2026-05-09-b60686.md", "sha256": "e71101aaba4adc11974a76fc81efeac455b21e0b59164ff68fca559b50ae80ad", "bytes": 3349, "kind": "include:cfl", "tier": "knowledge"}
@@ -951,6 +955,7 @@
 {"path": "cfl/wiki/sources/jon-messages/jon-arrivals-fulltext.md", "sha256": "d270791f9d60dd64639a129d8acdc0db6d0e3d65976c8c041beef6f674c9b723", "bytes": 1078, "kind": "include:cfl", "tier": "knowledge"}
 {"path": "cfl/wiki/sources/jon-messages/jon-morning-context-2026-09-04-verbatim.md", "sha256": "1761b194b7533e17801a59fcd0535f6204b9dcd97e8fabaa2633ac18349d4b10", "bytes": 10044, "kind": "include:cfl", "tier": "knowledge"}
 {"path": "cfl/wiki/sources/jon-messages/jon-ruling-no-hitl-side-cross-trunk-search-2026-09-04.md", "sha256": "a5590254e845702c0d1f333ed2c22152c597c3452dbb9510e47d96885f3e1fae", "bytes": 4722, "kind": "include:cfl", "tier": "knowledge"}
+{"path": "cfl/wiki/sources/jon-messages/jon-turns-session-71ce5a0e-2026-09-04.md", "sha256": "41c51a5df7061926c17f46336a2d0b798fdf4718f3cbef29f1339ec114bd7370", "bytes": 204276, "kind": "include:cfl", "tier": "knowledge"}
 {"path": "cfl/wiki/sources/reference/cfl-goals-2026-04-25.md", "sha256": "5776b3487a1a54fededb4de97f06914720387b97b5b7253ed8c8a1a1ac27ce2d", "bytes": 2269, "kind": "include:cfl", "tier": "knowledge"}
 {"path": "cfl/wiki/sources/reference/jon-messages-to-mirror-2026-08-02.md", "sha256": "2fe71591ea8034402780b4afcb9d318e8aec2b091add46c8c04d01a5047aa679", "bytes": 20158, "kind": "include:cfl", "tier": "knowledge"}
 {"path": "cfl/wiki/sources/reference/llm-wiki-origin-2026-04-15.md", "sha256": "850d203d62f66bf7051dc3e75fd1504f850d0c79bde74ea89ed6659dbc52d915", "bytes": 2701, "kind": "include:cfl", "tier": "knowledge"}
@@ -972,6 +977,23 @@
 {"path": "cfl/wiki/sources/wiki-t24-diff-ingest-2026-05-09-b60686.md", "sha256": "74b928d7c5aee76d3aa59322c1600362132165fa1e4ff4c9df4eedec288f04a4", "bytes": 3146, "kind": "include:cfl", "tier": "knowledge"}
 {"path": "cfl/wiki/sources/youtube/i-rebuilt-hermess-best-feature-in-claude-code-steal-this-9ciowbmokdu.md", "sha256": "8d5ddeeeff636f8e78fe825b7062bf8d995b30d7f335f81657c7b12e9c9831a6", "bytes": 1272, "kind": "include:cfl", "tier": "knowledge"}
 {"path": "cfl/wiki/sources/youtube/openwiki-brains-general-purpose-memory-for-agents-sbg90v2qfas.md", "sha256": "deee52904529fbd8861b1c805418c2522afa9d033f4171a992ea6cbe8572841d", "bytes": 1244, "kind": "include:cfl", "tier": "knowledge"}
+{"path": "cfl/wiki/test-outputs/HOOK-HARNESS-cfl-2026-09-02-post-h3.md", "sha256": "49bca176d2646425f25c88f37f91c830e3449827681061da4a64bd488a608d17", "bytes": 2804, "kind": "include:cfl", "tier": "knowledge"}
+{"path": "cfl/wiki/test-outputs/HOOK-HARNESS-cfl-2026-09-02.md", "sha256": "2d3aca29388613f64885d133bc442bdf28d79a2bf58f172186a2e73e847c92c9", "bytes": 2787, "kind": "include:cfl", "tier": "knowledge"}
+{"path": "cfl/wiki/test-outputs/HOOK-HARNESS-cfl-v2-2026-09-02.md", "sha256": "b2cdfa487e8c0260ddb3c05176b76b3a38cf03ed15bed14d6472a937926065a7", "bytes": 3054, "kind": "include:cfl", "tier": "knowledge"}
+{"path": "cfl/wiki/test-outputs/HOOK-HARNESS-cfl-v2-postH3-2026-09-02.md", "sha256": "af671bca5dab8bf674002980b31fd107b1bbb2835a33ffe75ad15deb4c4c9d87", "bytes": 2858, "kind": "include:cfl", "tier": "knowledge"}
+{"path": "cfl/wiki/test-outputs/HOOK-HARNESS-cfl-v3-2026-09-02.md", "sha256": "3d1b5619452837874001b58ac0ecfc9600b457e310b9153146cf38b492c132e2", "bytes": 2843, "kind": "include:cfl", "tier": "knowledge"}
+{"path": "cfl/wiki/test-outputs/HOOK-HARNESS-run.md", "sha256": "efbd00971e123d6cbea183463449b7a0cc00761b5210ed275635cb2257bbabbf", "bytes": 3986, "kind": "include:cfl", "tier": "knowledge"}
+{"path": "cfl/wiki/test-outputs/HOOK-HARNESS-v4-cfl-baseline.md", "sha256": "fde2aa928c201ba316aebaca8c91b699ced1230f613cc78464881ca560329802", "bytes": 3708, "kind": "include:cfl", "tier": "knowledge"}
+{"path": "cfl/wiki/test-outputs/HOOK-HARNESS-v4-cfl-degrade.md", "sha256": "e0a55df81ad75236ca19c6bd8812ec2ae18ac0863aefb0ece7122db1a4afd3ab", "bytes": 6473, "kind": "include:cfl", "tier": "knowledge"}
+{"path": "cfl/wiki/test-outputs/HOOK-HARNESS-v4-cfl-final-2026-09-02.md", "sha256": "b1c44b8c4bb430a8919df515600fc4256ab92891cea06282985944ef55111be7", "bytes": 6456, "kind": "include:cfl", "tier": "knowledge"}
+{"path": "cfl/wiki/test-outputs/HOOK-HARNESS-v4-cfl-postH3b.md", "sha256": "e907d94a9400363584df413ec92fda9fb695c324f225554806a3ed2a03a5546a", "bytes": 6541, "kind": "include:cfl", "tier": "knowledge"}
+{"path": "cfl/wiki/test-outputs/HOOK-HARNESS-v5-cfl-baseline.md", "sha256": "8ff880c8c5d23f377305d83318aa6e2a259370eee40b3f2b3bd1e76c9673ee6b", "bytes": 4041, "kind": "include:cfl", "tier": "knowledge"}
+{"path": "cfl/wiki/test-outputs/HOOK-HARNESS-v5-cfl-degrade.md", "sha256": "cd72ec3884f8e8f75680b6cebcc28e3dd29a87f4d8fd9501c938908051b8a428", "bytes": 6861, "kind": "include:cfl", "tier": "knowledge"}
+{"path": "cfl/wiki/test-outputs/seals/SEAL-cfl-pr123-governance-postmortem-2026-09-11.md", "sha256": "6b4cc49c18a51a2f2595306c8777ef17eb2dcdc32bb1d3d28220fa8f5a7c67bb", "bytes": 1661, "kind": "include:cfl", "tier": "knowledge"}
+{"path": "cfl/wiki/test-outputs/seals/SEAL-cfl-pr4-compass-framing-2026-09-11.md", "sha256": "b8bbda558603097e17e9b920730a0e69dc19691eff8eb126f83e030cdedb7638", "bytes": 2178, "kind": "include:cfl", "tier": "knowledge"}
+{"path": "cfl/wiki/test-outputs/seals/SEAL-cfl-talking-to-myself-2026-09-11.md", "sha256": "f7c7a4d2306f4bdf8c66d15f0b9beae73af746170cb92928b834876ade598239", "bytes": 1471, "kind": "include:cfl", "tier": "knowledge"}
+{"path": "cfl/wiki/test-outputs/test-designs/wikiskills-improve-test-2026-09-06.md", "sha256": "e452643d1f2ef9d716f59c44e3e1d60ab3d0e51fa2c3bf567fc418dbbe9af69b", "bytes": 3892, "kind": "include:cfl", "tier": "knowledge"}
+{"path": "cfl/wiki/test-outputs/test-log.md", "sha256": "6a8b3b36f0acbcd36b19bd0386eb8b0844b452940c7eddc832abbc9179422dfb", "bytes": 20106, "kind": "include:cfl", "tier": "knowledge"}
 {"path": "professional/.claude/commands/su-compact.md", "sha256": "96fc75098884689682b5e00fc921e45339cb963591ea98d767cb92d526325d94", "bytes": 5873, "kind": "include:professional", "tier": "knowledge"}
 {"path": "professional/.claude/commands/wake.md", "sha256": "4a0c68a0aa11e8b9ca9f25a9953ab68f9bda4748d7ecef751533fe94344fe156", "bytes": 8829, "kind": "include:professional", "tier": "knowledge"}
 {"path": "professional/.claude/skills/oath-checks/SKILL.md", "sha256": "6a673c0d34e0668e62cd1e98e05de84dbae37600bc2cb2a4af8659fd6245059b", "bytes": 9704, "kind": "include:professional", "tier": "knowledge"}

@@ -37,6 +37,7 @@ Exit: 0 every selftest passed and the tree is unchanged | 3 a selftest failed | 
 import argparse
 import hashlib
 import os
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -224,8 +225,23 @@ def main():
     # still held a handle in the temp cwd, TemporaryDirectory.__exit__ raised, and the PASS/FAIL
     # counts -- computed and never printed -- died with it. [2026-09-13 01:3x: 108 selftests ran and
     # the log ends in a shutil traceback.] ⭐ A measurement must not be hostage to its own teardown.
+    # ⛔ RUNNING A TREE'S CODE INSIDE THE TREE IS UNSAFE BY CONSTRUCTION, and cwd does not save you.
+    # [2026-09-13 03:0x, found by Antigravity verifying the union and relayed by Professional]
+    # raw/extracts/_state/finalisation.log, 91 bytes, appeared INSIDE N:/claude-pr4/cfl at 01:35:07 --
+    # written by a shipped script during this lint's own run. Every child already ran with cwd in a
+    # throwaway directory, so cwd was never the mechanism: the script derives its state directory
+    # through a ROOT it computes for itself, and `__file__` puts that inside the artifact.
+    # ⭐ THE LESSON GENERALISES PAST THIS SCRIPT: you cannot sandbox by cwd a program that resolves its
+    # own paths. Suppressing bytecode and hashing before/after were both treatments of symptoms --
+    # this is the cause. The tree is COPIED and the copy is executed; the artifact is read once to
+    # copy it and never again as a target.
     _env = dict(os.environ, PYTHONDONTWRITEBYTECODE="1")
-    with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as cwd:
+    with tempfile.TemporaryDirectory(ignore_cleanup_errors=True) as sandbox:
+        work = Path(sandbox) / "tree"
+        shutil.copytree(root, work, dirs_exist_ok=True)
+        cwd = str(Path(sandbox) / "cwd")
+        os.makedirs(cwd, exist_ok=True)
+        have = [work / q.relative_to(root) for q in have]
         for p in have:
             t0 = time.time()
             try:
@@ -291,7 +307,8 @@ def main():
         print(f"⛔ THE TREE CHANGED during the run ({before[:16]} -> {after[:16]}).")
         print("   A selftest wrote into the tree being graded. Treat as a stop, not a lint result.")
         return 5
-    print(f"tree digest after        : {after[:16]}  UNCHANGED (this run only)")
+    print(f"tree digest after        : {after[:16]}  UNCHANGED -- and the artifact was never the "
+          f"execution target: the tree is copied and the COPY runs.")
     print(f"CRITERION 2 (executability): {'PASS' if not _defects else 'FAIL'} -- {_defects} defect(s) "
           f"in the tree over {len(have):,} scripts; {len(lack):,} UNGRADED for having no selftest, "
           f"{len(byc.get('SLOW') or [])} inconclusive.")

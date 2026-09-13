@@ -68,11 +68,11 @@ Three configs, all JSONL, exported from `graph/index.sqlite` so the Hub viewer c
 
 | config | rows | fields |
 |---|---|---|
-| `chunks` (default) | 13,290 | `chunk_id`, `path`, `ord`, `heading`, `start_line`, `end_line`, `ntok`, `text`, `kind`, `tier` |
-| `files` | 1,302 | `path`, `sha256`, `bytes`, `kind`, `tier` |
-| `edges` | 4,169 | `src`, `dst`, `kind`, `raw` (wikilink and path references; 2,032 resolve to a shipped file) |
+| `chunks` (default) | 13,629 | `chunk_id`, `path`, `ord`, `heading`, `start_line`, `end_line`, `ntok`, `text`, `kind`, `tier` |
+| `files` | 1,324 | `path`, `sha256`, `bytes`, `kind`, `tier` |
+| `edges` | 4,221 | `src`, `dst`, `kind`, `raw` (wikilink and path references; 2,032 resolve to a shipped file) |
 
-The full index `graph/index.sqlite` (157.4 MB) adds `vectors` (13,290 rows, 512-d, potion-retrieval-32M), `docvecs` (1,302), `postings` (1,106,443 term to chunk rows), `terms` (25,314), `vocab_tri` (135,572 trigram rows) and `meta`. All chunks are in the `knowledge` tier; no transcripts ship. The source tree itself: 1,002 markdown pages, 278 Python and 39 shell scripts, 16 JSON files, across `cfl/` (1,015 files) and `professional/` (330). No splits: this is a record, not a benchmark.
+The full index `graph/index.sqlite` (161.1 MB) adds `vectors` (13,629 rows, 512-d, potion-retrieval-32M), `docvecs` (1,302), `postings` (1,106,443 term to chunk rows), `terms` (25,314), `vocab_tri` (135,572 trigram rows) and `meta`. All chunks are in the `knowledge` tier; no transcripts ship. The source tree itself: 1,002 markdown pages, 278 Python and 39 shell scripts, 16 JSON files, across `cfl/` (1,046 files) and `professional/` (330). No splits: this is a record, not a benchmark.
 
 ## Dataset Creation
 
