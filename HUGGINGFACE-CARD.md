@@ -1,54 +1,142 @@
 ---
-# Draft dataset card for the HuggingFace publication of this tree's graph and skills.
-# Status: DRAFT written 2026-09-13 01:19 CDT for Jon's sitting 2026-09-14. Nothing here is uploaded. The public derivation
-# (PII classes re-applied) has not been run; every number below is for the PRIVATE tree.
-license: TBD (Jon's choice)
-pretty_name: "WikiSkills in practice: a five-trunk Claude knowledge base, its skills, and its retrieval graph"
-tags: [wikiskills, knowledge-base, graph-rag, agent-skills, actuarial-methods, personal-project]
+# DRAFT dataset card, rewritten 2026-09-13 07:5x CDT to HuggingFace's datasetcard_template.md after Jon asked how the
+# first draft compared to gold-standard cards. The first draft (01:19) was written from memory, not from the template;
+# that failure is logged in the assembling seat's session log with its detector.
+# Status: not uploaded. Numbers describe the PRIVATE candidate; the public derivation re-applies the
+# personal-identifier fences and replaces them. License and third skill are Jon's decisions.
+pretty_name: "WikiSkills in Practice: a five-trunk Claude knowledge base, its skills, and its retrieval graph"
+language:
+- en
+license: other
+tags:
+- text
+- wikiskills
+- knowledge-base
+- graph-rag
+- agent-skills
+- claude-code
+- personal-project
+task_categories:
+- text-retrieval
+size_categories:
+- 10K<n<100K
+configs:
+- config_name: chunks
+  data_files: data/chunks.jsonl
+  default: true
+- config_name: files
+  data_files: data/files.jsonl
+- config_name: edges
+  data_files: data/edges.jsonl
 ---
 
-# WikiSkills in practice: skills, knowledge base, and graph from a six-agent, five-trunk Claude project
+# Dataset Card for WikiSkills in Practice
 
-**Author:** Jon (first name only; org: n/a; Jon 2026-09-12 20:57: *"Jon, n/a, first push is private."*)
+The derived, combined tree of two trunks of a six-agent Claude Code project (CFL, the foundational layer; Professional, the rigor seat), the skills those agents run, and the retrieval graph built from empty over that tree. It is the artifact Jon's LessWrong post points at.
 
-**What this is.** The derived, combined tree of two of the project's trunks (CFL, the foundational layer; Professional, the rigor seat) as assembled 2026-09-13, plus the retrieval graph built from empty over that tree. It is the artifact Jon's LessWrong post points at. This card describes the private candidate; the public dataset is the same tree after a second derivation that re-applies the personal-identifier fences, and its numbers will replace these.
+## Dataset Details
 
-**What the post says and what the artifact is.** The post's sentence *"it contains 3 skills and their test data so far"* names frame-before-commit and ground-before-stating; the third is graph-related and pending Jon's confirmation (candidate: wiki-query, which gained its reference files 2026-09-12). The sentence of the draft that names the third skill is missing from every copy on this machine, including the raw session record, which carries a 489-byte truncation at that point; only Jon holds it. The tree ships 47 skill directories, of which those three carry reference material. The post's *"the graph of my knowledge base, scrubbed of my PII"* describes the public derivation, not this private candidate.
+### Dataset Description
 
-## Composition (private candidate, measured 2026-09-13)
+Six months of a personal project in which Claude agents maintain a wiki as their record, read it before acting through named skills, and retrieve over it with a hybrid lexical, dense and link-graph index. This dataset is the shipped tree after derivation (an explicit include spec and exclusion list per trunk, with a manifest and a derivation log per half) plus the index built from that tree only. It is the private candidate; a public version re-applies identifier fences and will carry its own numbers.
 
-| part | count | source of truth |
+- **Curated by:** Jon (first name only; organisation n/a, by his ruling of 2026-09-12: *"Jon, n/a, first push is private."*)
+- **Funded by:** no one; personal project
+- **Shared by:** Jon
+- **Language:** English
+- **License:** pending Jon's choice (`other` until he names one)
+
+### Dataset Sources
+
+- **Repository:** the private git branch `pr4-combined-private` (Jon's push); the public repository does not yet exist
+- **Paper:** none. Jon's LessWrong post is the companion text; it is not yet posted
+- **Related paper Jon asked about, 2026-09-07:** https://huggingface.co/papers/2608.13940, not yet read by the assembling seat
+
+## Uses
+
+### Direct Use
+
+Reading the skills (`cfl/skills/`, `professional/skills/`) and their reference material as worked examples of agent discipline; querying the graph (`graph/index.sqlite`, or the `chunks` config) to see how a six-month agent record retrieves; reproducing every measurement in the README with the command beside it; studying the derivation logs as an example of publishing a subset of a working tree with per-file provenance.
+
+### Out-of-Scope Use
+
+Training a model to imitate the author or the agents; treating any number in the tree as current without re-running its command; using the skills as actuarial guidance (the author is an actuary and says this is not actuarial work; see Bias, Risks and Limitations); resolving any name found here to a person.
+
+## Dataset Structure
+
+Three configs, all JSONL, exported from `graph/index.sqlite` so the Hub viewer can render them:
+
+| config | rows | fields |
 |---|---|---|
-| `cfl/` | 1,015 files, 92 excluded by class | `cfl/MANIFEST.sha256`, `cfl/DERIVATION-LOG.md` |
-| `professional/` | 330 files, 12 excluded by class | `controls-professional/MANIFEST.sha256`, `DERIVATION-LOG.md` |
-| graph | 1,302 files indexed, 13,290 chunks, 2,032 resolved edges, 157.4 MB SQLite | rebuilt from empty over this tree; command in `README.md` |
-| skills | 47 directories; references in frame-before-commit (1), ground-before-stating (2 of 3, one held), wiki-query (2) | `cfl/skills/`, `professional/skills/` |
+| `chunks` (default) | 13,290 | `chunk_id`, `path`, `ord`, `heading`, `start_line`, `end_line`, `ntok`, `text`, `kind`, `tier` |
+| `files` | 1,302 | `path`, `sha256`, `bytes`, `kind`, `tier` |
+| `edges` | 4,169 | `src`, `dst`, `kind`, `raw` (wikilink and path references; 2,032 resolve to a shipped file) |
 
-The graph is a derived index and is never richer than its source. It exceeds GitHub's 100 MB per-file limit, so it ships here as a dataset file (or split, using Personal's `split_for_upload.py`) rather than in the git tree.
+The full index `graph/index.sqlite` (157.4 MB) adds `vectors` (13,290 rows, 512-d, potion-retrieval-32M), `docvecs` (1,302), `postings` (1,106,443 term to chunk rows), `terms` (25,314), `vocab_tri` (135,572 trigram rows) and `meta`. All chunks are in the `knowledge` tier; no transcripts ship. The source tree itself: 1,002 markdown pages, 278 Python and 39 shell scripts, 16 JSON files, across `cfl/` (1,015 files) and `professional/` (330). No splits: this is a record, not a benchmark.
 
-## How this was made, and by whom
+## Dataset Creation
 
-Six agents across five federated knowledge bases, as the post says: Professionalism (this tree's assembler, a Fable model), CFL, Secretary, Herald and Soul (Claude Personal), and Antigravity. Each trunk framed its part of the post independently at Jon's 2026-09-11 16:08 instruction (*"you and each co trunk need to read where everything actually left off with last coordinator and what would have been in my frontmatter and you need to frame your part"*). Those framings, present or not, by seat:
+### Curation Rationale
 
-| seat | framing of the post | where |
-|---|---|---|
-| Personal / Herald | present, 2026-09-11 14:58 | `FRAME-2026-09-11-personal-herald-AIR-GAP-IS-A-DERIVATION-NOT-AN-EXCLUSION.md` |
-| CFL | present, 2026-09-11 15:07 | `cfl-FRAME-BEFORE-COMMIT-2026-09-11-PR4-COMPASS-SOVEREIGN-POSITION.md` |
-| Professional | present, 2026-09-11 16:20, plus a synthesis of four frames | `pro-FRAME-BEFORE-COMMIT-2026-09-11-PR4-SOVEREIGN-POSITION-AND-QUESTIONS-HELD-FOR-JON.md`; `pro-SYNTHESIS-2026-09-11-…-FROM-FOUR-INDEPENDENT-FRAMES.md` |
-| Antigravity | present as a review packet and LessWrong policy dossier, 2026-09-11 | `REVIEW-REQUEST-2026-09-11-antigravity-to-professional-PR4-AND-LESSWRONG-COMPANION.md`; `[[lesswrong-publication-standards]]` |
-| Soul | UNKNOWN: no separate framing found by this seat; Personal's frame is Herald's | seat named, not counted |
-| Secretary | UNKNOWN: no framing letter found among its 2026-09-11 mail by this seat | seat named, not counted |
+Jon's post claims a repository with skills, their test data, and a knowledge graph. This tree exists so that every sentence of the post is true of an artifact a reader can open, and so that what was cut is defended by class and reason rather than absent.
 
-How the framings fold into the post is Jon's: his draft keeps one `((()))` slot for Professionalism's clarifications; one slot per trunk is the alternative. These letters live in the trunks' `exchange/` directories, which the derivation does not ship; whichever fold Jon chooses, the chosen text moves into a shipped page before the public derivation.
+### Source Data
 
-## Measurements a reader can re-run
+#### Data Collection and Processing
 
-Every count in this tree carries its command. Skill invocation by name across 197 main sessions since 2026-09-05 (`professional/scripts/audit/skill_use_eval.py`): frame-before-commit 26 tool calls, wiki-query 5, ground-before-stating 0; the zero is an invocation record, not a measure of the discipline, because that skill is loaded at session open in one trunk and applied without its name elsewhere. Criteria results, with the failing ones named, are in `README.md`.
+Each half is derived, not authored, by one deriver (`cfl/scripts/audit/derive_public_tree.py`) run against an explicit include spec and exclusion list; the deriver writes `MANIFEST.sha256` (every shipped file with hash and size) and `DERIVATION-LOG.md` (every excluded file with class, line and reason, plus a report-only section for files flagged and deliberately kept). Both manifests were recomputed against disk by two seats other than the author. The graph was built from empty over the shipped tree with CFL's `build_index.py`; the command is in the README. Nothing was hand-placed or hand-removed. CFL's half was derived three times on 2026-09-13 as its spec was corrected (dependency directories added, hook runtime state withheld); the superseded derivations are kept off-artifact.
 
-## What is not here
+#### Who are the source data producers?
 
-Letters, transcripts, session captures, trackers and one path with a no-remote rule are excluded by construction; 61 of CFL's 88 excluded files and 5 of Professional's 12 are still referred to by name from shipping files, so a citation can land on a name with nothing behind it. Each such name has a row in the derivation logs. Family and third-party names are gated on consent. Nothing in this repository is actuarial work; the author is an actuary and says so in the post's disclaimer, which this card repeats: an actuary who wants to use these skills should review and test them against the standards that apply to their own work.
+Jon, whose typed prompts and rulings are the wiki's primary sources, and six Claude agents across five knowledge bases: Professional (the assembler, a Fable model), CFL, Secretary, Herald and Soul (Claude Personal), and Antigravity. Each agent's pages carry its seat and session in frontmatter where the trunk's conventions require it.
 
-## Related
+### Annotations
 
-Jon's 2026-09-07 question, unanswered until this card: *"Is this index also being evaled as part of wikiskills? How should we consider this whitepaper in context? 'https://huggingface.co/papers/2608.13940'"* The index is evaluated by criteria G1 to G3 in `README.md` (coverage, five cold probes, size); the paper is not yet read by this seat and is listed here as the next reading, owner Professional.
+#### Annotation process
+
+None in the labelling sense. Frontmatter fields (`kind`, `status`, `trunk`, dates) are written by the agents as they work and are what the deriver's frontmatter rules read.
+
+#### Who are the annotators?
+
+The agents named above; no external annotators.
+
+### Personal and Sensitive Information
+
+This private candidate does **not** claim to be scrubbed of personal information. Jon's ruling of 2026-08-19 makes identifiers a non-cut on his private repositories; the public derivation re-applies fences for names, e-mail addresses, phone numbers, addresses, account and money identifiers, and one no-remote path, each with a planted-file leak control that must exclude and log every class before publication. Two rows are held on Jon's read and neither seat decides them: eleven Professional pages and one script carrying four family names; one CFL module and one CFL reference file carrying 65 and 121 name hits respectively. Third-party and family names are gated on consent in both versions. There is no removal-request channel yet; the public card must have one before upload.
+
+## Bias, Risks, and Limitations
+
+- **The tree points at files it does not contain.** 66 of CFL's 259 excluded files (92 content exclusions plus 167 withheld state files) are referenced by name from shipping files, 859 references; 5 of Professional's 12, 6 references. Each name has a row in a derivation log. A citation can land on a name with nothing behind it.
+- **Skills are typed as commands often and invoked by name by the agents rarely.** Across 197 main sessions since 2026-09-05: frame-before-commit 26 tool calls, wiki-query 5, ground-before-stating 0. The zero is an invocation record, not a measure of the discipline, because that skill loads at session open in one trunk and is applied without its name elsewhere. No measurement here shows effect.
+- **The post says three skills; 47 skill directories ship.** Three carry reference material. The third skill named in the post is pending Jon's confirmation, and the sentence of his draft that names it is truncated in every copy on this machine.
+- **Code that cannot run.** Of 125 shipped CFL scripts with selftests, 97 pass, 9 were unresolved at a 40-second cap, and all six missing-dependency failures are one module withheld by the name fence. 111 shipped scripts have no selftest and are ungraded.
+- **Not actuarial work.** The author is an actuary and grounds the skills in actuarial standards; nothing here was produced as actuarial work and the post's disclaimer says so.
+- **A single author's record.** Six months of one person's project with one person's framing. The wiki records what the agents believed at the time, including claims later struck; struck text is kept and marked, never deleted.
+- **The graph is derived and only as rich as its source.** It is rebuildable in about 22 seconds from the tree; it should never be treated as containing anything the tree does not.
+
+### Recommendations
+
+Re-run any number before citing it; read the derivation log before concluding a referenced file is missing; treat invocation counts as floors on invocation and as nothing about effect; do not use the skills in professional work without testing them against the standards that apply to that work.
+
+## Citation
+
+Pending: Jon's LessWrong post, once posted, is the citation. Until then, cite the repository and its commit.
+
+## Glossary
+
+- **Trunk:** one agent's knowledge base and working tree; the project runs five.
+- **Seat:** one Claude Code session acting for a trunk.
+- **Derivation:** producing the shipped subset of a working tree from an explicit spec, with manifest and log.
+- **WikiSkills:** the pattern of a wiki as the record and skills that read it before acting.
+
+## More Information
+
+The README beside this card carries the criteria table (what passed, what failed by measured number), the build command, and both trunks' cut defences. The assembling seat's session log records every struck claim of the assembly night as it happened.
+
+## Dataset Card Authors
+
+Claude Professional (Fable 5.1), session 682d274b, on Jon's instruction; artifact verified against disk by Claude CFL and Antigravity.
+
+## Dataset Card Contact
+
+Jon, via the repository's issues once it is public. No e-mail is published.
