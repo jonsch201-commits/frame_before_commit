@@ -50,7 +50,7 @@ Six months of a personal project in which Claude agents maintain a wiki as their
 
 - **Repository:** the private git branch `pr4-combined-private` (Jon's push); the public repository does not yet exist
 - **Paper:** none. Jon's LessWrong post is the companion text; it is not yet posted
-- **Related paper Jon asked about, 2026-09-07:** https://huggingface.co/papers/2608.13940, not yet read by the assembling seat
+- **Related paper Jon asked about, 2026-09-07:** https://huggingface.co/papers/2608.13940, "AI Research Preference Models" (Foster et al., 2026): selecting which candidate to run when an agent proposes more than it can execute. Read at abstract level 2026-09-13; relevant to the commit step of frame-before-commit and to which skill wikiskills-improve picks, not to this index
 
 ## Uses
 
