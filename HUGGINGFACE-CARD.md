@@ -19,9 +19,9 @@ tags: [wikiskills, knowledge-base, graph-rag, agent-skills, actuarial-methods, p
 
 | part | count | source of truth |
 |---|---|---|
-| `cfl/` | 1,147 files, 88 excluded by class | `cfl/MANIFEST.sha256`, `cfl/DERIVATION-LOG.md` |
+| `cfl/` | 1,015 files, 92 excluded by class | `cfl/MANIFEST.sha256`, `cfl/DERIVATION-LOG.md` |
 | `professional/` | 330 files, 12 excluded by class | `controls-professional/MANIFEST.sha256`, `DERIVATION-LOG.md` |
-| graph | 1,267 files indexed, 12,820 chunks, 2,028 resolved edges, 152.3 MB SQLite | rebuilt from empty over this tree; command in `README.md` |
+| graph | 1,302 files indexed, 13,290 chunks, 2,032 resolved edges, 157.4 MB SQLite | rebuilt from empty over this tree; command in `README.md` |
 | skills | 47 directories; references in frame-before-commit (1), ground-before-stating (2 of 3, one held), wiki-query (2) | `cfl/skills/`, `professional/skills/` |
 
 The graph is a derived index and is never richer than its source. It exceeds GitHub's 100 MB per-file limit, so it ships here as a dataset file (or split, using Personal's `split_for_upload.py`) rather than in the git tree.
