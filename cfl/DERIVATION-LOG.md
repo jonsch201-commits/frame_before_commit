@@ -20,11 +20,11 @@ Source: fs N:/claude-cfl/clone
 | quantity | n |
 |---|---|
 | paths at source | 18385 |
-| not in the include spec (never considered) | 17202 |
-| considered | 1183 |
-| INCLUDED | 1126 |
-| EXCLUDED (distinct files) | 87 |
-| exclusion hits (a file may carry several) | 347 |
+| not in the include spec (never considered) | 17180 |
+| considered | 1205 |
+| INCLUDED | 1147 |
+| EXCLUDED (distinct files) | 88 |
+| exclusion hits (a file may carry several) | 350 |
 
 ## Exclusions by class
 
@@ -33,7 +33,7 @@ Source: fs N:/claude-cfl/clone
 | BINARY-OR-UNDECODABLE | 1 |
 | CONTENT-ACCOUNT | 3 |
 | CONTENT-ADDRESS | 2 |
-| CONTENT-CARD | 15 |
+| CONTENT-CARD | 16 |
 | CONTENT-EMAIL | 4 |
 | CONTENT-FINANCIAL | 7 |
 | CONTENT-NAME | 40 |
@@ -125,6 +125,9 @@ Source: fs N:/claude-cfl/clone
 | `scripts/audit/write_fence.py` | CONTENT-FINANCIAL | 0 | account-number pattern @L675 |
 | `scripts/audit/write_fence.py` | CONTENT-SSN | 630 |  |
 | `scripts/audit/write_fence.py` | CONTENT-XC-EXCHEQUER-PATH | 724 | XC-Exchequer/ledger-2026-08.ofx |
+| `scripts/graphrag/render_history_cc.py` | CONTENT-CARD | 252 | Luhn-valid, non-excluded context |
+| `scripts/graphrag/render_history_cc.py` | CONTENT-CARD | 268 | Luhn-valid, non-excluded context |
+| `scripts/graphrag/render_history_cc.py` | CONTENT-CARD | 280 | Luhn-valid, non-excluded context |
 | `skills/cross-venue-intake/SKILL.md` | PATH-DENY-EXACT | 0 | CREDENTIAL-SHAPED access locator (Drive folder id) |
 | `skills/ground-before-stating/references/worked-examples.md` | CONTENT-NAME | 121 |  |
 | `skills/guide-of-home-and-family/SKILL.md` | CONTENT-NAME | 47 |  |
@@ -405,7 +408,7 @@ Source: fs N:/claude-cfl/clone
 
 ## REFERENCE-SURVIVORS
 
-**REFERENCE-SURVIVORS: 60 of 87 excluded files have >= 1 inbound reference by name in an INCLUDED file (783 refs total); PATH_EXACT rows: 22 of 30 have survivors**
+**REFERENCE-SURVIVORS: 61 of 88 excluded files have >= 1 inbound reference by name in an INCLUDED file (792 refs total); PATH_EXACT rows: 22 of 30 have survivors**
 
 A whole-file EXCLUDE removes the body; the NAME survives wherever an INCLUDED file referred to it. Nothing below was rewritten -- a reference by name is disclosed here as a name only. Forms: FULL (repo-relative path), SUFFIX (parent-dir/basename), FILENAME, WIKILINK (`[[stem]]`), STEM (bare basename). FILENAME is armed only when no other file at source shares the basename; WIKILINK and STEM only when no other path shares the stem, and STEM additionally only for slug-shaped stems (a hyphen, underscore or digit) -- a shared name or a plain word is not a reference to THIS file, and the `forms dropped` column says so per file. One row per (referring file, line, excluded file), most specific form wins. `--fail-on-survivors` exits 4 when any PATH_EXACT row has >= 1 survivor.
 
@@ -448,13 +451,14 @@ A whole-file EXCLUDE removes the body; the NAME survives wherever an INCLUDED fi
 | `scripts/audit/depii_derive.py` | SCAN | 2 | none |
 | `scripts/audit/depii_lexicon.py` | SCAN | 18 | none |
 | `scripts/audit/depii_path_canary.py` | SCAN | 1 | none |
-| `scripts/audit/ingest_gate.py` | SCAN | 13 | none |
+| `scripts/audit/ingest_gate.py` | SCAN | 16 | none |
 | `scripts/audit/leak_control.py` | SCAN | 6 | none |
 | `scripts/audit/publication_screen.py` | SCAN | 4 | none |
 | `scripts/audit/publish_content_gate.py` | SCAN | 4 | none |
 | `scripts/audit/publish_lexicon.py` | SCAN | 2 | none |
 | `scripts/audit/selftest_ingest_gate.py` | SCAN | 0 | none |
 | `scripts/audit/write_fence.py` | SCAN | 11 | none |
+| `scripts/graphrag/render_history_cc.py` | SCAN | 2 | none |
 | `skills/ground-before-stating/references/worked-examples.md` | SCAN | 4 | FILENAME (2 files at source named worked-examples.md); WIKILINK+STEM (2 paths at source share stem worked-examples) |
 | `skills/guide-of-home-and-family/SKILL.md` | SCAN | 0 | FILENAME (45 files at source named SKILL.md); WIKILINK+STEM (45 paths at source share stem SKILL) |
 | `skills/herald/SKILL.md` | SCAN | 4 | FILENAME (45 files at source named SKILL.md); WIKILINK+STEM (45 paths at source share stem SKILL) |
@@ -463,7 +467,7 @@ A whole-file EXCLUDE removes the body; the NAME survives wherever an INCLUDED fi
 | `wiki/concepts/personal-role-architecture.md` | SCAN | 8 | none |
 | `wiki/concepts/probe-registry.md` | SCAN | 128 | none |
 | `wiki/entities/ENTITY-masters-kitchen-bath.md` | SCAN | 0 | none |
-| `wiki/entities/claude-code.md` | SCAN | 164 | none |
+| `wiki/entities/claude-code.md` | SCAN | 165 | none |
 | `wiki/entities/index.md` | SCAN | 0 | FILENAME (7 files at source named index.md); WIKILINK+STEM (7 paths at source share stem index) |
 | `wiki/entities/jon.md` | SCAN | 1 | FILENAME (3 files at source named jon.md); WIKILINK+STEM (3 paths at source share stem jon) |
 | `wiki/references/agent-memory/t44-apollo-artemis-complete.md` | SCAN | 1 | none |
@@ -497,7 +501,7 @@ A whole-file EXCLUDE removes the body; the NAME survives wherever an INCLUDED fi
 | `wiki/sources/infrastructure/wiki-session-conflict-resolution-crosslinks-2026-06-04.md` | SCAN | 2 | none |
 | `wiki/sources/jon-messages/jon-turns-session-71ce5a0e-2026-09-04.md` | SCAN | 0 | none |
 | `wiki/sources/security-master-audit-2026-06-27.md` | SCAN | 3 | none |
-| `wiki/sources/session-stubs.md` | SCAN | 33 | none |
+| `wiki/sources/session-stubs.md` | SCAN | 36 | none |
 
 ### `scripts/audit/verify_quotes.py` (PATH_EXACT) -- 20 inbound ref(s)
 
@@ -834,7 +838,7 @@ A whole-file EXCLUDE removes the body; the NAME survives wherever an INCLUDED fi
 
 - `wiki/concepts/de-pii-deriver.md:28` FULL `scripts/audit/depii_path_canary.py`
 
-### `scripts/audit/ingest_gate.py` (SCAN) -- 13 inbound ref(s)
+### `scripts/audit/ingest_gate.py` (SCAN) -- 16 inbound ref(s)
 
 - `scripts/audit/derive_public_tree.py:30` FULL `scripts/audit/ingest_gate.py`
 - `scripts/audit/derive_public_tree.py:57` STEM `ingest_gate`
@@ -842,6 +846,9 @@ A whole-file EXCLUDE removes the body; the NAME survives wherever an INCLUDED fi
 - `scripts/audit/derive_public_tree.py:376` STEM `ingest_gate`
 - `scripts/audit/derive_public_tree.py:379` STEM `ingest_gate`
 - `scripts/audit/derive_public_tree.py:382` STEM `ingest_gate`
+- `scripts/tests/selftest_probe_window.py:22` STEM `ingest_gate`
+- `scripts/tests/selftest_probe_window.py:55` STEM `ingest_gate`
+- `scripts/tests/selftest_probe_window.py:66` STEM `ingest_gate`
 - `wiki/patterns/self-citation-moves-the-class.md:64` FILENAME `ingest_gate.py`
 - `wiki/references/read-safe-write-fence-v0.md:114` FULL `scripts/audit/ingest_gate.py`
 - `wiki/references/read-safe-write-fence-v0.md:272` STEM `ingest_gate`
@@ -891,6 +898,11 @@ A whole-file EXCLUDE removes the body; the NAME survives wherever an INCLUDED fi
 - `wiki/references/read-safe-write-fence-v0.md:215` FULL `scripts/audit/write_fence.py`
 - `wiki/references/read-safe-write-fence-v0.md:348` FILENAME `write_fence.py`
 - `wiki/references/read-safe-write-fence-v0.md:349` FILENAME `write_fence.py`
+
+### `scripts/graphrag/render_history_cc.py` (SCAN) -- 2 inbound ref(s)
+
+- `wiki/references/history-jsonl-retrieval-2026-09-12.md:56` FULL `scripts/graphrag/render_history_cc.py`
+- `wiki/references/history-jsonl-retrieval-2026-09-12.md:194` FILENAME `render_history_cc.py`
 
 ### `skills/ground-before-stating/references/worked-examples.md` (SCAN) -- 4 inbound ref(s)
 
@@ -1065,7 +1077,7 @@ A whole-file EXCLUDE removes the body; the NAME survives wherever an INCLUDED fi
 - `wiki/sources/infrastructure/xc-questions-never-posed-silence-defaults-2026-08-16-081198.md:156` WIKILINK `[[probe-registry`
 - `wiki/sources/stylomantic/stylomantic-decoder-fbc-hats-crosslink-2026-07-29-3b7351.md:183` WIKILINK `[[probe-registry`
 
-### `wiki/entities/claude-code.md` (SCAN) -- 164 inbound ref(s)
+### `wiki/entities/claude-code.md` (SCAN) -- 165 inbound ref(s)
 
 - `scripts/audit/_su_close_summaries.py:53` STEM `claude-code`
 - `scripts/audit/_su_close_summaries.py:128` STEM `claude-code`
@@ -1097,6 +1109,7 @@ A whole-file EXCLUDE removes the body; the NAME survives wherever an INCLUDED fi
 - `scripts/audit/wake_map.py:218` STEM `claude-code`
 - `scripts/audit/wikiskills_prototype_render.py:104` STEM `claude-code`
 - `scripts/audit/wikiskills_prototype_render.py:175` STEM `claude-code`
+- `scripts/tests/selftest_probe_window.py:35` STEM `claude-code`
 - `skills/session-order/SKILL.md:303` STEM `claude-code`
 - `skills/transcript-parser/SKILL.md:55` STEM `claude-code`
 - `skills/wiki-master/SKILL.md:93` STEM `claude-code`
@@ -1426,7 +1439,7 @@ A whole-file EXCLUDE removes the body; the NAME survives wherever an INCLUDED fi
 - `wiki/sources/infrastructure/professional-resurrection-test-fence-close-2026-08-15-ffb92d.md:97` WIKILINK `[[security-master-audit-2026-06-27`
 - `wiki/sources/infrastructure/professional-security-agenda-to-resident-launch-vigil-2026-08-08-592c3c.md:117` WIKILINK `[[security-master-audit-2026-06-27`
 
-### `wiki/sources/session-stubs.md` (SCAN) -- 33 inbound ref(s)
+### `wiki/sources/session-stubs.md` (SCAN) -- 36 inbound ref(s)
 
 - `scripts/audit/coverage_census.py:35` STEM `session-stubs`
 - `scripts/audit/coverage_census.py:267` STEM `session-stubs`
@@ -1452,6 +1465,9 @@ A whole-file EXCLUDE removes the body; the NAME survives wherever an INCLUDED fi
 - `scripts/audit/register_stubs.py:293` FILENAME `session-stubs.md`
 - `scripts/audit/wikiskills_prototype_render.py:264` FILENAME `session-stubs.md`
 - `scripts/audit/wikiskills_prototype_render.py:265` FILENAME `session-stubs.md`
+- `scripts/graphrag/acceptance.py:115` FULL `wiki/sources/session-stubs.md`
+- `scripts/graphrag/acceptance.py:133` STEM `session-stubs`
+- `scripts/graphrag/build_index.py:487` FULL `wiki/sources/session-stubs.md`
 - `skills/wiki-master/SKILL.md:881` FILENAME `session-stubs.md`
 - `wiki/WIKISKILLS-PROTOTYPE.md:61` FILENAME `session-stubs.md`
 - `wiki/references/agent-memory/hedge-flattening-and-invented-rulings.md:28` FILENAME `session-stubs.md`
@@ -1464,17 +1480,17 @@ A whole-file EXCLUDE removes the body; the NAME survives wherever an INCLUDED fi
 
 ## VALUE-WALK
 
-**VALUE-WALK: 1 literal(s) walked over 1126 INCLUDED files; 0 literal(s) found, 0 hit(s) total**
+**VALUE-WALK: 1 literal(s) walked over 1147 INCLUDED files; 0 literal(s) found, 0 hit(s) total**
 
 Each `VALUE_WALK` literal from `public_exclusions.txt` is walked fixed-string and case-sensitive over every INCLUDED file. Withholding the file that introduced an identifier does not withhold the identifier. The literal is never printed here -- a row carries an opaque ordinal id, sha256[:8] of (per-run random salt + literal) with the salt printed nowhere (an unsalted digest of a low-entropy literal is an oracle), and its class -- so this log cannot leak what it guards. Nothing was rewritten. `--fail-on-value-hits` exits 5 when any hit exists.
 
 | id | salted digest[:8] | class | hits |
 |---|---|---|---|
-| VW-01 | `26d5d6a2` | CREDENTIAL-SHAPED Drive folder id | 0 |
+| VW-01 | `4200dfae` | CREDENTIAL-SHAPED Drive folder id | 0 |
 
 ## SHAPE-SCAN
 
-**SHAPE-SCAN: 2 shape(s) scanned over 1126 INCLUDED files; 5 token hit(s) (detector only, no exit code)**
+**SHAPE-SCAN: 2 shape(s) scanned over 1147 INCLUDED files; 13 token hit(s) (detector only, no exit code)**
 
 Each `SHAPE_SCAN <name> <regex>` row is scanned, bounded by non-token characters, over every INCLUDED file, after dropping hex-only strings, tokens lacking mixed case plus a digit, tokens carrying a date, and hyphenated slugs. A hit names the shape and the token's LENGTH only, never the token. This is a detector feeding a human decision; it sets no exit code. Nothing was rewritten.
 
@@ -1482,16 +1498,24 @@ Second column (lane PUB-2e, 2026-09-02; never a filter -- no row is removed): ea
 
 | shape | hits | likely_slug=no | likely_slug=yes |
 |---|---|---|---|
-| GOOGLE-DRIVE-ID | 3 | 1 | 2 |
-| GOOGLE-FILE-ID | 2 | 0 | 2 |
+| GOOGLE-DRIVE-ID | 8 | 4 | 4 |
+| GOOGLE-FILE-ID | 5 | 1 | 4 |
 
-### GOOGLE-DRIVE-ID -- 3 hit(s)
+### GOOGLE-DRIVE-ID -- 8 hit(s)
 
+- `scripts/tests/selftest_reference_survivors.py:319` GOOGLE-DRIVE-ID len=33 likely_slug=no separators=0 longest_alpha_segment=0
+- `scripts/tests/selftest_reference_survivors.py:360` GOOGLE-DRIVE-ID len=33 likely_slug=no separators=0 longest_alpha_segment=0
+- `scripts/tests/selftest_reference_survivors.py:361` GOOGLE-DRIVE-ID len=33 likely_slug=no separators=1 longest_alpha_segment=0
 - `wiki/sources/infrastructure/secretary-claudeai-seat-born-coordinator-ruling-write-lane-2026-08-15-b50b3c.md:138` GOOGLE-DRIVE-ID len=33 likely_slug=no separators=0 longest_alpha_segment=0
+- `scripts/tests/selftest_reference_survivors.py:354` GOOGLE-DRIVE-ID len=33 likely_slug=yes separators=4 longest_alpha_segment=9
+- `scripts/tests/selftest_reference_survivors.py:356` GOOGLE-DRIVE-ID len=33 likely_slug=yes separators=4 longest_alpha_segment=12
 - `wiki/skills-gate/validation/dream/split.jsonl:8` GOOGLE-DRIVE-ID len=33 likely_slug=yes separators=5 longest_alpha_segment=6
 - `wiki/sources/infrastructure/professional-inbound-drain-19th-wake-2026-08-17-817504.md:40` GOOGLE-DRIVE-ID len=33 likely_slug=yes separators=4 longest_alpha_segment=9
 
-### GOOGLE-FILE-ID -- 2 hit(s)
+### GOOGLE-FILE-ID -- 5 hit(s)
 
+- `scripts/tests/selftest_reference_survivors.py:362` GOOGLE-FILE-ID len=44 likely_slug=no separators=1 longest_alpha_segment=0
+- `scripts/tests/selftest_reference_survivors.py:355` GOOGLE-FILE-ID len=44 likely_slug=yes separators=6 longest_alpha_segment=8
+- `scripts/tests/selftest_reference_survivors.py:357` GOOGLE-FILE-ID len=44 likely_slug=yes separators=5 longest_alpha_segment=19
 - `wiki/sources/infrastructure/switchboard-operator-deliver-herald-review-verdict-2026-08-17-c28473.md:51` GOOGLE-FILE-ID len=44 likely_slug=yes separators=5 longest_alpha_segment=11
 - `wiki/sources/infrastructure/switchboard-professional-graphrag-collision-bg-review-2026-08-17-629372.md:46` GOOGLE-FILE-ID len=44 likely_slug=yes separators=8 longest_alpha_segment=8
