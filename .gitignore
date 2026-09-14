@@ -10,3 +10,10 @@ __pycache__/
 
 # CFL superseded derivation kept for diffing, not part of the artifact
 cfl-superseded-*/
+
+# HuggingFace dataset outputs: Jon 2026-09-14 01:09, "just not publish the huggingbace file".
+# The dataset ships to HuggingFace, never in this repo. Files stay on disk (nothing deleted).
+data/*.jsonl
+data/huggingface/
+*.parquet
+/index.sqlite
