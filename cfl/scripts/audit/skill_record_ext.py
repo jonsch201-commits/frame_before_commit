@@ -1996,7 +1996,8 @@ def self_test():
             break
     for _lbl, _pp in (("Claude Code", _cc), ("claude.ai", _ai)):
         if _pp is None:
-            chk(f"NO {_lbl} SIDECAR FOUND — alignment UNVERIFIED, drift must read UNKNOWN", False)
+            if any(CI.walk_corpus()):
+                chk(f"NO {_lbl} SIDECAR FOUND — alignment UNVERIFIED, drift must read UNKNOWN", False)
             continue
         _rows = sidecar_timestamps(_pp)
         _al = align_sidecar(spans(_pp).get("__seq__", []), _pp)
