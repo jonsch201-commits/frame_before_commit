@@ -8,8 +8,8 @@ Source: fs N:/claude-cfl/clone
 
 ## Exclusion set
 
-- Read from `scripts/audit/public_exclusions.txt` (sha256 `05d84d2cd0032ea3343b83a2c3638c34f7393431e7dc9f860a153e60a67d2c03`), never inferred from repo prose.
-- DIR_NAME entries: XC-Exchequer | CONTENT_CLASS entries: 9 | PATH_PREFIX entries: 16
+- Read from `scripts/audit/public_exclusions.txt` (sha256 `72e237bd67fdf79a51b57cfd3e4e35e3e0e352784a4ff8fafe5e4ddb5cfa316c`), never inferred from repo prose.
+- DIR_NAME entries: XC-Exchequer | CONTENT_CLASS entries: 9 | PATH_PREFIX entries: 17
 
 ## Gazetteer arming
 
@@ -19,12 +19,12 @@ Source: fs N:/claude-cfl/clone
 
 | quantity | n |
 |---|---|
-| paths at source | 18385 |
-| not in the include spec (never considered) | 17202 |
-| considered | 1183 |
-| INCLUDED | 1126 |
-| EXCLUDED (distinct files) | 87 |
-| exclusion hits (a file may carry several) | 347 |
+| paths at source | 18409 |
+| not in the include spec (never considered) | 17299 |
+| considered | 1110 |
+| INCLUDED | 1046 |
+| EXCLUDED (distinct files) | 94 |
+| exclusion hits (a file may carry several) | 379 |
 
 ## Exclusions by class
 
@@ -32,12 +32,12 @@ Source: fs N:/claude-cfl/clone
 |---|---|
 | BINARY-OR-UNDECODABLE | 1 |
 | CONTENT-ACCOUNT | 3 |
-| CONTENT-ADDRESS | 2 |
-| CONTENT-CARD | 15 |
-| CONTENT-EMAIL | 4 |
+| CONTENT-ADDRESS | 3 |
+| CONTENT-CARD | 14 |
+| CONTENT-EMAIL | 5 |
 | CONTENT-FINANCIAL | 7 |
-| CONTENT-NAME | 40 |
-| CONTENT-PHONE | 2 |
+| CONTENT-NAME | 45 |
+| CONTENT-PHONE | 3 |
 | CONTENT-SSN | 3 |
 | CONTENT-XC-EXCHEQUER-PATH | 6 |
 | ENTITY-NOT-SEAT-OR-SYSTEM | 3 |
@@ -70,7 +70,6 @@ Source: fs N:/claude-cfl/clone
 | `scripts/audit/depii_derive.py` | CONTENT-NAME | 167 |  |
 | `scripts/audit/depii_derive.py` | CONTENT-NAME | 345 |  |
 | `scripts/audit/depii_lexicon.py` | CONTENT-CARD | 216 | Luhn-valid, non-excluded context |
-| `scripts/audit/depii_lexicon.py` | CONTENT-CARD | 217 | Luhn-valid, non-excluded context |
 | `scripts/audit/depii_path_canary.py` | CONTENT-ACCOUNT | 47 |  |
 | `scripts/audit/depii_path_canary.py` | CONTENT-ADDRESS | 41 |  |
 | `scripts/audit/depii_path_canary.py` | CONTENT-CARD | 43 | Luhn-valid, non-excluded context |
@@ -125,6 +124,41 @@ Source: fs N:/claude-cfl/clone
 | `scripts/audit/write_fence.py` | CONTENT-FINANCIAL | 0 | account-number pattern @L675 |
 | `scripts/audit/write_fence.py` | CONTENT-SSN | 630 |  |
 | `scripts/audit/write_fence.py` | CONTENT-XC-EXCHEQUER-PATH | 724 | XC-Exchequer/ledger-2026-08.ofx |
+| `scripts/graphrag/render_history_cc.py` | CONTENT-CARD | 252 | Luhn-valid, non-excluded context |
+| `scripts/graphrag/render_history_cc.py` | CONTENT-CARD | 268 | Luhn-valid, non-excluded context |
+| `scripts/graphrag/render_history_cc.py` | CONTENT-CARD | 280 | Luhn-valid, non-excluded context |
+| `scripts/migrations/add_asana_items.py` | CONTENT-NAME | 3 |  |
+| `scripts/migrations/add_asana_items.py` | CONTENT-NAME | 9 |  |
+| `scripts/migrations/add_asana_items.py` | CONTENT-NAME | 17 |  |
+| `scripts/migrations/add_asana_items.py` | CONTENT-NAME | 18 |  |
+| `scripts/migrations/reclassify_categories.py` | CONTENT-NAME | 3 |  |
+| `scripts/migrations/reclassify_categories.py` | CONTENT-NAME | 8 |  |
+| `scripts/migrations/reclassify_categories.py` | CONTENT-NAME | 21 |  |
+| `scripts/migrations/reclassify_categories.py` | CONTENT-NAME | 22 |  |
+| `scripts/migrations/reclassify_categories.py` | CONTENT-NAME | 33 |  |
+| `scripts/migrations/reclassify_categories.py` | CONTENT-NAME | 34 |  |
+| `scripts/migrations/reclassify_categories.py` | CONTENT-NAME | 44 |  |
+| `scripts/migrations/reclassify_categories.py` | CONTENT-NAME | 46 |  |
+| `scripts/migrations/reclassify_categories.py` | CONTENT-NAME | 50 |  |
+| `scripts/migrations/reclassify_categories.py` | CONTENT-NAME | 87 |  |
+| `scripts/migrations/reprioritize_and_sort.py` | CONTENT-NAME | 3 |  |
+| `scripts/migrations/reprioritize_and_sort.py` | CONTENT-NAME | 6 |  |
+| `scripts/migrations/reprioritize_and_sort.py` | CONTENT-NAME | 11 |  |
+| `scripts/migrations/reprioritize_and_sort.py` | CONTENT-NAME | 43 |  |
+| `scripts/migrations/reprioritize_and_sort.py` | CONTENT-NAME | 44 |  |
+| `scripts/migrations/reprioritize_and_sort.py` | CONTENT-NAME | 53 |  |
+| `scripts/migrations/reprioritize_and_sort.py` | CONTENT-NAME | 57 |  |
+| `scripts/migrations/reprioritize_and_sort.py` | CONTENT-NAME | 60 |  |
+| `scripts/pii/ollama_strip.py` | CONTENT-ADDRESS | 175 |  |
+| `scripts/pii/ollama_strip.py` | CONTENT-CARD | 177 | Luhn-valid, non-excluded context |
+| `scripts/pii/ollama_strip.py` | CONTENT-CARD | 183 | Luhn-valid, non-excluded context |
+| `scripts/pii/ollama_strip.py` | CONTENT-EMAIL | 175 |  |
+| `scripts/pii/ollama_strip.py` | CONTENT-EMAIL | 183 |  |
+| `scripts/pii/ollama_strip.py` | CONTENT-NAME | 177 |  |
+| `scripts/pii/ollama_strip.py` | CONTENT-NAME | 177 |  |
+| `scripts/pii/ollama_strip.py` | CONTENT-NAME | 184 |  |
+| `scripts/pii/ollama_strip.py` | CONTENT-PHONE | 178 |  |
+| `scripts/pii/ollama_strip.py` | CONTENT-PHONE | 184 |  |
 | `skills/cross-venue-intake/SKILL.md` | PATH-DENY-EXACT | 0 | CREDENTIAL-SHAPED access locator (Drive folder id) |
 | `skills/ground-before-stating/references/worked-examples.md` | CONTENT-NAME | 121 |  |
 | `skills/guide-of-home-and-family/SKILL.md` | CONTENT-NAME | 47 |  |
@@ -151,20 +185,21 @@ Source: fs N:/claude-cfl/clone
 | `wiki/entities/claude-code.md` | ENTITY-NOT-SEAT-OR-SYSTEM | 0 | entity_type: (absent) |
 | `wiki/entities/index.md` | CONTENT-NAME | 57 |  |
 | `wiki/entities/jon.md` | ENTITY-NOT-SEAT-OR-SYSTEM | 0 | entity_type: (absent) |
+| `wiki/index.md` | CONTENT-NAME | 885 |  |
+| `wiki/index.md` | CONTENT-NAME | 886 |  |
+| `wiki/index.md` | CONTENT-NAME | 899 |  |
 | `wiki/references/SCOPE-anthropic-zips-read-fence-2026-08-24.md` | PATH-DENY-EXACT | 0 | HEALTH (semantic read chunk 3) |
 | `wiki/references/agent-memory/active-work-state.md` | PATH-DENY-EXACT | 0 | FAMILY (semantic read chunk 3) |
 | `wiki/references/agent-memory/cc-jsonl-thinking-signature-only.md` | PATH-DENY-EXACT | 0 | THIRD-PARTY |
 | `wiki/references/agent-memory/md-not-uncaptured-authoritative-disposition.md` | PATH-DENY-EXACT | 0 | FAMILY |
 | `wiki/references/agent-memory/t44-apollo-artemis-complete.md` | CONTENT-NAME | 42 |  |
 | `wiki/references/agent-memory/verify-conditional-claim-resolution.md` | PATH-DENY-EXACT | 0 | HOUSEHOLD-FINANCE (solar lease) |
-| `wiki/references/audit-census-2026-07-13.md` | CONTENT-CARD | 138 | Luhn-valid, non-excluded context |
 | `wiki/references/audit-census-2026-07-13.md` | CONTENT-NAME | 44 |  |
 | `wiki/references/audit-census-2026-07-13.md` | CONTENT-NAME | 68 |  |
 | `wiki/references/audit-census-2026-07-13.md` | CONTENT-NAME | 145 |  |
 | `wiki/references/audit-census-2026-07-13.md` | CONTENT-NAME | 152 |  |
 | `wiki/references/audit-census-2026-07-13.md` | CONTENT-NAME | 156 |  |
 | `wiki/references/audit-census-2026-07-13.md` | CONTENT-NAME | 168 |  |
-| `wiki/references/audit-conformance-ledger.md` | CONTENT-CARD | 111 | Luhn-valid, non-excluded context |
 | `wiki/references/audit-conformance-ledger.md` | CONTENT-NAME | 131 |  |
 | `wiki/references/audit-conformance-ledger.md` | CONTENT-NAME | 170 |  |
 | `wiki/references/audit-conformance-ledger.md` | CONTENT-NAME | 171 |  |
@@ -174,7 +209,6 @@ Source: fs N:/claude-cfl/clone
 | `wiki/references/audit-program-2026-07-13.md` | PATH-DENY-EXACT | 0 | LOCATION (home town via repair-page slug) + personal security incident |
 | `wiki/references/calibration-results-2026-07-13.md` | PATH-DENY-EXACT | 0 | OTHER personal security incident + HOUSEHOLD-FINANCE rows |
 | `wiki/references/cfl-branch-registry.md` | CONTENT-NAME | 311 |  |
-| `wiki/references/cfl-file-manifest-2026-07-16.md` | CONTENT-CARD | 278 | Luhn-valid, non-excluded context |
 | `wiki/references/cfl-file-manifest-2026-07-16.md` | CONTENT-NAME | 95 |  |
 | `wiki/references/cfl-file-manifest-2026-07-16.md` | CONTENT-NAME | 151 |  |
 | `wiki/references/cfl-file-manifest-2026-07-16.md` | CONTENT-NAME | 152 |  |
@@ -236,26 +270,17 @@ Source: fs N:/claude-cfl/clone
 | `wiki/references/registries/trunks.md` | CONTENT-NAME | 105 |  |
 | `wiki/references/registries/trunks.md` | CONTENT-NAME | 106 |  |
 | `wiki/references/registries/trunks.md` | CONTENT-NAME | 167 |  |
-| `wiki/skills-gate/INGEST-LEDGER.md` | CONTENT-CARD | 194 | Luhn-valid, non-excluded context |
-| `wiki/skills-gate/INGEST-LEDGER.md` | CONTENT-CARD | 196 | Luhn-valid, non-excluded context |
-| `wiki/skills-gate/INGEST-LEDGER.md` | CONTENT-CARD | 198 | Luhn-valid, non-excluded context |
 | `wiki/skills-gate/INGEST-LEDGER.md` | CONTENT-CARD | 1411 | Luhn-valid, non-excluded context |
 | `wiki/skills-gate/INGEST-LEDGER.md` | CONTENT-CARD | 1413 | Luhn-valid, non-excluded context |
 | `wiki/skills-gate/INGEST-LEDGER.md` | CONTENT-CARD | 1936 | Luhn-valid, non-excluded context |
 | `wiki/skills-gate/INGEST-LEDGER.md` | CONTENT-CARD | 1938 | Luhn-valid, non-excluded context |
 | `wiki/skills-gate/INGEST-LEDGER.md` | CONTENT-CARD | 2637 | Luhn-valid, non-excluded context |
 | `wiki/skills-gate/INGEST-LEDGER.md` | CONTENT-CARD | 2639 | Luhn-valid, non-excluded context |
-| `wiki/skills-gate/INGEST-LEDGER.md` | CONTENT-CARD | 2857 | Luhn-valid, non-excluded context |
-| `wiki/skills-gate/INGEST-LEDGER.md` | CONTENT-CARD | 2859 | Luhn-valid, non-excluded context |
-| `wiki/skills-gate/INGEST-LEDGER.md` | CONTENT-CARD | 2861 | Luhn-valid, non-excluded context |
 | `wiki/skills-gate/INGEST-LEDGER.md` | CONTENT-CARD | 4423 | Luhn-valid, non-excluded context |
 | `wiki/skills-gate/INGEST-LEDGER.md` | CONTENT-CARD | 4425 | Luhn-valid, non-excluded context |
 | `wiki/skills-gate/INGEST-LEDGER.md` | CONTENT-CARD | 5078 | Luhn-valid, non-excluded context |
 | `wiki/skills-gate/INGEST-LEDGER.md` | CONTENT-CARD | 5080 | Luhn-valid, non-excluded context |
 | `wiki/skills-gate/INGEST-LEDGER.md` | CONTENT-CARD | 5082 | Luhn-valid, non-excluded context |
-| `wiki/skills-gate/INGEST-LEDGER.md` | CONTENT-CARD | 5155 | Luhn-valid, non-excluded context |
-| `wiki/skills-gate/INGEST-LEDGER.md` | CONTENT-CARD | 5157 | Luhn-valid, non-excluded context |
-| `wiki/skills-gate/INGEST-LEDGER.md` | CONTENT-CARD | 5159 | Luhn-valid, non-excluded context |
 | `wiki/skills-gate/INGEST-LEDGER.md` | CONTENT-FINANCIAL | 0 | OFX/QFX marker '.ofx' |
 | `wiki/skills-gate/INGEST-LEDGER.md` | CONTENT-FINANCIAL | 0 | OFX/QFX marker '.qfx' |
 | `wiki/skills-gate/INGEST-LEDGER.md` | CONTENT-NAME | 4933 |  |
@@ -330,15 +355,7 @@ Source: fs N:/claude-cfl/clone
 | `wiki/sources/infrastructure/document-capture-and-record-integrity-2026-08-01-a85aea.md` | CONTENT-NAME | 192 |  |
 | `wiki/sources/infrastructure/document-capture-and-record-integrity-2026-08-01-a85aea.md` | CONTENT-NAME | 205 |  |
 | `wiki/sources/infrastructure/document-capture-and-record-integrity-2026-08-01-a85aea.md` | CONTENT-NAME | 206 |  |
-| `wiki/sources/infrastructure/ears-protocol-position-changes-heading-test-2026-08-07-746694.md` | CONTENT-CARD | 9 | Luhn-valid, non-excluded context |
-| `wiki/sources/infrastructure/ears-protocol-position-changes-heading-test-2026-08-07-746694.md` | CONTENT-CARD | 13 | Luhn-valid, non-excluded context |
-| `wiki/sources/infrastructure/ears-protocol-position-changes-heading-test-2026-08-07-746694.md` | CONTENT-CARD | 18 | Luhn-valid, non-excluded context |
-| `wiki/sources/infrastructure/ears-protocol-position-changes-heading-test-2026-08-07-746694.md` | CONTENT-CARD | 47 | Luhn-valid, non-excluded context |
-| `wiki/sources/infrastructure/ears-protocol-position-changes-heading-test-2026-08-07-746694.md` | CONTENT-CARD | 53 | Luhn-valid, non-excluded context |
-| `wiki/sources/infrastructure/ears-protocol-position-changes-heading-test-2026-08-07-746694.md` | CONTENT-CARD | 59 | Luhn-valid, non-excluded context |
-| `wiki/sources/infrastructure/ears-protocol-position-changes-heading-test-2026-08-07-746694.md` | CONTENT-CARD | 64 | Luhn-valid, non-excluded context |
 | `wiki/sources/infrastructure/fable-mirror-first-extended-deployment-2026-08-01-a4db57.md` | PATH-DENY-EXACT | 0 | PATH_EXACT row (no comment) |
-| `wiki/sources/infrastructure/fourth-attempt-signal-dropped-interpretation-test-2026-08-07-807624.md` | CONTENT-CARD | 87 | Luhn-valid, non-excluded context |
 | `wiki/sources/infrastructure/global-claude-md-is-cfls-constitution-2026-08-17-03827a.md` | PATH-DENY-EXACT | 0 | GOOGLE-RESOURCE-ID line 122 |
 | `wiki/sources/infrastructure/graph-navigation-link-quality-audit-2026-06-04.md` | CONTENT-NAME | 20 |  |
 | `wiki/sources/infrastructure/j-layer-forward-pass-direction-2026-07-11-090a56-cont.md` | CONTENT-NAME | 71 |  |
@@ -362,9 +379,6 @@ Source: fs N:/claude-cfl/clone
 | `wiki/sources/infrastructure/wiki-master-audio-ingest-archive-2026-05-29-f6de9a.md` | CONTENT-NAME | 53 |  |
 | `wiki/sources/infrastructure/wiki-master-audit-skill-review-2026-06-09-707392.md` | CONTENT-NAME | 30 |  |
 | `wiki/sources/infrastructure/wiki-master-audit-skill-review-2026-06-09-707392.md` | CONTENT-NAME | 30 |  |
-| `wiki/sources/infrastructure/wiki-master-cc-personal-ingest-2026-05-29-974202.md` | CONTENT-CARD | 7 | Luhn-valid, non-excluded context |
-| `wiki/sources/infrastructure/wiki-master-cc-personal-ingest-2026-05-29-974202.md` | CONTENT-CARD | 21 | Luhn-valid, non-excluded context |
-| `wiki/sources/infrastructure/wiki-master-cc-personal-ingest-2026-05-29-974202.md` | CONTENT-CARD | 22 | Luhn-valid, non-excluded context |
 | `wiki/sources/infrastructure/wiki-master-phase-cycle-2026-07-08-774a3a.md` | PATH-DENY-EXACT | 0 | OTHER + CREDENTIAL-SHAPED incident |
 | `wiki/sources/infrastructure/wiki-master-session-2026-05-25-ee177e24.md` | CONTENT-NAME | 11 |  |
 | `wiki/sources/infrastructure/wiki-master-session-2026-05-25-ee177e24.md` | CONTENT-NAME | 12 |  |
@@ -380,13 +394,11 @@ Source: fs N:/claude-cfl/clone
 | `wiki/sources/infrastructure/wiki-multi-master-audit-2026-06-02-dba2c0b.md` | CONTENT-NAME | 91 |  |
 | `wiki/sources/infrastructure/wiki-session-conflict-resolution-crosslinks-2026-06-04.md` | CONTENT-NAME | 22 |  |
 | `wiki/sources/infrastructure/wiki-session-conflict-resolution-crosslinks-2026-06-04.md` | CONTENT-NAME | 22 |  |
-| `wiki/sources/jon-messages/jon-turns-session-71ce5a0e-2026-09-04.md` | CONTENT-CARD | 1877 | Luhn-valid, non-excluded context |
 | `wiki/sources/reference/cfl-goals-2026-07-08-verbatim.md` | PATH-DENY-EXACT | 0 | FAMILY (verbatim family/wife/kids goals) |
 | `wiki/sources/security-master-audit-2026-06-27.md` | CONTENT-NAME | 47 |  |
 | `wiki/sources/security-master-audit-2026-06-27.md` | CONTENT-NAME | 47 |  |
 | `wiki/sources/security-master-audit-2026-06-27.md` | CONTENT-NAME | 89 |  |
 | `wiki/sources/security-master-audit-2026-06-27.md` | CONTENT-NAME | 89 |  |
-| `wiki/sources/session-stubs.md` | CONTENT-CARD | 626 | Luhn-valid, non-excluded context |
 | `wiki/sources/session-stubs.md` | CONTENT-FINANCIAL | 0 | OFX/QFX marker '.ofx' |
 | `wiki/sources/session-stubs.md` | CONTENT-FINANCIAL | 0 | OFX/QFX marker '.qfx' |
 | `wiki/sources/session-stubs.md` | CONTENT-NAME | 40 |  |
@@ -394,6 +406,26 @@ Source: fs N:/claude-cfl/clone
 | `wiki/sources/session-stubs.md` | CONTENT-NAME | 57 |  |
 | `wiki/sources/session-stubs.md` | CONTENT-NAME | 57 |  |
 | `wiki/sources/session-stubs.md` | CONTENT-NAME | 60 |  |
+| `wiki/test-outputs/HOOK-HARNESS-run.jsonl` | CONTENT-CARD | 6 | Luhn-valid, non-excluded context |
+| `wiki/test-outputs/HOOK-HARNESS-v4-cfl-degrade.jsonl` | CONTENT-CARD | 18 | Luhn-valid, non-excluded context |
+| `wiki/test-outputs/HOOK-HARNESS-v4-cfl-degrade.jsonl` | CONTENT-CARD | 34 | Luhn-valid, non-excluded context |
+| `wiki/test-outputs/HOOK-HARNESS-v4-cfl-final-2026-09-02.jsonl` | CONTENT-CARD | 18 | Luhn-valid, non-excluded context |
+| `wiki/test-outputs/HOOK-HARNESS-v4-cfl-final-2026-09-02.jsonl` | CONTENT-CARD | 20 | Luhn-valid, non-excluded context |
+| `wiki/test-outputs/HOOK-HARNESS-v4-cfl-final-2026-09-02.jsonl` | CONTENT-CARD | 23 | Luhn-valid, non-excluded context |
+| `wiki/test-outputs/HOOK-HARNESS-v4-cfl-final-2026-09-02.jsonl` | CONTENT-CARD | 26 | Luhn-valid, non-excluded context |
+| `wiki/test-outputs/HOOK-HARNESS-v4-cfl-final-2026-09-02.jsonl` | CONTENT-CARD | 29 | Luhn-valid, non-excluded context |
+| `wiki/test-outputs/HOOK-HARNESS-v4-cfl-final-2026-09-02.jsonl` | CONTENT-CARD | 34 | Luhn-valid, non-excluded context |
+| `wiki/test-outputs/HOOK-HARNESS-v4-cfl-postH3b.jsonl` | CONTENT-CARD | 2 | Luhn-valid, non-excluded context |
+| `wiki/test-outputs/HOOK-HARNESS-v4-cfl-postH3b.jsonl` | CONTENT-CARD | 5 | Luhn-valid, non-excluded context |
+| `wiki/test-outputs/HOOK-HARNESS-v4-cfl-postH3b.jsonl` | CONTENT-CARD | 9 | Luhn-valid, non-excluded context |
+| `wiki/test-outputs/HOOK-HARNESS-v4-cfl-postH3b.jsonl` | CONTENT-CARD | 13 | Luhn-valid, non-excluded context |
+| `wiki/test-outputs/HOOK-HARNESS-v4-cfl-postH3b.jsonl` | CONTENT-CARD | 18 | Luhn-valid, non-excluded context |
+| `wiki/test-outputs/HOOK-HARNESS-v4-cfl-postH3b.jsonl` | CONTENT-CARD | 20 | Luhn-valid, non-excluded context |
+| `wiki/test-outputs/HOOK-HARNESS-v4-cfl-postH3b.jsonl` | CONTENT-CARD | 23 | Luhn-valid, non-excluded context |
+| `wiki/test-outputs/HOOK-HARNESS-v4-cfl-postH3b.jsonl` | CONTENT-CARD | 26 | Luhn-valid, non-excluded context |
+| `wiki/test-outputs/HOOK-HARNESS-v4-cfl-postH3b.jsonl` | CONTENT-CARD | 29 | Luhn-valid, non-excluded context |
+| `wiki/test-outputs/HOOK-HARNESS-v4-cfl-postH3b.jsonl` | CONTENT-CARD | 34 | Luhn-valid, non-excluded context |
+| `wiki/test-outputs/HOOK-HARNESS-v5-cfl-baseline.jsonl` | CONTENT-CARD | 19 | Luhn-valid, non-excluded context |
 
 ## REPORT-ONLY (nothing was withheld for these)
 
@@ -405,29 +437,29 @@ Source: fs N:/claude-cfl/clone
 
 ## REFERENCE-SURVIVORS
 
-**REFERENCE-SURVIVORS: 60 of 87 excluded files have >= 1 inbound reference by name in an INCLUDED file (783 refs total); PATH_EXACT rows: 22 of 30 have survivors**
+**REFERENCE-SURVIVORS: 72 of 261 excluded files have >= 1 inbound reference by name in an INCLUDED file (1015 refs total); PATH_EXACT rows: 25 of 30 have survivors**
 
 A whole-file EXCLUDE removes the body; the NAME survives wherever an INCLUDED file referred to it. Nothing below was rewritten -- a reference by name is disclosed here as a name only. Forms: FULL (repo-relative path), SUFFIX (parent-dir/basename), FILENAME, WIKILINK (`[[stem]]`), STEM (bare basename). FILENAME is armed only when no other file at source shares the basename; WIKILINK and STEM only when no other path shares the stem, and STEM additionally only for slug-shaped stems (a hyphen, underscore or digit) -- a shared name or a plain word is not a reference to THIS file, and the `forms dropped` column says so per file. One row per (referring file, line, excluded file), most specific form wins. `--fail-on-survivors` exits 4 when any PATH_EXACT row has >= 1 survivor.
 
 | excluded file | exclusion | inbound refs | forms dropped |
 |---|---|---|---|
 | `scripts/audit/verify_quotes.py` | PATH_EXACT | 20 | none |
-| `skills/cross-venue-intake/SKILL.md` | PATH_EXACT | 0 | FILENAME (45 files at source named SKILL.md); WIKILINK+STEM (45 paths at source share stem SKILL) |
+| `skills/cross-venue-intake/SKILL.md` | PATH_EXACT | 5 | FILENAME (45 files at source named SKILL.md); WIKILINK+STEM (45 paths at source share stem SKILL) |
 | `skills/security-master/SKILL.md` | PATH_EXACT | 0 | FILENAME (45 files at source named SKILL.md); WIKILINK+STEM (45 paths at source share stem SKILL) |
 | `skills/soul/SKILL.md` | PATH_EXACT | 0 | FILENAME (45 files at source named SKILL.md); WIKILINK+STEM (45 paths at source share stem SKILL) |
-| `wiki/concepts/repo-hygiene.md` | PATH_EXACT | 11 | none |
-| `wiki/references/SCOPE-anthropic-zips-read-fence-2026-08-24.md` | PATH_EXACT | 0 | none |
-| `wiki/references/agent-memory/active-work-state.md` | PATH_EXACT | 7 | none |
-| `wiki/references/agent-memory/cc-jsonl-thinking-signature-only.md` | PATH_EXACT | 11 | none |
-| `wiki/references/agent-memory/md-not-uncaptured-authoritative-disposition.md` | PATH_EXACT | 12 | none |
-| `wiki/references/agent-memory/verify-conditional-claim-resolution.md` | PATH_EXACT | 3 | none |
-| `wiki/references/audit-program-2026-07-13.md` | PATH_EXACT | 0 | none |
-| `wiki/references/calibration-results-2026-07-13.md` | PATH_EXACT | 1 | none |
-| `wiki/references/corpus-operations-taxonomy.md` | PATH_EXACT | 1 | none |
-| `wiki/references/ingest-queue.md` | PATH_EXACT | 12 | none |
-| `wiki/references/partial-sessions-registry.md` | PATH_EXACT | 4 | none |
-| `wiki/references/pilot-backfill-findings-2026-07-13.md` | PATH_EXACT | 1 | none |
-| `wiki/references/privacy-default-rule-2026-07-29.md` | PATH_EXACT | 5 | none |
+| `wiki/concepts/repo-hygiene.md` | PATH_EXACT | 12 | none |
+| `wiki/references/SCOPE-anthropic-zips-read-fence-2026-08-24.md` | PATH_EXACT | 1 | none |
+| `wiki/references/agent-memory/active-work-state.md` | PATH_EXACT | 8 | none |
+| `wiki/references/agent-memory/cc-jsonl-thinking-signature-only.md` | PATH_EXACT | 13 | none |
+| `wiki/references/agent-memory/md-not-uncaptured-authoritative-disposition.md` | PATH_EXACT | 13 | none |
+| `wiki/references/agent-memory/verify-conditional-claim-resolution.md` | PATH_EXACT | 4 | none |
+| `wiki/references/audit-program-2026-07-13.md` | PATH_EXACT | 1 | none |
+| `wiki/references/calibration-results-2026-07-13.md` | PATH_EXACT | 2 | none |
+| `wiki/references/corpus-operations-taxonomy.md` | PATH_EXACT | 2 | none |
+| `wiki/references/ingest-queue.md` | PATH_EXACT | 13 | none |
+| `wiki/references/partial-sessions-registry.md` | PATH_EXACT | 5 | none |
+| `wiki/references/pilot-backfill-findings-2026-07-13.md` | PATH_EXACT | 2 | none |
+| `wiki/references/privacy-default-rule-2026-07-29.md` | PATH_EXACT | 6 | none |
 | `wiki/sources/ai-governance/ai-oversight-quality-paper-2026-03-09-89c6d7.md` | PATH_EXACT | 10 | none |
 | `wiki/sources/infrastructure/cfl-port-work-and-friend-fork-2026-07-09-a0113e.md` | PATH_EXACT | 0 | none |
 | `wiki/sources/infrastructure/coordinator-mirror-pipeline-ratifications-turn2-turn3-2026-07-21-1ad477.md` | PATH_EXACT | 10 | none |
@@ -441,6 +473,173 @@ A whole-file EXCLUDE removes the body; the NAME survives wherever an INCLUDED fi
 | `wiki/sources/infrastructure/triage-project-model-direction-2026-07-11-a3e6cf.md` | PATH_EXACT | 2 | none |
 | `wiki/sources/infrastructure/wiki-master-phase-cycle-2026-07-08-774a3a.md` | PATH_EXACT | 2 | none |
 | `wiki/sources/reference/cfl-goals-2026-07-08-verbatim.md` | PATH_EXACT | 2 | none |
+| `.claude/hooks/state/.gitignore` | PATH_PREFIX | 0 | FILENAME (2 files at source named .gitignore); WIKILINK+STEM (7 paths at source share stem ) |
+| `.claude/hooks/state/MODE` | PATH_PREFIX | 40 | STEM ('MODE' is a plain word, not slug-shaped) |
+| `.claude/hooks/state/post-skills-sync.log` | PATH_PREFIX | 1 | WIKILINK+STEM (2 paths at source share stem post-skills-sync) |
+| `.claude/hooks/state/postcompact-graded-20260905T144121-71ce5a0e.stamp` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/postcompact-graded-20260905T151631-71ce5a0e.stamp` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/postcompact-graded-20260905T223400-46276084.stamp` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/postcompact-graded-20260906T215038-46276084.stamp` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/postcompact-graded-20260907T202211-a86404c0.stamp` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/postcompact-graded-20260912T012338-8634adc3.stamp` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/postcompact-graded-20260912T112654-8634adc3.stamp` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/postcompact-graded-20260912T163111-8634adc3.stamp` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/postcompact-graded-20260912T204558-8634adc3.stamp` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/pre-stop-consult.log` | PATH_PREFIX | 6 | WIKILINK+STEM (2 paths at source share stem pre-stop-consult) |
+| `.claude/hooks/state/prestop-0242b512-3782-437e-97b9-562ee954b04b-6.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-0808192b-a200-45db-a535-2d21a1d0f4f4-7.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-1191b3e8-7f9a-45de-a3a3-fbe0e2759d74-5.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-46276084-5985-4514-9ad1-0d77cf7a0ceb-10.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-46276084-5985-4514-9ad1-0d77cf7a0ceb-1142.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-46276084-5985-4514-9ad1-0d77cf7a0ceb-1248.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-46276084-5985-4514-9ad1-0d77cf7a0ceb-1402.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-46276084-5985-4514-9ad1-0d77cf7a0ceb-1625.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-46276084-5985-4514-9ad1-0d77cf7a0ceb-2070.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-46276084-5985-4514-9ad1-0d77cf7a0ceb-3522.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-46276084-5985-4514-9ad1-0d77cf7a0ceb-3907.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-46276084-5985-4514-9ad1-0d77cf7a0ceb-4432.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-46276084-5985-4514-9ad1-0d77cf7a0ceb-4644.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-46276084-5985-4514-9ad1-0d77cf7a0ceb-4678.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-46276084-5985-4514-9ad1-0d77cf7a0ceb-4972.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-46276084-5985-4514-9ad1-0d77cf7a0ceb-5045.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-46276084-5985-4514-9ad1-0d77cf7a0ceb-5590.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-46276084-5985-4514-9ad1-0d77cf7a0ceb-5934.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-46276084-5985-4514-9ad1-0d77cf7a0ceb-5958.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-46276084-5985-4514-9ad1-0d77cf7a0ceb-6006.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-46276084-5985-4514-9ad1-0d77cf7a0ceb-6178.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-46276084-5985-4514-9ad1-0d77cf7a0ceb-6274.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-46276084-5985-4514-9ad1-0d77cf7a0ceb-6408.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-46276084-5985-4514-9ad1-0d77cf7a0ceb-6789.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-46276084-5985-4514-9ad1-0d77cf7a0ceb-6992.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-46276084-5985-4514-9ad1-0d77cf7a0ceb-7022.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-46276084-5985-4514-9ad1-0d77cf7a0ceb-7179.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-46276084-5985-4514-9ad1-0d77cf7a0ceb-7226.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-46276084-5985-4514-9ad1-0d77cf7a0ceb-7590.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-46276084-5985-4514-9ad1-0d77cf7a0ceb-8502.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-46276084-5985-4514-9ad1-0d77cf7a0ceb-861.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-46276084-5985-4514-9ad1-0d77cf7a0ceb-8843.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-46276084-5985-4514-9ad1-0d77cf7a0ceb-9117.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-46276084-5985-4514-9ad1-0d77cf7a0ceb-9209.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-46276084-5985-4514-9ad1-0d77cf7a0ceb-9273.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-46276084-5985-4514-9ad1-0d77cf7a0ceb-9423.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-46276084-5985-4514-9ad1-0d77cf7a0ceb-9503.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-5201a340-c9d1-4c6e-8ae3-adc9bfbd2ad3-6.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-56676636-7691-4d0e-9ad2-1cc0cd3ace91-6.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-10336.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-11246.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-11512.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-11653.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-12221.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-12343.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-12985.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-1303.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-1386.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-14286.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-14847.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-15648.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-15953.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-17206.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-17406.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-17648.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-17758.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-17931.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-20.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-20304.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-20595.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-21018.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-21376.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-214.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-2352.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-2728.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-2883.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-2930.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-2964.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-3540.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-3602.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-4527.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-4961.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-5119.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-5174.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-5183.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-5300.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-5339.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-5391.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-5421.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-5435.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-5456.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-5503.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-5519.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-5539.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-5553.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-5722.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-5857.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-5901.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-5954.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-5986.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-6007.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-6028.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-6049.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-6078.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-6092.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-6222.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-6287.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-6451.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-737.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-751.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-8531.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-8559.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-8619.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-8643.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-9050.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-9337.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-9436.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-9744.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-71ce5a0e-d253-41cc-9fb7-a0c6d06c7adb-9945.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-78df46c6-2239-4a4e-ac3e-c24fca71a7ce-7.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-8634adc3-9999-4303-8ca9-714cce57a921-10367.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-8634adc3-9999-4303-8ca9-714cce57a921-10853.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-8634adc3-9999-4303-8ca9-714cce57a921-1114.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-8634adc3-9999-4303-8ca9-714cce57a921-11285.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-8634adc3-9999-4303-8ca9-714cce57a921-11483.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-8634adc3-9999-4303-8ca9-714cce57a921-11739.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-8634adc3-9999-4303-8ca9-714cce57a921-1292.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-8634adc3-9999-4303-8ca9-714cce57a921-1418.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-8634adc3-9999-4303-8ca9-714cce57a921-1474.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-8634adc3-9999-4303-8ca9-714cce57a921-21.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-8634adc3-9999-4303-8ca9-714cce57a921-3000.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-8634adc3-9999-4303-8ca9-714cce57a921-3210.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-8634adc3-9999-4303-8ca9-714cce57a921-3270.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-8634adc3-9999-4303-8ca9-714cce57a921-3668.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-8634adc3-9999-4303-8ca9-714cce57a921-403.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-8634adc3-9999-4303-8ca9-714cce57a921-4318.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-8634adc3-9999-4303-8ca9-714cce57a921-4612.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-8634adc3-9999-4303-8ca9-714cce57a921-4878.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-8634adc3-9999-4303-8ca9-714cce57a921-5265.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-8634adc3-9999-4303-8ca9-714cce57a921-5669.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-8634adc3-9999-4303-8ca9-714cce57a921-5923.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-8634adc3-9999-4303-8ca9-714cce57a921-6037.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-8634adc3-9999-4303-8ca9-714cce57a921-6217.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-8634adc3-9999-4303-8ca9-714cce57a921-6574.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-8634adc3-9999-4303-8ca9-714cce57a921-6718.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-8634adc3-9999-4303-8ca9-714cce57a921-709.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-8634adc3-9999-4303-8ca9-714cce57a921-7226.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-8634adc3-9999-4303-8ca9-714cce57a921-7467.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-8634adc3-9999-4303-8ca9-714cce57a921-7779.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-8634adc3-9999-4303-8ca9-714cce57a921-8531.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-8634adc3-9999-4303-8ca9-714cce57a921-8621.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-8634adc3-9999-4303-8ca9-714cce57a921-875.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-8634adc3-9999-4303-8ca9-714cce57a921-8813.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-8634adc3-9999-4303-8ca9-714cce57a921-9277.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-8634adc3-9999-4303-8ca9-714cce57a921-9498.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-8634adc3-9999-4303-8ca9-714cce57a921-9834.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-a86404c0-42c6-4581-a86f-a52e35bdfae7-18.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-a86404c0-42c6-4581-a86f-a52e35bdfae7-758.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-a9842e87-0a5a-4285-917f-29d38696d807-64.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-c5265c73-1758-4a20-aba2-cac6631eee5d-6.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-d8fa6bf3-4513-48d1-be0c-ed83c8dd116f-64.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/prestop-harness-0000-8.count` | PATH_PREFIX | 1 | none |
+| `.claude/hooks/state/prestop-test-0000-0.count` | PATH_PREFIX | 0 | none |
+| `.claude/hooks/state/skills-sync.stamp` | PATH_PREFIX | 1 | none |
 | `.claude/hooks/__pycache__/global-staleness-probe.cpython-314.pyc` | SCAN | 0 | none |
 | `scripts/audit/assign_branch_frontmatter.py` | SCAN | 6 | none |
 | `scripts/audit/check_tracked_content.py` | SCAN | 0 | none |
@@ -448,33 +647,39 @@ A whole-file EXCLUDE removes the body; the NAME survives wherever an INCLUDED fi
 | `scripts/audit/depii_derive.py` | SCAN | 2 | none |
 | `scripts/audit/depii_lexicon.py` | SCAN | 18 | none |
 | `scripts/audit/depii_path_canary.py` | SCAN | 1 | none |
-| `scripts/audit/ingest_gate.py` | SCAN | 13 | none |
+| `scripts/audit/ingest_gate.py` | SCAN | 20 | none |
 | `scripts/audit/leak_control.py` | SCAN | 6 | none |
 | `scripts/audit/publication_screen.py` | SCAN | 4 | none |
 | `scripts/audit/publish_content_gate.py` | SCAN | 4 | none |
 | `scripts/audit/publish_lexicon.py` | SCAN | 2 | none |
 | `scripts/audit/selftest_ingest_gate.py` | SCAN | 0 | none |
 | `scripts/audit/write_fence.py` | SCAN | 11 | none |
+| `scripts/graphrag/render_history_cc.py` | SCAN | 2 | none |
+| `scripts/migrations/add_asana_items.py` | SCAN | 0 | none |
+| `scripts/migrations/reclassify_categories.py` | SCAN | 0 | none |
+| `scripts/migrations/reprioritize_and_sort.py` | SCAN | 0 | none |
+| `scripts/pii/ollama_strip.py` | SCAN | 0 | none |
 | `skills/ground-before-stating/references/worked-examples.md` | SCAN | 4 | FILENAME (2 files at source named worked-examples.md); WIKILINK+STEM (2 paths at source share stem worked-examples) |
 | `skills/guide-of-home-and-family/SKILL.md` | SCAN | 0 | FILENAME (45 files at source named SKILL.md); WIKILINK+STEM (45 paths at source share stem SKILL) |
 | `skills/herald/SKILL.md` | SCAN | 4 | FILENAME (45 files at source named SKILL.md); WIKILINK+STEM (45 paths at source share stem SKILL) |
 | `skills/wiki-orientation/SKILL.md` | SCAN | 0 | FILENAME (45 files at source named SKILL.md); WIKILINK+STEM (45 paths at source share stem SKILL) |
-| `wiki/concepts/herald-of-home-and-life.md` | SCAN | 14 | none |
-| `wiki/concepts/personal-role-architecture.md` | SCAN | 8 | none |
-| `wiki/concepts/probe-registry.md` | SCAN | 128 | none |
+| `wiki/concepts/herald-of-home-and-life.md` | SCAN | 15 | none |
+| `wiki/concepts/personal-role-architecture.md` | SCAN | 9 | none |
+| `wiki/concepts/probe-registry.md` | SCAN | 130 | none |
 | `wiki/entities/ENTITY-masters-kitchen-bath.md` | SCAN | 0 | none |
-| `wiki/entities/claude-code.md` | SCAN | 164 | none |
+| `wiki/entities/claude-code.md` | SCAN | 180 | none |
 | `wiki/entities/index.md` | SCAN | 0 | FILENAME (7 files at source named index.md); WIKILINK+STEM (7 paths at source share stem index) |
 | `wiki/entities/jon.md` | SCAN | 1 | FILENAME (3 files at source named jon.md); WIKILINK+STEM (3 paths at source share stem jon) |
-| `wiki/references/agent-memory/t44-apollo-artemis-complete.md` | SCAN | 1 | none |
-| `wiki/references/audit-census-2026-07-13.md` | SCAN | 1 | none |
-| `wiki/references/audit-conformance-ledger.md` | SCAN | 6 | none |
-| `wiki/references/cfl-branch-registry.md` | SCAN | 17 | none |
-| `wiki/references/cfl-file-manifest-2026-07-16.md` | SCAN | 0 | none |
+| `wiki/index.md` | SCAN | 120 | FILENAME (7 files at source named index.md); WIKILINK+STEM (7 paths at source share stem index) |
+| `wiki/references/agent-memory/t44-apollo-artemis-complete.md` | SCAN | 2 | none |
+| `wiki/references/audit-census-2026-07-13.md` | SCAN | 3 | none |
+| `wiki/references/audit-conformance-ledger.md` | SCAN | 7 | none |
+| `wiki/references/cfl-branch-registry.md` | SCAN | 18 | none |
+| `wiki/references/cfl-file-manifest-2026-07-16.md` | SCAN | 1 | none |
 | `wiki/references/claude-code/settings-reference.md` | SCAN | 44 | none |
-| `wiki/references/growth-intent-worked-examples/example-a-material-agent-interaction-after.md` | SCAN | 1 | none |
+| `wiki/references/growth-intent-worked-examples/example-a-material-agent-interaction-after.md` | SCAN | 2 | none |
 | `wiki/references/registries/trunks.md` | SCAN | 9 | STEM ('trunks' is a plain word, not slug-shaped) |
-| `wiki/skills-gate/INGEST-LEDGER.md` | SCAN | 13 | none |
+| `wiki/skills-gate/INGEST-LEDGER.md` | SCAN | 14 | none |
 | `wiki/skills-gate/validation/su-compact/blind-run1-mechanical.json` | SCAN | 0 | FILENAME (5 files at source named blind-run1-mechanical.json); WIKILINK+STEM (5 paths at source share stem blind-run1-mechanical) |
 | `wiki/sources/infrastructure/agent-interaction-framework-2026-07-02-5990f2.md` | SCAN | 3 | FILENAME (2 files at source named agent-interaction-framework-2026-07-02-5990f2.md); WIKILINK+STEM (2 paths at source share stem agent-interaction-framework-2026-07-02-5990f2) |
 | `wiki/sources/infrastructure/capacity-planning-autonomy-governance-2026-07-10-7f2815.md` | SCAN | 1 | none |
@@ -483,21 +688,22 @@ A whole-file EXCLUDE removes the body; the NAME survives wherever an INCLUDED fi
 | `wiki/sources/infrastructure/computer-use-knowledge-base-organization-2026-09-03-8d00d7.md` | SCAN | 0 | none |
 | `wiki/sources/infrastructure/corpus-loss-audit-2026-07-19.md` | SCAN | 6 | none |
 | `wiki/sources/infrastructure/document-capture-and-record-integrity-2026-08-01-a85aea.md` | SCAN | 1 | none |
-| `wiki/sources/infrastructure/ears-protocol-position-changes-heading-test-2026-08-07-746694.md` | SCAN | 0 | none |
-| `wiki/sources/infrastructure/fourth-attempt-signal-dropped-interpretation-test-2026-08-07-807624.md` | SCAN | 0 | none |
 | `wiki/sources/infrastructure/graph-navigation-link-quality-audit-2026-06-04.md` | SCAN | 0 | none |
 | `wiki/sources/infrastructure/j-layer-forward-pass-direction-2026-07-11-090a56-cont.md` | SCAN | 5 | none |
 | `wiki/sources/infrastructure/motherboard-request-becomes-memory-tree-and-oath-deposit-2026-08-14-5107dd.md` | SCAN | 0 | none |
 | `wiki/sources/infrastructure/triage-master-open-items-2026-04-28-090a56.md` | SCAN | 4 | none |
 | `wiki/sources/infrastructure/wiki-master-audio-ingest-archive-2026-05-29-f6de9a.md` | SCAN | 1 | none |
 | `wiki/sources/infrastructure/wiki-master-audit-skill-review-2026-06-09-707392.md` | SCAN | 0 | none |
-| `wiki/sources/infrastructure/wiki-master-cc-personal-ingest-2026-05-29-974202.md` | SCAN | 0 | none |
 | `wiki/sources/infrastructure/wiki-master-session-2026-05-25-ee177e24.md` | SCAN | 0 | none |
 | `wiki/sources/infrastructure/wiki-multi-master-audit-2026-06-02-dba2c0b.md` | SCAN | 12 | none |
 | `wiki/sources/infrastructure/wiki-session-conflict-resolution-crosslinks-2026-06-04.md` | SCAN | 2 | none |
-| `wiki/sources/jon-messages/jon-turns-session-71ce5a0e-2026-09-04.md` | SCAN | 0 | none |
 | `wiki/sources/security-master-audit-2026-06-27.md` | SCAN | 3 | none |
-| `wiki/sources/session-stubs.md` | SCAN | 33 | none |
+| `wiki/sources/session-stubs.md` | SCAN | 39 | none |
+| `wiki/test-outputs/HOOK-HARNESS-run.jsonl` | SCAN | 1 | WIKILINK+STEM (2 paths at source share stem HOOK-HARNESS-run) |
+| `wiki/test-outputs/HOOK-HARNESS-v4-cfl-degrade.jsonl` | SCAN | 0 | WIKILINK+STEM (2 paths at source share stem HOOK-HARNESS-v4-cfl-degrade) |
+| `wiki/test-outputs/HOOK-HARNESS-v4-cfl-final-2026-09-02.jsonl` | SCAN | 0 | WIKILINK+STEM (2 paths at source share stem HOOK-HARNESS-v4-cfl-final-2026-09-02) |
+| `wiki/test-outputs/HOOK-HARNESS-v4-cfl-postH3b.jsonl` | SCAN | 0 | WIKILINK+STEM (2 paths at source share stem HOOK-HARNESS-v4-cfl-postH3b) |
+| `wiki/test-outputs/HOOK-HARNESS-v5-cfl-baseline.jsonl` | SCAN | 0 | WIKILINK+STEM (2 paths at source share stem HOOK-HARNESS-v5-cfl-baseline) |
 
 ### `scripts/audit/verify_quotes.py` (PATH_EXACT) -- 20 inbound ref(s)
 
@@ -522,7 +728,15 @@ A whole-file EXCLUDE removes the body; the NAME survives wherever an INCLUDED fi
 - `wiki/sources/infrastructure/merge-train-instrument-blindness-wayfinder-2026-07-29-627c1e.md:126` FILENAME `verify_quotes.py`
 - `wiki/sources/infrastructure/merge-train-instrument-blindness-wayfinder-2026-07-29-627c1e.md:131` FILENAME `verify_quotes.py`
 
-### `wiki/concepts/repo-hygiene.md` (PATH_EXACT) -- 11 inbound ref(s)
+### `skills/cross-venue-intake/SKILL.md` (PATH_EXACT) -- 5 inbound ref(s)
+
+- `wiki/sources/jon-messages/jon-turns-session-71ce5a0e-2026-09-04.md:623` FULL `skills/cross-venue-intake/SKILL.md`
+- `wiki/sources/jon-messages/jon-turns-session-71ce5a0e-2026-09-04.md:630` FULL `skills/cross-venue-intake/SKILL.md`
+- `wiki/sources/jon-messages/jon-turns-session-71ce5a0e-2026-09-04.md:694` FULL `skills/cross-venue-intake/SKILL.md`
+- `wiki/sources/jon-messages/jon-turns-session-71ce5a0e-2026-09-04.md:703` FULL `skills/cross-venue-intake/SKILL.md`
+- `wiki/sources/jon-messages/jon-turns-session-71ce5a0e-2026-09-04.md:761` FULL `skills/cross-venue-intake/SKILL.md`
+
+### `wiki/concepts/repo-hygiene.md` (PATH_EXACT) -- 12 inbound ref(s)
 
 - `wiki/concepts/bgisolation-membrane.md:64` WIKILINK `[[repo-hygiene`
 - `wiki/concepts/fable-mirror.md:102` WIKILINK `[[repo-hygiene`
@@ -535,8 +749,13 @@ A whole-file EXCLUDE removes the body; the NAME survives wherever an INCLUDED fi
 - `wiki/sources/infrastructure/cfl-video-implementation-planning-2026-07-26-a42d10.md:77` WIKILINK `[[repo-hygiene`
 - `wiki/sources/infrastructure/merge-train-instrument-blindness-wayfinder-2026-07-29-627c1e.md:164` WIKILINK `[[repo-hygiene`
 - `wiki/sources/infrastructure/wiki-su-pr68-sync-to-g-and-elder-witness-on-canonical-whitelist-2026-07-21-47d61b.md:106` WIKILINK `[[repo-hygiene`
+- `wiki/test-outputs/LINT-SWEEP-2026-09-02.out:75` STEM `repo-hygiene`
 
-### `wiki/references/agent-memory/active-work-state.md` (PATH_EXACT) -- 7 inbound ref(s)
+### `wiki/references/SCOPE-anthropic-zips-read-fence-2026-08-24.md` (PATH_EXACT) -- 1 inbound ref(s)
+
+- `wiki/test-outputs/LINT-SWEEP-2026-09-02.out:152` STEM `SCOPE-anthropic-zips-read-fence-2026-08-24`
+
+### `wiki/references/agent-memory/active-work-state.md` (PATH_EXACT) -- 8 inbound ref(s)
 
 - `wiki/references/agent-memory/README.md:155` WIKILINK `[[active-work-state`
 - `wiki/references/agent-memory/README.md:210` STEM `active-work-state`
@@ -545,9 +764,11 @@ A whole-file EXCLUDE removes the body; the NAME survives wherever an INCLUDED fi
 - `wiki/references/agent-memory/drive-lag-stale-read-hazard.md:29` WIKILINK `[[active-work-state`
 - `wiki/references/agent-memory/planned-path-g1-g2-gate-order.md:35` WIKILINK `[[active-work-state`
 - `wiki/references/agent-memory/session-close-2026-07-07-backlog-plan.md:36` WIKILINK `[[active-work-state`
+- `wiki/test-outputs/LINT-SWEEP-2026-09-02.out:153` STEM `active-work-state`
 
-### `wiki/references/agent-memory/cc-jsonl-thinking-signature-only.md` (PATH_EXACT) -- 11 inbound ref(s)
+### `wiki/references/agent-memory/cc-jsonl-thinking-signature-only.md` (PATH_EXACT) -- 13 inbound ref(s)
 
+- `scripts/claude_api_capture.py:9` STEM `cc-jsonl-thinking-signature-only`
 - `skills/session-order/SKILL.md:303` STEM `cc-jsonl-thinking-signature-only`
 - `wiki/references/agent-memory/README.md:94` WIKILINK `[[cc-jsonl-thinking-signature-only`
 - `wiki/references/agent-memory/live-session-liveness-and-untracked-state.md:30` WIKILINK `[[cc-jsonl-thinking-signature-only`
@@ -559,8 +780,9 @@ A whole-file EXCLUDE removes the body; the NAME survives wherever an INCLUDED fi
 - `wiki/sources/infrastructure/channel-design-and-jon-answers-2026-08-02.md:240` STEM `cc-jsonl-thinking-signature-only`
 - `wiki/sources/infrastructure/thinking-tokens-cc-vs-api-legibility-2026-08-12-183fa5.md:83` WIKILINK `[[cc-jsonl-thinking-signature-only`
 - `wiki/sources/infrastructure/thinking-tokens-cc-vs-api-legibility-2026-08-12-183fa5.md:101` WIKILINK `[[cc-jsonl-thinking-signature-only`
+- `wiki/test-outputs/LINT-SWEEP-2026-09-02.out:161` STEM `cc-jsonl-thinking-signature-only`
 
-### `wiki/references/agent-memory/md-not-uncaptured-authoritative-disposition.md` (PATH_EXACT) -- 12 inbound ref(s)
+### `wiki/references/agent-memory/md-not-uncaptured-authoritative-disposition.md` (PATH_EXACT) -- 13 inbound ref(s)
 
 - `wiki/references/agent-memory/README.md:116` WIKILINK `[[md-not-uncaptured-authoritative-disposition`
 - `wiki/references/agent-memory/askuserquestion-answers-not-captured.md:59` STEM `md-not-uncaptured-authoritative-disposition`
@@ -574,22 +796,30 @@ A whole-file EXCLUDE removes the body; the NAME survives wherever an INCLUDED fi
 - `wiki/sources/infrastructure/professional-21st-wake-marker-grep-not-a-detector-2026-08-17-adc56d.md:106` WIKILINK `[[md-not-uncaptured-authoritative-disposition`
 - `wiki/sources/infrastructure/professional-fifth-wake-declines-subprocess-read-path-2026-08-17-9ff05b-v2.md:110` WIKILINK `[[md-not-uncaptured-authoritative-disposition`
 - `wiki/sources/infrastructure/wiki-master-su-capture-only-2026-07-13-96e1c2.md:103` WIKILINK `[[md-not-uncaptured-authoritative-disposition`
+- `wiki/test-outputs/LINT-SWEEP-2026-09-02.out:193` STEM `md-not-uncaptured-authoritative-disposition`
 
-### `wiki/references/agent-memory/verify-conditional-claim-resolution.md` (PATH_EXACT) -- 3 inbound ref(s)
+### `wiki/references/agent-memory/verify-conditional-claim-resolution.md` (PATH_EXACT) -- 4 inbound ref(s)
 
 - `wiki/references/agent-memory/README.md:134` WIKILINK `[[verify-conditional-claim-resolution`
 - `wiki/references/agent-memory/max-plan-fl-budget.md:29` WIKILINK `[[verify-conditional-claim-resolution`
 - `wiki/references/agent-memory/no-public-clone-inside-private-tree.md:34` WIKILINK `[[verify-conditional-claim-resolution`
+- `wiki/test-outputs/LINT-SWEEP-2026-09-02.out:223` STEM `verify-conditional-claim-resolution`
 
-### `wiki/references/calibration-results-2026-07-13.md` (PATH_EXACT) -- 1 inbound ref(s)
+### `wiki/references/audit-program-2026-07-13.md` (PATH_EXACT) -- 1 inbound ref(s)
+
+- `wiki/test-outputs/LINT-SWEEP-2026-09-02.out:157` STEM `audit-program-2026-07-13`
+
+### `wiki/references/calibration-results-2026-07-13.md` (PATH_EXACT) -- 2 inbound ref(s)
 
 - `wiki/references/README-genre-split.md:39` FILENAME `calibration-results-2026-07-13.md`
+- `wiki/test-outputs/LINT-SWEEP-2026-09-02.out:160` STEM `calibration-results-2026-07-13`
 
-### `wiki/references/corpus-operations-taxonomy.md` (PATH_EXACT) -- 1 inbound ref(s)
+### `wiki/references/corpus-operations-taxonomy.md` (PATH_EXACT) -- 2 inbound ref(s)
 
 - `wiki/references/README-genre-split.md:49` FILENAME `corpus-operations-taxonomy.md`
+- `wiki/test-outputs/LINT-SWEEP-2026-09-02.out:169` STEM `corpus-operations-taxonomy`
 
-### `wiki/references/ingest-queue.md` (PATH_EXACT) -- 12 inbound ref(s)
+### `wiki/references/ingest-queue.md` (PATH_EXACT) -- 13 inbound ref(s)
 
 - `scripts/audit/coverage_gap.py:78` FULL `wiki/references/ingest-queue.md`
 - `scripts/audit/coverage_gap.py:171` FULL `wiki/references/ingest-queue.md`
@@ -603,25 +833,29 @@ A whole-file EXCLUDE removes the body; the NAME survives wherever an INCLUDED fi
 - `wiki/sources/infrastructure/wiki-master-triple-su-self-audit-2026-07-18-922df2.md:224` FULL `wiki/references/ingest-queue.md`
 - `wiki/sources/infrastructure/wiki-master-triple-su-self-audit-2026-07-18-922df2.md:230` FULL `wiki/references/ingest-queue.md`
 - `wiki/sources/infrastructure/wiki-su-pr68-sync-to-g-and-elder-witness-on-canonical-whitelist-2026-07-21-47d61b.md:57` FILENAME `ingest-queue.md`
+- `wiki/test-outputs/LINT-SWEEP-2026-09-02.out:187` STEM `ingest-queue`
 
-### `wiki/references/partial-sessions-registry.md` (PATH_EXACT) -- 4 inbound ref(s)
+### `wiki/references/partial-sessions-registry.md` (PATH_EXACT) -- 5 inbound ref(s)
 
 - `skills/wiki-master/SKILL.md:119` FULL `wiki/references/partial-sessions-registry.md`
 - `skills/wiki-master/SKILL.md:415` FULL `wiki/references/partial-sessions-registry.md`
 - `wiki/references/README-genre-split.md:48` FILENAME `partial-sessions-registry.md`
 - `wiki/references/agent-memory/session-close-2026-07-07-backlog-plan.md:34` FILENAME `partial-sessions-registry.md`
+- `wiki/test-outputs/LINT-SWEEP-2026-09-02.out:199` STEM `partial-sessions-registry`
 
-### `wiki/references/pilot-backfill-findings-2026-07-13.md` (PATH_EXACT) -- 1 inbound ref(s)
+### `wiki/references/pilot-backfill-findings-2026-07-13.md` (PATH_EXACT) -- 2 inbound ref(s)
 
 - `wiki/references/README-genre-split.md:40` FILENAME `pilot-backfill-findings-2026-07-13.md`
+- `wiki/test-outputs/LINT-SWEEP-2026-09-02.out:200` STEM `pilot-backfill-findings-2026-07-13`
 
-### `wiki/references/privacy-default-rule-2026-07-29.md` (PATH_EXACT) -- 5 inbound ref(s)
+### `wiki/references/privacy-default-rule-2026-07-29.md` (PATH_EXACT) -- 6 inbound ref(s)
 
 - `wiki/patterns/exclusion-verified-by-absence-not-by-list.md:31` FULL `wiki/references/privacy-default-rule-2026-07-29.md`
 - `wiki/references/update-levels-2026-07-31.md:191` FULL `wiki/references/privacy-default-rule-2026-07-29.md`
 - `wiki/references/update-levels-2026-07-31.md:241` FULL `wiki/references/privacy-default-rule-2026-07-29.md`
 - `wiki/references/update-levels-2026-07-31.md:267` FULL `wiki/references/privacy-default-rule-2026-07-29.md`
 - `wiki/sources/infrastructure/question-pricing-model-and-outcome-tracking-approval-2026-07-27-408368.md:137` FULL `wiki/references/privacy-default-rule-2026-07-29.md`
+- `wiki/test-outputs/LINT-SWEEP-2026-09-02.out:203` STEM `privacy-default-rule-2026-07-29`
 
 ### `wiki/sources/ai-governance/ai-oversight-quality-paper-2026-03-09-89c6d7.md` (PATH_EXACT) -- 10 inbound ref(s)
 
@@ -694,6 +928,70 @@ A whole-file EXCLUDE removes the body; the NAME survives wherever an INCLUDED fi
 
 - `scripts/audit/find_answer.py:271` FILENAME `cfl-goals-2026-07-08-verbatim.md`
 - `scripts/audit/find_answer.py:627` STEM `cfl-goals-2026-07-08-verbatim`
+
+### `.claude/hooks/state/MODE` (PATH_PREFIX) -- 40 inbound ref(s)
+
+- `.claude/hooks/turn-boundary-retrieval.sh:12` FULL `.claude/hooks/state/MODE`
+- `.claude/hooks/turn-boundary-retrieval.sh:18` FILENAME `MODE`
+- `.claude/hooks/turn-boundary-retrieval.sh:20` FULL `.claude/hooks/state/MODE`
+- `.claude/hooks/turn-boundary-retrieval.sh:21` FILENAME `MODE`
+- `.claude/hooks/turn-boundary-retrieval.sh:22` FILENAME `MODE`
+- `.claude/hooks/turn-boundary-retrieval.sh:24` FILENAME `MODE`
+- `.claude/hooks/turn-boundary-retrieval.sh:28` FILENAME `MODE`
+- `.claude/hooks/turn-boundary-retrieval.sh:38` FILENAME `MODE`
+- `.claude/hooks/turn-boundary-retrieval.sh:39` FILENAME `MODE`
+- `.claude/hooks/turn-boundary-retrieval.sh:73` FILENAME `MODE`
+- `.claude/hooks/turn-boundary-retrieval.sh:74` FILENAME `MODE`
+- `.claude/hooks/turn-boundary-retrieval.sh:79` FILENAME `MODE`
+- `scripts/audit/check_compact_loss.py:83` FILENAME `MODE`
+- `scripts/audit/check_compact_loss.py:428` FILENAME `MODE`
+- `scripts/audit/exchange_inbox.py:24` FILENAME `MODE`
+- `scripts/audit/fbc_decision_log.py:235` FILENAME `MODE`
+- `scripts/audit/fbc_decision_log.py:333` FILENAME `MODE`
+- `scripts/audit/turn_boundary_wrapper_selftest.py:9` FULL `.claude/hooks/state/MODE`
+- `scripts/audit/turn_boundary_wrapper_selftest.py:29` FILENAME `MODE`
+- `scripts/audit/turn_boundary_wrapper_selftest.py:31` FILENAME `MODE`
+- `scripts/audit/turn_boundary_wrapper_selftest.py:32` FILENAME `MODE`
+- `scripts/audit/turn_boundary_wrapper_selftest.py:33` FILENAME `MODE`
+- `scripts/audit/turn_boundary_wrapper_selftest.py:36` FILENAME `MODE`
+- `scripts/audit/turn_boundary_wrapper_selftest.py:136` FILENAME `MODE`
+- `scripts/audit/turn_boundary_wrapper_selftest.py:138` FILENAME `MODE`
+- `scripts/audit/turn_boundary_wrapper_selftest.py:141` FILENAME `MODE`
+- `scripts/audit/turn_boundary_wrapper_selftest.py:145` FILENAME `MODE`
+- `scripts/audit/turn_boundary_wrapper_selftest.py:149` FILENAME `MODE`
+- `scripts/audit/turn_boundary_wrapper_selftest.py:151` FILENAME `MODE`
+- `scripts/audit/turn_boundary_wrapper_selftest.py:152` FILENAME `MODE`
+- `scripts/audit/turn_boundary_wrapper_selftest.py:154` FILENAME `MODE`
+- `scripts/audit/turn_boundary_wrapper_selftest.py:156` FILENAME `MODE`
+- `scripts/audit/turn_boundary_wrapper_selftest.py:157` FILENAME `MODE`
+- `scripts/audit/turn_boundary_wrapper_selftest.py:159` FILENAME `MODE`
+- `scripts/audit/turn_boundary_wrapper_selftest.py:165` FILENAME `MODE`
+- `scripts/audit/turn_boundary_wrapper_selftest.py:172` FILENAME `MODE`
+- `skills/wikiskills-improve/SKILL.md:204` FILENAME `MODE`
+- `wiki/concepts/claude-code-function-hooks.md:98` FILENAME `MODE`
+- `wiki/references/constitution/constitution-where-jons-words-live.md:103` FILENAME `MODE`
+- `wiki/references/skills/frame-before-commit.md:251` FILENAME `MODE`
+
+### `.claude/hooks/state/post-skills-sync.log` (PATH_PREFIX) -- 1 inbound ref(s)
+
+- `.claude/hooks/post-skills-sync.sh:58` FILENAME `post-skills-sync.log`
+
+### `.claude/hooks/state/pre-stop-consult.log` (PATH_PREFIX) -- 6 inbound ref(s)
+
+- `.claude/hooks/pre-stop-consult.sh:73` FILENAME `pre-stop-consult.log`
+- `wiki/patterns/a-logs-first-line-is-the-instruments-sensitivity.md:39` FULL `.claude/hooks/state/pre-stop-consult.log`
+- `wiki/patterns/a-logs-first-line-is-the-instruments-sensitivity.md:118` FULL `.claude/hooks/state/pre-stop-consult.log`
+- `wiki/patterns/a-shared-aggregate-read-as-a-per-actor-fact.md:100` FILENAME `pre-stop-consult.log`
+- `wiki/patterns/a-shared-aggregate-read-as-a-per-actor-fact.md:103` FILENAME `pre-stop-consult.log`
+- `wiki/patterns/a-shared-aggregate-read-as-a-per-actor-fact.md:106` FILENAME `pre-stop-consult.log`
+
+### `.claude/hooks/state/prestop-harness-0000-8.count` (PATH_PREFIX) -- 1 inbound ref(s)
+
+- `wiki/patterns/a-shared-aggregate-read-as-a-per-actor-fact.md:97` FILENAME `prestop-harness-0000-8.count`
+
+### `.claude/hooks/state/skills-sync.stamp` (PATH_PREFIX) -- 1 inbound ref(s)
+
+- `.claude/hooks/post-skills-sync.sh:59` FILENAME `skills-sync.stamp`
 
 ### `scripts/audit/assign_branch_frontmatter.py` (SCAN) -- 6 inbound ref(s)
 
@@ -816,7 +1114,7 @@ A whole-file EXCLUDE removes the body; the NAME survives wherever an INCLUDED fi
 - `scripts/audit/derive_public_tree.py:56` STEM `depii_lexicon`
 - `scripts/audit/derive_public_tree.py:300` STEM `depii_lexicon`
 - `scripts/audit/derive_public_tree.py:370` STEM `depii_lexicon`
-- `scripts/audit/derive_public_tree.py:823` STEM `depii_lexicon`
+- `scripts/audit/derive_public_tree.py:836` STEM `depii_lexicon`
 - `wiki/concepts/de-pii-deriver.md:26` FULL `scripts/audit/depii_lexicon.py`
 - `wiki/concepts/de-pii-deriver.md:62` STEM `depii_lexicon`
 - `wiki/entities/soul.md:17` FULL `scripts/audit/depii_lexicon.py`
@@ -834,7 +1132,7 @@ A whole-file EXCLUDE removes the body; the NAME survives wherever an INCLUDED fi
 
 - `wiki/concepts/de-pii-deriver.md:28` FULL `scripts/audit/depii_path_canary.py`
 
-### `scripts/audit/ingest_gate.py` (SCAN) -- 13 inbound ref(s)
+### `scripts/audit/ingest_gate.py` (SCAN) -- 20 inbound ref(s)
 
 - `scripts/audit/derive_public_tree.py:30` FULL `scripts/audit/ingest_gate.py`
 - `scripts/audit/derive_public_tree.py:57` STEM `ingest_gate`
@@ -842,6 +1140,9 @@ A whole-file EXCLUDE removes the body; the NAME survives wherever an INCLUDED fi
 - `scripts/audit/derive_public_tree.py:376` STEM `ingest_gate`
 - `scripts/audit/derive_public_tree.py:379` STEM `ingest_gate`
 - `scripts/audit/derive_public_tree.py:382` STEM `ingest_gate`
+- `scripts/tests/selftest_probe_window.py:22` STEM `ingest_gate`
+- `scripts/tests/selftest_probe_window.py:55` STEM `ingest_gate`
+- `scripts/tests/selftest_probe_window.py:66` STEM `ingest_gate`
 - `wiki/patterns/self-citation-moves-the-class.md:64` FILENAME `ingest_gate.py`
 - `wiki/references/read-safe-write-fence-v0.md:114` FULL `scripts/audit/ingest_gate.py`
 - `wiki/references/read-safe-write-fence-v0.md:272` STEM `ingest_gate`
@@ -849,10 +1150,14 @@ A whole-file EXCLUDE removes the body; the NAME survives wherever an INCLUDED fi
 - `wiki/references/source-page-contract-v1.md:158` FILENAME `ingest_gate.py`
 - `wiki/references/source-page-repair-contract-v1.md:46` FULL `scripts/audit/ingest_gate.py`
 - `wiki/references/source-page-repair-contract-v1.md:59` FULL `scripts/audit/ingest_gate.py`
+- `wiki/sources/jon-messages/jon-turns-session-71ce5a0e-2026-09-04.md:481` FILENAME `ingest_gate.py`
+- `wiki/sources/jon-messages/jon-turns-session-71ce5a0e-2026-09-04.md:1420` FULL `scripts/audit/ingest_gate.py`
+- `wiki/sources/jon-messages/jon-turns-session-71ce5a0e-2026-09-04.md:1585` FILENAME `ingest_gate.py`
+- `wiki/sources/jon-messages/jon-turns-session-71ce5a0e-2026-09-04.md:1860` FULL `scripts/audit/ingest_gate.py`
 
 ### `scripts/audit/leak_control.py` (SCAN) -- 6 inbound ref(s)
 
-- `scripts/audit/derive_public_tree.py:1002` FILENAME `leak_control.py`
+- `scripts/audit/derive_public_tree.py:1015` FILENAME `leak_control.py`
 - `wiki/patterns/exclusion-verified-by-absence-not-by-list.md:70` FULL `scripts/audit/leak_control.py`
 - `wiki/patterns/exclusion-verified-by-absence-not-by-list.md:71` FULL `scripts/audit/leak_control.py`
 - `wiki/patterns/exclusion-verified-by-absence-not-by-list.md:74` FULL `scripts/audit/leak_control.py`
@@ -892,6 +1197,11 @@ A whole-file EXCLUDE removes the body; the NAME survives wherever an INCLUDED fi
 - `wiki/references/read-safe-write-fence-v0.md:348` FILENAME `write_fence.py`
 - `wiki/references/read-safe-write-fence-v0.md:349` FILENAME `write_fence.py`
 
+### `scripts/graphrag/render_history_cc.py` (SCAN) -- 2 inbound ref(s)
+
+- `wiki/references/history-jsonl-retrieval-2026-09-12.md:56` FULL `scripts/graphrag/render_history_cc.py`
+- `wiki/references/history-jsonl-retrieval-2026-09-12.md:194` FILENAME `render_history_cc.py`
+
 ### `skills/ground-before-stating/references/worked-examples.md` (SCAN) -- 4 inbound ref(s)
 
 - `skills/ground-before-stating/SKILL.md:401` SUFFIX `references/worked-examples.md`
@@ -906,7 +1216,7 @@ A whole-file EXCLUDE removes the body; the NAME survives wherever an INCLUDED fi
 - `wiki/references/agent-memory/pm-herald-skill-state.md:56` FULL `skills/herald/SKILL.md`
 - `wiki/sources/infrastructure/jon-turn8-fbcfork-skilldefects-canonical-nightly-docker-gate-2026-07-26.md:63` SUFFIX `herald/SKILL.md`
 
-### `wiki/concepts/herald-of-home-and-life.md` (SCAN) -- 14 inbound ref(s)
+### `wiki/concepts/herald-of-home-and-life.md` (SCAN) -- 15 inbound ref(s)
 
 - `wiki/concepts/life-domains.md:62` WIKILINK `[[herald-of-home-and-life`
 - `wiki/concepts/meta-pm-framework.md:91` WIKILINK `[[herald-of-home-and-life`
@@ -922,8 +1232,9 @@ A whole-file EXCLUDE removes the body; the NAME survives wherever an INCLUDED fi
 - `wiki/sources/infrastructure/project-manager-architecture-2026-04-30-f8cc02-cont.md:34` WIKILINK `[[herald-of-home-and-life`
 - `wiki/sources/infrastructure/skills-master-intake-grill-2026-05-27-e52ed2.md:35` WIKILINK `[[herald-of-home-and-life`
 - `wiki/sources/infrastructure/wiki-master-cc-phase3e-concept-gaps-2026-06-04-125957.md:17` STEM `herald-of-home-and-life`
+- `wiki/test-outputs/LINT-SWEEP-2026-09-02.out:62` STEM `herald-of-home-and-life`
 
-### `wiki/concepts/personal-role-architecture.md` (SCAN) -- 8 inbound ref(s)
+### `wiki/concepts/personal-role-architecture.md` (SCAN) -- 9 inbound ref(s)
 
 - `wiki/concepts/life-domains.md:54` WIKILINK `[[personal-role-architecture`
 - `wiki/concepts/life-domains.md:62` WIKILINK `[[personal-role-architecture`
@@ -933,8 +1244,9 @@ A whole-file EXCLUDE removes the body; the NAME survives wherever an INCLUDED fi
 - `wiki/sources/infrastructure/meta-pm-layer-architecture-2026-06-27-a13169.md:50` WIKILINK `[[personal-role-architecture`
 - `wiki/sources/infrastructure/project-manager-architecture-2026-04-30-f8cc02-cont.md:34` WIKILINK `[[personal-role-architecture`
 - `wiki/sources/infrastructure/wiki-master-cc-phase3e-concept-gaps-2026-06-04-125957.md:17` STEM `personal-role-architecture`
+- `wiki/test-outputs/LINT-SWEEP-2026-09-02.out:72` STEM `personal-role-architecture`
 
-### `wiki/concepts/probe-registry.md` (SCAN) -- 128 inbound ref(s)
+### `wiki/concepts/probe-registry.md` (SCAN) -- 130 inbound ref(s)
 
 - `scripts/audit/check_source_schema_drift.py:11` STEM `probe-registry`
 - `scripts/audit/heartbeat_battery.py:66` STEM `probe-registry`
@@ -1064,8 +1376,10 @@ A whole-file EXCLUDE removes the body; the NAME survives wherever an INCLUDED fi
 - `wiki/sources/infrastructure/wiki-unnavigable-organization-clause-ears-protocol-2026-08-07-415d8d.md:101` WIKILINK `[[probe-registry`
 - `wiki/sources/infrastructure/xc-questions-never-posed-silence-defaults-2026-08-16-081198.md:156` WIKILINK `[[probe-registry`
 - `wiki/sources/stylomantic/stylomantic-decoder-fbc-hats-crosslink-2026-07-29-3b7351.md:183` WIKILINK `[[probe-registry`
+- `wiki/test-outputs/LINT-SWEEP-2026-09-02.out:73` STEM `probe-registry`
+- `wiki/test-outputs/LINT-SWEEP-2026-09-02.out:125` STEM `probe-registry`
 
-### `wiki/entities/claude-code.md` (SCAN) -- 164 inbound ref(s)
+### `wiki/entities/claude-code.md` (SCAN) -- 180 inbound ref(s)
 
 - `scripts/audit/_su_close_summaries.py:53` STEM `claude-code`
 - `scripts/audit/_su_close_summaries.py:128` STEM `claude-code`
@@ -1097,6 +1411,20 @@ A whole-file EXCLUDE removes the body; the NAME survives wherever an INCLUDED fi
 - `scripts/audit/wake_map.py:218` STEM `claude-code`
 - `scripts/audit/wikiskills_prototype_render.py:104` STEM `claude-code`
 - `scripts/audit/wikiskills_prototype_render.py:175` STEM `claude-code`
+- `scripts/barrier_session_identity.py:152` STEM `claude-code`
+- `scripts/extract_claude_code_sessions.py:148` STEM `claude-code`
+- `scripts/extract_claude_code_sessions.py:1084` STEM `claude-code`
+- `scripts/extract_claude_code_sessions.py:1095` STEM `claude-code`
+- `scripts/raw_tracking_pass.py:101` STEM `claude-code`
+- `scripts/raw_tracking_pass.py:111` STEM `claude-code`
+- `scripts/raw_tracking_pass.py:146` STEM `claude-code`
+- `scripts/raw_tracking_pass.py:147` STEM `claude-code`
+- `scripts/raw_tracking_pass.py:148` STEM `claude-code`
+- `scripts/raw_tracking_pass.py:149` STEM `claude-code`
+- `scripts/reconstruct_session.py:682` STEM `claude-code`
+- `scripts/reconstruct_session.py:685` STEM `claude-code`
+- `scripts/session_identity.py:142` STEM `claude-code`
+- `scripts/tests/selftest_probe_window.py:35` STEM `claude-code`
 - `skills/session-order/SKILL.md:303` STEM `claude-code`
 - `skills/transcript-parser/SKILL.md:55` STEM `claude-code`
 - `skills/wiki-master/SKILL.md:93` STEM `claude-code`
@@ -1187,10 +1515,12 @@ A whole-file EXCLUDE removes the body; the NAME survives wherever an INCLUDED fi
 - `wiki/sources/infrastructure/coordination-resume-plan-2026-08-02.md:68` STEM `claude-code`
 - `wiki/sources/infrastructure/disk-g-standing-rule-interpretation-test-2026-08-07-6b6114.md:29` STEM `claude-code`
 - `wiki/sources/infrastructure/ears-protocol-disk-g-standing-rule-test-2026-08-07-5321a1.md:29` STEM `claude-code`
+- `wiki/sources/infrastructure/ears-protocol-position-changes-heading-test-2026-08-07-746694.md:31` STEM `claude-code`
 - `wiki/sources/infrastructure/ears-protocol-tabernacle-praise-misread-test-2026-08-07-81fd72.md:29` STEM `claude-code`
 - `wiki/sources/infrastructure/effort-slash-command-sets-medium-2026-08-05-3762d6.md:19` STEM `claude-code`
 - `wiki/sources/infrastructure/elder-consult-predecessor-systems-pre-stop-consult-wake-stale-2026-08-07-d24142.md:17` STEM `claude-code`
 - `wiki/sources/infrastructure/em-dash-output-test-then-memory-only-recall-check-2026-08-07-bfc2f6.md:19` STEM `claude-code`
+- `wiki/sources/infrastructure/fourth-attempt-signal-dropped-interpretation-test-2026-08-07-807624.md:29` STEM `claude-code`
 - `wiki/sources/infrastructure/hold-flag-secretary-routing-probe-fork-b-2026-08-17-666666.md:19` STEM `claude-code`
 - `wiki/sources/infrastructure/hold-flag-secretary-routing-probe-fork-ok-2026-08-17-555555.md:19` STEM `claude-code`
 - `wiki/sources/infrastructure/login-slash-command-then-interrupted-test-probe-2026-08-08-aaf4f2.md:19` STEM `claude-code`
@@ -1236,15 +1566,141 @@ A whole-file EXCLUDE removes the body; the NAME survives wherever an INCLUDED fi
 
 - `scripts/audit/normalize_wiki_eol_to_head.py:11` SUFFIX `entities/jon.md`
 
-### `wiki/references/agent-memory/t44-apollo-artemis-complete.md` (SCAN) -- 1 inbound ref(s)
+### `wiki/index.md` (SCAN) -- 120 inbound ref(s)
+
+- `.claude/hooks/tests/test_fable_mirror_write_fence.sh:60` FULL `wiki/index.md`
+- `.claude/hooks/tests/test_fable_mirror_write_fence.sh:61` FULL `wiki/index.md`
+- `.claude/hooks/tests/test_fable_mirror_write_fence.sh:87` FULL `wiki/index.md`
+- `.claude/hooks/tests/test_fable_mirror_write_fence.sh:103` FULL `wiki/index.md`
+- `scripts/anti_decoy_resolver.py:9` FULL `wiki/index.md`
+- `scripts/anti_decoy_resolver.py:31` FULL `wiki/index.md`
+- `scripts/anti_decoy_resolver.py:63` FULL `wiki/index.md`
+- `scripts/anti_decoy_resolver.py:122` FULL `wiki/index.md`
+- `scripts/audit/agent_end_ingest.py:1367` FULL `wiki/index.md`
+- `scripts/audit/check_reachability_chain.py:54` FULL `wiki/index.md`
+- `scripts/audit/check_reachability_chain.py:81` FULL `wiki/index.md`
+- `scripts/audit/check_reachability_chain.py:264` FULL `wiki/index.md`
+- `scripts/audit/check_reachability_chain.py:370` FULL `wiki/index.md`
+- `scripts/audit/check_secondary_attribution.py:27` FULL `wiki/index.md`
+- `scripts/audit/check_wiki_path_refs.py:116` FULL `wiki/index.md`
+- `scripts/audit/check_wiki_path_refs.py:292` FULL `wiki/index.md`
+- `scripts/audit/check_wiki_path_refs.py:302` FULL `wiki/index.md`
+- `scripts/audit/drain_routing_ledger.py:326` FULL `wiki/index.md`
+- `scripts/audit/drain_routing_ledger.py:364` FULL `wiki/index.md`
+- `scripts/audit/find_resurrection_candidates.py:71` FULL `wiki/index.md`
+- `scripts/audit/gbs_class_forensics.py:318` FULL `wiki/index.md`
+- `scripts/audit/index_counts.py:75` FULL `wiki/index.md`
+- `scripts/audit/index_counts.py:105` FULL `wiki/index.md`
+- `scripts/audit/index_counts.py:111` FULL `wiki/index.md`
+- `scripts/audit/index_counts.py:129` FULL `wiki/index.md`
+- `scripts/audit/index_coverage.py:100` FULL `wiki/index.md`
+- `scripts/audit/index_coverage.py:186` FULL `wiki/index.md`
+- `scripts/audit/index_coverage.py:196` FULL `wiki/index.md`
+- `scripts/audit/index_coverage.py:205` FULL `wiki/index.md`
+- `scripts/audit/lint_shipped_coverage.py:4` FULL `wiki/index.md`
+- `scripts/audit/lint_shipped_coverage.py:47` FULL `wiki/index.md`
+- `scripts/audit/lint_shipped_coverage.py:81` FULL `wiki/index.md`
+- `scripts/audit/lint_skills.py:144` FULL `wiki/index.md`
+- `scripts/audit/regen_index_sections.py:2` FULL `wiki/index.md`
+- `scripts/audit/regen_index_sections.py:8` FULL `wiki/index.md`
+- `scripts/audit/regen_index_sections.py:14` FULL `wiki/index.md`
+- `scripts/audit/regen_index_sections.py:18` FULL `wiki/index.md`
+- `scripts/audit/regen_index_sections.py:22` FULL `wiki/index.md`
+- `scripts/audit/regen_index_sections.py:36` FULL `wiki/index.md`
+- `scripts/audit/regen_index_sections.py:76` FULL `wiki/index.md`
+- `scripts/audit/regen_index_sections.py:99` FULL `wiki/index.md`
+- `scripts/audit/regen_index_sections.py:142` FULL `wiki/index.md`
+- `scripts/audit/wiki_reachability.py:6` FULL `wiki/index.md`
+- `scripts/audit/wiki_reachability.py:36` FULL `wiki/index.md`
+- `scripts/audit/wiki_reachability.py:111` FULL `wiki/index.md`
+- `scripts/audit/wikiskills_prototype_render.py:325` FULL `wiki/index.md`
+- `scripts/audit/wikiskills_prototype_render.py:329` FULL `wiki/index.md`
+- `scripts/lint_citation_coverage.py:68` FULL `wiki/index.md`
+- `scripts/lint_untracked_wiki.py:5` FULL `wiki/index.md`
+- `scripts/lint_untracked_wiki.py:34` FULL `wiki/index.md`
+- `scripts/lint_untracked_wiki.py:103` FULL `wiki/index.md`
+- `scripts/ollama_wiki/wiki_agent.py:468` FULL `wiki/index.md`
+- `skills/project-manager/SKILL.md:60` FULL `wiki/index.md`
+- `skills/project-manager/SKILL.md:90` FULL `wiki/index.md`
+- `skills/project-manager/SKILL.md:290` FULL `wiki/index.md`
+- `skills/session-order/SKILL.md:16` FULL `wiki/index.md`
+- `skills/session-order/SKILL.md:66` FULL `wiki/index.md`
+- `skills/session-order/SKILL.md:96` FULL `wiki/index.md`
+- `skills/session-order/SKILL.md:219` FULL `wiki/index.md`
+- `skills/wiki-master/SKILL.md:138` FULL `wiki/index.md`
+- `skills/wiki-master/SKILL.md:180` FULL `wiki/index.md`
+- `skills/wiki-master/SKILL.md:304` FULL `wiki/index.md`
+- `skills/wiki-master/SKILL.md:327` FULL `wiki/index.md`
+- `skills/wiki-master/SKILL.md:348` FULL `wiki/index.md`
+- `skills/wiki-master/SKILL.md:522` FULL `wiki/index.md`
+- `skills/wiki-master/SKILL.md:548` FULL `wiki/index.md`
+- `skills/wiki-master/SKILL.md:591` FULL `wiki/index.md`
+- `skills/wiki-master/SKILL.md:913` FULL `wiki/index.md`
+- `skills/wiki-master/SKILL.md:923` FULL `wiki/index.md`
+- `wiki/WIKISKILLS-PROTOTYPE.md:69` FULL `wiki/index.md`
+- `wiki/WIKISKILLS-PROTOTYPE.md:70` FULL `wiki/index.md`
+- `wiki/WIKISKILLS-PROTOTYPE.md:71` FULL `wiki/index.md`
+- `wiki/WIKISKILLS-PROTOTYPE.md:124` FULL `wiki/index.md`
+- `wiki/WIKISKILLS-PROTOTYPE.md:125` FULL `wiki/index.md`
+- `wiki/WIKISKILLS-PROTOTYPE.md:126` FULL `wiki/index.md`
+- `wiki/concepts/disposition-and-delivered-is-not-received.md:68` FULL `wiki/index.md`
+- `wiki/concepts/understand-anything.md:56` FULL `wiki/index.md`
+- `wiki/concepts/words-reify.md:45` FULL `wiki/index.md`
+- `wiki/entities/exchequer.md:32` FULL `wiki/index.md`
+- `wiki/references/LAWS-what-a-green-means.md:940` FULL `wiki/index.md`
+- `wiki/references/agent-memory/hedge-flattening-and-invented-rulings.md:28` FULL `wiki/index.md`
+- `wiki/references/constitution/constitution-stale-lines-retired.md:22` FULL `wiki/index.md`
+- `wiki/references/constitution/constitution-stale-lines-retired.md:24` FULL `wiki/index.md`
+- `wiki/references/growth-intent-worked-examples/README.md:342` FULL `wiki/index.md`
+- `wiki/references/raw-file-standards.md:296` FULL `wiki/index.md`
+- `wiki/references/records-map.md:40` FULL `wiki/index.md`
+- `wiki/references/records-map.md:50` FULL `wiki/index.md`
+- `wiki/references/records-map.md:112` FULL `wiki/index.md`
+- `wiki/references/records-map.md:143` FULL `wiki/index.md`
+- `wiki/references/records-map.md:144` FULL `wiki/index.md`
+- `wiki/references/records-map.md:145` FULL `wiki/index.md`
+- `wiki/references/records-map.md:146` FULL `wiki/index.md`
+- `wiki/references/records-map.md:147` FULL `wiki/index.md`
+- `wiki/references/records-map.md:148` FULL `wiki/index.md`
+- `wiki/references/records-map.md:149` FULL `wiki/index.md`
+- `wiki/references/records-map.md:151` FULL `wiki/index.md`
+- `wiki/references/records-map.md:153` FULL `wiki/index.md`
+- `wiki/references/skills/wiki-master.md:152` FULL `wiki/index.md`
+- `wiki/references/skills/wiki-master.md:159` FULL `wiki/index.md`
+- `wiki/references/wiki-answer-key.md:11` FULL `wiki/index.md`
+- `wiki/references/wiki-answer-key.md:21` FULL `wiki/index.md`
+- `wiki/references/wiki-answer-key.md:74` FULL `wiki/index.md`
+- `wiki/references/wiki-answer-key.md:79` FULL `wiki/index.md`
+- `wiki/references/wiki-answer-key.md:80` FULL `wiki/index.md`
+- `wiki/sources/infrastructure/UNCERTAIN-cfl-early-setup-2026-05-01-000a36.md:26` FULL `wiki/index.md`
+- `wiki/sources/infrastructure/close-fable-mirror-standard-update-2026-08-02.md:146` FULL `wiki/index.md`
+- `wiki/sources/infrastructure/conductor-execution-manager-crossvenue-intake-2026-07-18-78619b.md:68` FULL `wiki/index.md`
+- `wiki/sources/infrastructure/docker-readiness-reading-surface-defect-2026-07-21-085e60.md:34` FULL `wiki/index.md`
+- `wiki/sources/infrastructure/merge-train-instrument-blindness-wayfinder-2026-07-29-627c1e.md:53` FULL `wiki/index.md`
+- `wiki/sources/infrastructure/pr1-promise-retrospective-2026-08-23.md:31` FULL `wiki/index.md`
+- `wiki/sources/infrastructure/professionalism-opus-wake-2026-08-30-a90e0d.md:38` FULL `wiki/index.md`
+- `wiki/sources/infrastructure/question-pricing-model-and-outcome-tracking-approval-2026-07-27-408368.md:94` FULL `wiki/index.md`
+- `wiki/sources/infrastructure/skills-master-cc-restore-2026-05-08-f9cdf4.md:39` FULL `wiki/index.md`
+- `wiki/sources/infrastructure/skills-master-role-architecture-2026-05-15-2e2c62.md:40` FULL `wiki/index.md`
+- `wiki/sources/infrastructure/wayfinder-charter-observer-agents-2026-07-19-60bf84.md:51` FULL `wiki/index.md`
+- `wiki/sources/infrastructure/wayfinder-charter-observer-agents-2026-07-19-60bf84.md:87` FULL `wiki/index.md`
+- `wiki/sources/infrastructure/wiki-master-cc-personal-ingest-2026-05-29-974202.md:21` FULL `wiki/index.md`
+- `wiki/sources/infrastructure/wiki-master-phase3-subagent-log-2026-06-01-ad8e70.md:19` FULL `wiki/index.md`
+- `wiki/sources/infrastructure/wiki-master-phase3-subagent-log-2026-06-01-ad8e70.md:43` FULL `wiki/index.md`
+- `wiki/sources/infrastructure/wiki-update-lag-postcompact-hook-gap-eleven-items-2026-09-01-32cb0a.md:52` FULL `wiki/index.md`
+
+### `wiki/references/agent-memory/t44-apollo-artemis-complete.md` (SCAN) -- 2 inbound ref(s)
 
 - `wiki/references/agent-memory/README.md:131` WIKILINK `[[t44-apollo-artemis-complete`
+- `wiki/test-outputs/LINT-SWEEP-2026-09-02.out:218` STEM `t44-apollo-artemis-complete`
 
-### `wiki/references/audit-census-2026-07-13.md` (SCAN) -- 1 inbound ref(s)
+### `wiki/references/audit-census-2026-07-13.md` (SCAN) -- 3 inbound ref(s)
 
+- `scripts/lint_citation_coverage.py:5` FULL `wiki/references/audit-census-2026-07-13.md`
 - `wiki/references/README-genre-split.md:39` FILENAME `audit-census-2026-07-13.md`
+- `wiki/test-outputs/LINT-SWEEP-2026-09-02.out:155` STEM `audit-census-2026-07-13`
 
-### `wiki/references/audit-conformance-ledger.md` (SCAN) -- 6 inbound ref(s)
+### `wiki/references/audit-conformance-ledger.md` (SCAN) -- 7 inbound ref(s)
 
 - `scripts/audit/lint.py:422` FULL `wiki/references/audit-conformance-ledger.md`
 - `scripts/audit/lint.py:566` SUFFIX `references/audit-conformance-ledger.md`
@@ -1252,8 +1708,9 @@ A whole-file EXCLUDE removes the body; the NAME survives wherever an INCLUDED fi
 - `wiki/references/source-page-standard-v1.md:109` FILENAME `audit-conformance-ledger.md`
 - `wiki/references/source-page-standard-v2.md:199` FILENAME `audit-conformance-ledger.md`
 - `wiki/references/source-page-standard-v3.md:190` FILENAME `audit-conformance-ledger.md`
+- `wiki/test-outputs/LINT-SWEEP-2026-09-02.out:156` STEM `audit-conformance-ledger`
 
-### `wiki/references/cfl-branch-registry.md` (SCAN) -- 17 inbound ref(s)
+### `wiki/references/cfl-branch-registry.md` (SCAN) -- 18 inbound ref(s)
 
 - `scripts/audit/skill_record_ext.py:37` FILENAME `cfl-branch-registry.md`
 - `scripts/audit/skill_record_ext.py:1061` FILENAME `cfl-branch-registry.md`
@@ -1272,6 +1729,11 @@ A whole-file EXCLUDE removes the body; the NAME survives wherever an INCLUDED fi
 - `wiki/sources/infrastructure/secretary-post-compact-rsi-orginization-and-critic-2026-08-15-4e6a6f.md:161` WIKILINK `[[cfl-branch-registry`
 - `wiki/sources/infrastructure/secretary-self-branching-compact-test-2026-08-15-b84af2.md:149` WIKILINK `[[cfl-branch-registry`
 - `wiki/sources/infrastructure/secretary-wake-brief-continuity-model-directive-2026-08-15-40bbac.md:164` WIKILINK `[[cfl-branch-registry`
+- `wiki/test-outputs/LINT-SWEEP-2026-09-02.out:163` STEM `cfl-branch-registry`
+
+### `wiki/references/cfl-file-manifest-2026-07-16.md` (SCAN) -- 1 inbound ref(s)
+
+- `wiki/test-outputs/LINT-SWEEP-2026-09-02.out:164` STEM `cfl-file-manifest-2026-07-16`
 
 ### `wiki/references/claude-code/settings-reference.md` (SCAN) -- 44 inbound ref(s)
 
@@ -1320,9 +1782,10 @@ A whole-file EXCLUDE removes the body; the NAME survives wherever an INCLUDED fi
 - `wiki/references/claude-code/workflows.md:344` STEM `settings-reference`
 - `wiki/references/claude-code/workflows.md:426` STEM `settings-reference`
 
-### `wiki/references/growth-intent-worked-examples/example-a-material-agent-interaction-after.md` (SCAN) -- 1 inbound ref(s)
+### `wiki/references/growth-intent-worked-examples/example-a-material-agent-interaction-after.md` (SCAN) -- 2 inbound ref(s)
 
 - `wiki/concepts/heteronomy-horn-pearl-lens.md:113` FULL `wiki/references/growth-intent-worked-examples/example-a-material-agent-interaction-after.md`
+- `wiki/test-outputs/LINT-SWEEP-2026-09-02.out:178` STEM `example-a-material-agent-interaction-after`
 
 ### `wiki/references/registries/trunks.md` (SCAN) -- 9 inbound ref(s)
 
@@ -1336,10 +1799,11 @@ A whole-file EXCLUDE removes the body; the NAME survives wherever an INCLUDED fi
 - `wiki/references/vocabulary.md:248` FULL `wiki/references/registries/trunks.md`
 - `wiki/references/vocabulary.md:337` SUFFIX `registries/trunks.md`
 
-### `wiki/skills-gate/INGEST-LEDGER.md` (SCAN) -- 13 inbound ref(s)
+### `wiki/skills-gate/INGEST-LEDGER.md` (SCAN) -- 14 inbound ref(s)
 
 - `scripts/audit/absence_claims.py:421` STEM `INGEST-LEDGER`
 - `scripts/audit/derive_public_tree.py:72` FULL `wiki/skills-gate/INGEST-LEDGER.md`
+- `scripts/audit/lint_shipped_coverage.py:176` FILENAME `INGEST-LEDGER.md`
 - `scripts/audit/repair_list_from_ledger.py:4` FULL `wiki/skills-gate/INGEST-LEDGER.md`
 - `scripts/audit/repair_list_from_ledger.py:46` FULL `wiki/skills-gate/INGEST-LEDGER.md`
 - `scripts/audit/wikiskills_prototype_render.py:336` STEM `INGEST-LEDGER`
@@ -1426,7 +1890,7 @@ A whole-file EXCLUDE removes the body; the NAME survives wherever an INCLUDED fi
 - `wiki/sources/infrastructure/professional-resurrection-test-fence-close-2026-08-15-ffb92d.md:97` WIKILINK `[[security-master-audit-2026-06-27`
 - `wiki/sources/infrastructure/professional-security-agenda-to-resident-launch-vigil-2026-08-08-592c3c.md:117` WIKILINK `[[security-master-audit-2026-06-27`
 
-### `wiki/sources/session-stubs.md` (SCAN) -- 33 inbound ref(s)
+### `wiki/sources/session-stubs.md` (SCAN) -- 39 inbound ref(s)
 
 - `scripts/audit/coverage_census.py:35` STEM `session-stubs`
 - `scripts/audit/coverage_census.py:267` STEM `session-stubs`
@@ -1452,6 +1916,12 @@ A whole-file EXCLUDE removes the body; the NAME survives wherever an INCLUDED fi
 - `scripts/audit/register_stubs.py:293` FILENAME `session-stubs.md`
 - `scripts/audit/wikiskills_prototype_render.py:264` FILENAME `session-stubs.md`
 - `scripts/audit/wikiskills_prototype_render.py:265` FILENAME `session-stubs.md`
+- `scripts/graphrag/acceptance.py:115` FULL `wiki/sources/session-stubs.md`
+- `scripts/graphrag/acceptance.py:133` STEM `session-stubs`
+- `scripts/graphrag/build_index.py:487` FULL `wiki/sources/session-stubs.md`
+- `scripts/lint_untracked_wiki.py:6` FULL `wiki/sources/session-stubs.md`
+- `scripts/lint_untracked_wiki.py:43` FULL `wiki/sources/session-stubs.md`
+- `scripts/lint_untracked_wiki.py:105` FULL `wiki/sources/session-stubs.md`
 - `skills/wiki-master/SKILL.md:881` FILENAME `session-stubs.md`
 - `wiki/WIKISKILLS-PROTOTYPE.md:61` FILENAME `session-stubs.md`
 - `wiki/references/agent-memory/hedge-flattening-and-invented-rulings.md:28` FILENAME `session-stubs.md`
@@ -1462,19 +1932,23 @@ A whole-file EXCLUDE removes the body; the NAME survives wherever an INCLUDED fi
 - `wiki/sources/infrastructure/merge-train-instrument-blindness-wayfinder-2026-07-29-627c1e.md:54` FILENAME `session-stubs.md`
 - `wiki/sources/infrastructure/wiki-unnavigable-organization-not-volume-2026-08-07-d869b4.md:54` FULL `wiki/sources/session-stubs.md`
 
+### `wiki/test-outputs/HOOK-HARNESS-run.jsonl` (SCAN) -- 1 inbound ref(s)
+
+- `scripts/audit/hook_harness.py:1642` FULL `wiki/test-outputs/HOOK-HARNESS-run.jsonl`
+
 ## VALUE-WALK
 
-**VALUE-WALK: 1 literal(s) walked over 1126 INCLUDED files; 0 literal(s) found, 0 hit(s) total**
+**VALUE-WALK: 1 literal(s) walked over 1046 INCLUDED files; 0 literal(s) found, 0 hit(s) total**
 
 Each `VALUE_WALK` literal from `public_exclusions.txt` is walked fixed-string and case-sensitive over every INCLUDED file. Withholding the file that introduced an identifier does not withhold the identifier. The literal is never printed here -- a row carries an opaque ordinal id, sha256[:8] of (per-run random salt + literal) with the salt printed nowhere (an unsalted digest of a low-entropy literal is an oracle), and its class -- so this log cannot leak what it guards. Nothing was rewritten. `--fail-on-value-hits` exits 5 when any hit exists.
 
 | id | salted digest[:8] | class | hits |
 |---|---|---|---|
-| VW-01 | `26d5d6a2` | CREDENTIAL-SHAPED Drive folder id | 0 |
+| VW-01 | `8631a70c` | CREDENTIAL-SHAPED Drive folder id | 0 |
 
 ## SHAPE-SCAN
 
-**SHAPE-SCAN: 2 shape(s) scanned over 1126 INCLUDED files; 5 token hit(s) (detector only, no exit code)**
+**SHAPE-SCAN: 2 shape(s) scanned over 1046 INCLUDED files; 13 token hit(s) (detector only, no exit code)**
 
 Each `SHAPE_SCAN <name> <regex>` row is scanned, bounded by non-token characters, over every INCLUDED file, after dropping hex-only strings, tokens lacking mixed case plus a digit, tokens carrying a date, and hyphenated slugs. A hit names the shape and the token's LENGTH only, never the token. This is a detector feeding a human decision; it sets no exit code. Nothing was rewritten.
 
@@ -1482,16 +1956,24 @@ Second column (lane PUB-2e, 2026-09-02; never a filter -- no row is removed): ea
 
 | shape | hits | likely_slug=no | likely_slug=yes |
 |---|---|---|---|
-| GOOGLE-DRIVE-ID | 3 | 1 | 2 |
-| GOOGLE-FILE-ID | 2 | 0 | 2 |
+| GOOGLE-DRIVE-ID | 8 | 4 | 4 |
+| GOOGLE-FILE-ID | 5 | 1 | 4 |
 
-### GOOGLE-DRIVE-ID -- 3 hit(s)
+### GOOGLE-DRIVE-ID -- 8 hit(s)
 
+- `scripts/tests/selftest_reference_survivors.py:319` GOOGLE-DRIVE-ID len=33 likely_slug=no separators=0 longest_alpha_segment=0
+- `scripts/tests/selftest_reference_survivors.py:360` GOOGLE-DRIVE-ID len=33 likely_slug=no separators=0 longest_alpha_segment=0
+- `scripts/tests/selftest_reference_survivors.py:361` GOOGLE-DRIVE-ID len=33 likely_slug=no separators=1 longest_alpha_segment=0
 - `wiki/sources/infrastructure/secretary-claudeai-seat-born-coordinator-ruling-write-lane-2026-08-15-b50b3c.md:138` GOOGLE-DRIVE-ID len=33 likely_slug=no separators=0 longest_alpha_segment=0
+- `scripts/tests/selftest_reference_survivors.py:354` GOOGLE-DRIVE-ID len=33 likely_slug=yes separators=4 longest_alpha_segment=9
+- `scripts/tests/selftest_reference_survivors.py:356` GOOGLE-DRIVE-ID len=33 likely_slug=yes separators=4 longest_alpha_segment=12
 - `wiki/skills-gate/validation/dream/split.jsonl:8` GOOGLE-DRIVE-ID len=33 likely_slug=yes separators=5 longest_alpha_segment=6
 - `wiki/sources/infrastructure/professional-inbound-drain-19th-wake-2026-08-17-817504.md:40` GOOGLE-DRIVE-ID len=33 likely_slug=yes separators=4 longest_alpha_segment=9
 
-### GOOGLE-FILE-ID -- 2 hit(s)
+### GOOGLE-FILE-ID -- 5 hit(s)
 
+- `scripts/tests/selftest_reference_survivors.py:362` GOOGLE-FILE-ID len=44 likely_slug=no separators=1 longest_alpha_segment=0
+- `scripts/tests/selftest_reference_survivors.py:355` GOOGLE-FILE-ID len=44 likely_slug=yes separators=6 longest_alpha_segment=8
+- `scripts/tests/selftest_reference_survivors.py:357` GOOGLE-FILE-ID len=44 likely_slug=yes separators=5 longest_alpha_segment=19
 - `wiki/sources/infrastructure/switchboard-operator-deliver-herald-review-verdict-2026-08-17-c28473.md:51` GOOGLE-FILE-ID len=44 likely_slug=yes separators=5 longest_alpha_segment=11
 - `wiki/sources/infrastructure/switchboard-professional-graphrag-collision-bg-review-2026-08-17-629372.md:46` GOOGLE-FILE-ID len=44 likely_slug=yes separators=8 longest_alpha_segment=8

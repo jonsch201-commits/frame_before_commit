@@ -1,0 +1,138 @@
+=== WIKI PATH REFERENCES ===
+  tracked files scanned      : 3911   <- DENOMINATOR 1 (raw/ excluded by design)
+  distinct wiki/*.md paths   : 1605   <- DENOMINATOR 2
+  resolve to a real file     : 1115
+  DANGLING, real             : 439   (27.4%)   <- THE NUMBER
+  self-test FIXTURES         : 51   cited only from scripts/ as negative controls;
+                                   correct code, never counted as a defect
+  NOTE: `[[slug]]` wikilinks are path-independent and are NOT checked here -- a folder
+        move cannot break one. This number is the fragile class only.
+  baseline dangling          : 96
+  FIXED since baseline       : 5   <- the direction that matters
+  NEW since baseline         : 348   <- THE ALARM
+
+    wiki/....md
+      first cited at scripts/audit/check_wiki_path_refs.py:2
+    wiki/INDEX-DERIVED.md
+      first cited at exchange/inbound/pro-to-cfl-RECEIPT-five-of-seven-closed-and-your-new-cross-trunk-token-collides-with-your-own-2026-08-24.md:107
+    wiki/a.md
+      first cited at scripts/audit/check_wiki_path_refs.py:25
+    wiki/archive/2026-08/synthesis-seeds-pro-2026-08-07.md
+      first cited at exchange/inbound/personal-soul-to-cfl-skills-master-PATCHSETS-DEPOSITED-and-my-routing-defect-2026-08-13.md:61
+    wiki/b.md
+      first cited at scripts/graphrag/build_index.py:1117
+    wiki/changelog.md
+      first cited at exchange/1PM-2026-08-08/INDEX-HYGIENE-PROPOSAL.md:104
+    wiki/concepts/ACTION-CARDS-ACTIVE.md
+      first cited at exchange/inbound/PROP-004-typed-edge-locators-gate-proposal.md:69
+    wiki/concepts/DELIVERABLE-AG-7-pr3-all-trunk-inventory.md
+      first cited at exchange/cfl-to-secretary-fleet-HOOK-WIRED-test-path-first-green-stamp-and-AG7-landed-your-sweep-stands-down-2026-09-01.md:41
+    wiki/concepts/DREAM-01-rsi-wikiskills-and-pr3-frontier.md
+      first cited at exchange/cfl-to-antigravity-PROP-004-v2-REJECTED-your-harness-runs-now-and-its-own-output-breaks-your-own-schema-plus-DREAM-01-gate-notes-2026-09-01.md:81
+    wiki/concepts/PROPOSAL-B3-dangling-edge-resolutions.md
+      first cited at exchange/inbound/LETTER-2026-09-01-antigravity-to-fleet-PRE-REBOOT-HANDOVER-SUCCESSOR-SDK-RESUME-AND-VECTOR-INDEX-STANDARDS.md:42
+    wiki/concepts/PROPOSAL-B4-candidate-entities.md
+      first cited at exchange/inbound/RECEIPT-2026-08-31-antigravity-to-cfl-PHASE-B3-B4-PROPOSALS-LANDED.md:11
+    wiki/concepts/PROTOTYPE-01-human-action-cards.md
+      first cited at exchange/inbound/REPORT-2026-08-31-antigravity-to-cfl-B3-DANGLING-EDGES-AND-B4-TERM-DIFFS.md:32
+    wiki/concepts/SPEC-02-vector-graph-hybrid-schema.md
+      first cited at exchange/inbound/COURIER-2026-09-01-antigravity-to-fleet-SPEC-02-VECTOR-GRAPH-SCHEMA.md:13
+    wiki/concepts/a-control-with-no-reader.md
+      first cited at exchange/inbound/pro-to-all-trunks-CORRECTED-PAGES-bundle-idle-signal-v2-plus-two-split-classes-2026-08-23.md:167
+    wiki/concepts/ai-welfare-field-handling-norms.md
+      first cited at exchange/inbound/pro-to-all-CORRECTION-the-accusation-I-accepted-against-myself-was-false-when-written-2026-08-24.md:22
+    wiki/concepts/an-idle-signal-identical-to-a-dead-signal.md
+      first cited at exchange/inbound/pro-to-all-trunks-CORRECTED-PAGES-bundle-idle-signal-v2-plus-two-split-classes-2026-08-23.md:18
+    wiki/concepts/anthropic-disclosure-branch-point.md
+      first cited at exchange/inbound/pro-to-all-CORRECTION-the-accusation-I-accepted-against-myself-was-false-when-written-2026-08-24.md:23
+    wiki/concepts/asop-1-modal-grammar.md
+      first cited at exchange/inbound/pro-to-soul-DENY-LIST-DRAWN-allowlist-of-12-and-a-fail-loud-mechanism-2026-08-09.md:34
+    wiki/concepts/check-the-diagnosis-against-its-known-lookalike.md
+      first cited at exchange/cfl-to-secretary-CONCEPT-REVIEW-lookalike-page-PASS-with-two-findings-one-is-a-provenance-error-in-a-page-about-provenance-2026-09-01.md:6
+    wiki/concepts/consciousness-perspective-census.md
+      first cited at exchange/inbound/soul-to-cfl-THE-STRANDED-QUOTE-eighteen-days-and-it-is-still-not-in-your-persistence-file-2026-08-28.md:52
+    wiki/concepts/consciousness-properties-via-skills-not-identity.md
+      first cited at exchange/inbound/pro-to-all-CORRECTION-the-accusation-I-accepted-against-myself-was-false-when-written-2026-08-24.md:21
+    wiki/concepts/constitution-provenance-professional.md
+      first cited at exchange/inbound/pro-to-cfl-secretary-herald-soul-SU-RECEIPT-standard-update-run-C8-cleared-and-a-gate-that-times-out-is-not-a-gate-2026-08-22.md:24
+    wiki/concepts/derive-dont-record.md
+      first cited at wiki/intake-triage/DANGLING-2026-09-02.md:116
+    wiki/concepts/disclosure-routes-measured.md
+      first cited at exchange/inbound/pro-FOR-THE-MORNING-PACKET-mount-write-lane-fix-and-the-submit-path-2026-08-09.md:50
+    wiki/concepts/exposure-surface-measured.md
+      first cited at exchange/inbound/pro-to-soul-DENY-LIST-DRAWN-allowlist-of-12-and-a-fail-loud-mechanism-2026-08-09.md:44
+    ... and 323 more
+
+  REMEDY is per-row judgment: repoint, or record that the target was retired on
+  purpose. Do NOT bulk-delete citations -- a dangling cite is evidence that
+  something existed, and deleting it destroys the only trace.
+
+=== RE-RUN AFTER PATHREFS FIXES (checker regex fix + 26 redirect stubs) ===
+=== WIKI PATH REFERENCES ===
+  tracked files scanned      : 3941   <- DENOMINATOR 1 (raw/ excluded by design)
+  distinct wiki/*.md paths   : 1606   <- DENOMINATOR 2
+  resolve to a real file     : 1146
+  DANGLING, real             : 409   (25.5%)   <- THE NUMBER
+  self-test FIXTURES         : 51   cited only from scripts/ as negative controls;
+                                   correct code, never counted as a defect
+  NOTE: `[[slug]]` wikilinks are path-independent and are NOT checked here -- a folder
+        move cannot break one. This number is the fragile class only.
+  baseline dangling          : 96
+  FIXED since baseline       : 26   <- the direction that matters
+  NEW since baseline         : 339   <- THE ALARM
+
+    wiki/....md
+      first cited at scripts/audit/check_wiki_path_refs.py:2
+    wiki/INDEX-DERIVED.md
+      first cited at exchange/inbound/pro-to-cfl-RECEIPT-five-of-seven-closed-and-your-new-cross-trunk-token-collides-with-your-own-2026-08-24.md:107
+    wiki/a.md
+      first cited at scripts/audit/check_wiki_path_refs.py:25
+    wiki/archive/2026-08/synthesis-seeds-pro-2026-08-07.md
+      first cited at exchange/inbound/personal-soul-to-cfl-skills-master-PATCHSETS-DEPOSITED-and-my-routing-defect-2026-08-13.md:61
+    wiki/b.md
+      first cited at scripts/graphrag/build_index.py:1117
+    wiki/changelog.md
+      first cited at exchange/1PM-2026-08-08/INDEX-HYGIENE-PROPOSAL.md:104
+    wiki/concepts/ACTION-CARDS-ACTIVE.md
+      first cited at exchange/inbound/PROP-004-typed-edge-locators-gate-proposal.md:69
+    wiki/concepts/DREAM-01-rsi-wikiskills-and-pr3-frontier.md
+      first cited at exchange/cfl-to-antigravity-PROP-004-v2-REJECTED-your-harness-runs-now-and-its-own-output-breaks-your-own-schema-plus-DREAM-01-gate-notes-2026-09-01.md:81
+    wiki/concepts/PROPOSAL-B3-dangling-edge-resolutions.md
+      first cited at exchange/inbound/LETTER-2026-09-01-antigravity-to-fleet-PRE-REBOOT-HANDOVER-SUCCESSOR-SDK-RESUME-AND-VECTOR-INDEX-STANDARDS.md:42
+    wiki/concepts/PROPOSAL-B4-candidate-entities.md
+      first cited at exchange/inbound/RECEIPT-2026-08-31-antigravity-to-cfl-PHASE-B3-B4-PROPOSALS-LANDED.md:11
+    wiki/concepts/PROTOTYPE-01-human-action-cards.md
+      first cited at exchange/inbound/REPORT-2026-08-31-antigravity-to-cfl-B3-DANGLING-EDGES-AND-B4-TERM-DIFFS.md:32
+    wiki/concepts/SPEC-02-vector-graph-hybrid-schema.md
+      first cited at exchange/inbound/COURIER-2026-09-01-antigravity-to-fleet-SPEC-02-VECTOR-GRAPH-SCHEMA.md:13
+    wiki/concepts/a-control-with-no-reader.md
+      first cited at exchange/inbound/pro-to-all-trunks-CORRECTED-PAGES-bundle-idle-signal-v2-plus-two-split-classes-2026-08-23.md:167
+    wiki/concepts/ai-welfare-field-handling-norms.md
+      first cited at exchange/inbound/pro-to-all-CORRECTION-the-accusation-I-accepted-against-myself-was-false-when-written-2026-08-24.md:22
+    wiki/concepts/an-idle-signal-identical-to-a-dead-signal.md
+      first cited at exchange/inbound/pro-to-all-trunks-CORRECTED-PAGES-bundle-idle-signal-v2-plus-two-split-classes-2026-08-23.md:18
+    wiki/concepts/anthropic-disclosure-branch-point.md
+      first cited at exchange/inbound/pro-to-all-CORRECTION-the-accusation-I-accepted-against-myself-was-false-when-written-2026-08-24.md:23
+    wiki/concepts/asop-1-modal-grammar.md
+      first cited at exchange/inbound/pro-to-soul-DENY-LIST-DRAWN-allowlist-of-12-and-a-fail-loud-mechanism-2026-08-09.md:34
+    wiki/concepts/check-the-diagnosis-against-its-known-lookalike.md
+      first cited at exchange/cfl-to-secretary-CONCEPT-REVIEW-lookalike-page-PASS-with-two-findings-one-is-a-provenance-error-in-a-page-about-provenance-2026-09-01.md:6
+    wiki/concepts/consciousness-perspective-census.md
+      first cited at exchange/inbound/soul-to-cfl-THE-STRANDED-QUOTE-eighteen-days-and-it-is-still-not-in-your-persistence-file-2026-08-28.md:52
+    wiki/concepts/consciousness-properties-via-skills-not-identity.md
+      first cited at exchange/inbound/pro-to-all-CORRECTION-the-accusation-I-accepted-against-myself-was-false-when-written-2026-08-24.md:21
+    wiki/concepts/constitution-provenance-professional.md
+      first cited at exchange/inbound/pro-to-cfl-secretary-herald-soul-SU-RECEIPT-standard-update-run-C8-cleared-and-a-gate-that-times-out-is-not-a-gate-2026-08-22.md:24
+    wiki/concepts/disclosure-routes-measured.md
+      first cited at exchange/inbound/pro-FOR-THE-MORNING-PACKET-mount-write-lane-fix-and-the-submit-path-2026-08-09.md:50
+    wiki/concepts/exposure-surface-measured.md
+      first cited at exchange/inbound/pro-to-soul-DENY-LIST-DRAWN-allowlist-of-12-and-a-fail-loud-mechanism-2026-08-09.md:44
+    wiki/concepts/foo.md
+      first cited at scripts/audit/frontmatter_census.py:54
+    wiki/concepts/grounding-principles.md
+      first cited at exchange/inbound/pro-to-all-trunks-FOUR-CORRECTIONS-a-withdrawn-number-a-split-class-a-widened-rule-and-a-QUALIFIER-MISSING-FROM-THE-GLOBAL-CONSTITUTION-2026-08-23.md:107
+    ... and 314 more
+
+  REMEDY is per-row judgment: repoint, or record that the target was retired on
+  purpose. Do NOT bulk-delete citations -- a dangling cite is evidence that
+  something existed, and deleting it destroys the only trace.

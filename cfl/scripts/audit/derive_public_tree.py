@@ -799,6 +799,19 @@ def main():
                  , len(_sp['SUFFIX_UNDER']), len(_sp['BASENAME_UNDER'])))
     else:
         print('[derive] include-spec=BUILT-IN (CFL shape)')
+    # ⛔ --allow-nonempty-out ADDS AND OVERWRITES. IT NEVER REMOVES. So a NEW WITHHOLD DOES NOT TAKE
+    # EFFECT on a re-derive into an existing tree: the spec changes, the manifest shrinks, and the
+    # withheld files sit there from the previous run.
+    # [measured 2026-09-13 02:5x: a PATH_PREFIX row withholding .claude/hooks/state was added and
+    # re-derived with this flag; all 167 state files were still in the tree afterwards, and I had
+    # already told Professional they were withheld. A SPEC CHANGE IS NOT A TREE CHANGE.]
+    # ⭐ The flag is kept -- it is the right tool for an ADDITIVE spec change, which is most of them --
+    # but it now says what it cannot do, every time it is used.
+    if os.path.isdir(a.out) and os.listdir(a.out) and a.allow_nonempty_out:
+        print("[derive] ⚠️ --allow-nonempty-out: this run ADDS and OVERWRITES and NEVER REMOVES. Any "
+              "file withheld since the last derivation is STILL IN THE TREE. If this spec change "
+              "REMOVES anything, derive into a FRESH directory instead -- the manifest will shrink "
+              "while the tree does not, and nothing else will notice.", file=sys.stderr)
     if os.path.isdir(a.out) and os.listdir(a.out) and not a.allow_nonempty_out:
         # 2026-09-02: 8 semantically WITHHELD files survived a re-derive because the
         # deriver only ever adds. A non-empty --out is UNKNOWN, never a clean tree.
